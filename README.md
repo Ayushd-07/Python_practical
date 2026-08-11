@@ -1,994 +1,390 @@
-# 🌍 Air Quality Data Analysis
+# 📈 RELIANCE Stock Market Data Analysis
 
-<div align="center">
+> A practical Python data analysis project focused on exploring, cleaning, visualizing, and statistically analyzing historical **RELIANCE stock market data**.
 
-### 📊 Exploratory Data Analysis using Python
-
-**Clean • Transform • Explore • Visualize • Understand**
-
-![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)
-![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0?style=for-the-badge)
-![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-
-</div>
+This project uses **Python, NumPy, Pandas, Matplotlib, and Seaborn** to investigate stock-price behavior, yearly and monthly trends, trading information, and relationships between important market variables.
 
 ---
 
-## 📌 Project Overview
+## 🌟 Project Overview
 
-**Air Quality Data Analysis** is an Exploratory Data Analysis (EDA) project created using **Python, Pandas, NumPy, Matplotlib, and Seaborn**.
+The **RELIANCE Stock Market Data Analysis** project is designed as a complete exploratory data analysis workflow.
 
-The project works with air-quality observations containing **pollution measurements, date and time information, and weather-related variables**. The main purpose is to clean the dataset, transform the date and time information into useful formats, and explore pollution and weather patterns through visualizations.
+The notebook starts by loading the RELIANCE stock dataset and checking its structure. It then performs data-quality checks, prepares the date information, selects data for **2020** for detailed monthly and daily trend analysis, creates multiple visualizations, and finally studies correlations between major numerical stock variables.
 
-The analysis focuses on:
+The analysis covers:
 
-- 🌫️ Monthly **CO** concentration
-- 🟠 Monthly **NOx** concentration
-- 💧 Monthly **Relative Humidity**
-- ⏰ Hourly **NO₂** concentration
-- 🌡️ Hourly **Temperature**
-- 🔥 Relationships between pollution and weather variables
-
-The complete analysis is implemented in the Jupyter Notebook:
-
-```text
-Air_Quality(1).ipynb
-```
+- 🗂️ Dataset loading and exploration
+- 🔍 Initial data inspection
+- 🧹 Missing-value checking and cleaning
+- 🧾 Column and data-type analysis
+- 📅 Date conversion and time-based filtering
+- 📈 Monthly maximum High price analysis
+- 📉 Monthly minimum Low price analysis
+- 💹 Open vs Close price comparison
+- 📊 High vs Low price comparison
+- 💰 Yearly VWAP analysis
+- 🔗 Correlation analysis
+- 🌡️ Correlation heatmap visualization
+- 📝 Key findings and conclusion
 
 ---
 
-# 🎯 Project Objectives
+## 🎯 Objectives
 
 The main objectives of this project are:
 
-- 📂 Load the air-quality dataset into a Pandas DataFrame
-- 🔎 Inspect the dataset and its structure
-- 🧹 Identify and remove missing observations
-- 🔄 Reset the DataFrame index after cleaning
-- 🧬 Inspect column data types
-- 📅 Convert the `Date` column into Pandas datetime format
-- ⏰ Combine date and time into a `DateTime` column
-- 📆 Analyze monthly CO concentration
-- 🟠 Analyze monthly NOx concentration
-- 💧 Analyze monthly Relative Humidity
-- 🌫️ Analyze hourly NO₂ concentration
-- 🌡️ Analyze hourly temperature
-- 🔗 Study relationships between pollution and weather variables
-- 📊 Present findings using clear visualizations
+1. Understand the structure of the RELIANCE stock dataset.
+2. Inspect the dataset for missing values and duplicate records.
+3. Understand the available stock-market attributes.
+4. Convert the `Date` column into a proper datetime format.
+5. Filter the dataset for the year **2020** for detailed trend analysis.
+6. Study monthly High and Low price behavior.
+7. Compare Open and Close prices over time.
+8. Compare High and Low prices to understand the trading range.
+9. Summarize VWAP values year by year.
+10. Analyze correlations between major stock-price variables.
+11. Present the results through clear and easy-to-understand visualizations.
 
 ---
 
-# 🗂️ Table of Contents
-
-- [📌 Project Overview](#-project-overview)
-- [🎯 Project Objectives](#-project-objectives)
-- [📂 Project Structure](#-project-structure)
-- [🛠️ Technologies Used](#️-technologies-used)
-- [📊 Dataset](#-dataset)
-- [🔄 Analysis Workflow](#-analysis-workflow)
-- [1️⃣ Import Libraries](#1️⃣-import-libraries)
-- [2️⃣ Load Dataset](#2️⃣-load-dataset)
-- [3️⃣ Missing Value Analysis](#3️⃣-missing-value-analysis)
-- [4️⃣ Data Cleaning](#4️⃣-data-cleaning)
-- [5️⃣ Data Type Inspection](#5️⃣-data-type-inspection)
-- [6️⃣ Date Transformation](#6️⃣-date-transformation)
-- [7️⃣ DateTime Creation](#7️⃣-datetime-creation)
-- [8️⃣ Monthly CO Analysis](#8️⃣-monthly-co-analysis)
-- [9️⃣ Monthly NOx Analysis](#9️⃣-monthly-nox-analysis)
-- [🔟 Monthly Relative Humidity Analysis](#-monthly-relative-humidity-analysis)
-- [1️⃣1️⃣ Hourly NO₂ Analysis](#1️⃣1️⃣-hourly-no₂-analysis)
-- [1️⃣2️⃣ Hourly Temperature Analysis](#1️⃣2️⃣-hourly-temperature-analysis)
-- [1️⃣3️⃣ Pollution and Weather Correlation](#1️⃣3️⃣-pollution-and-weather-correlation)
-- [🔑 Key Findings](#-key-findings)
-- [📈 Visualizations](#-visualizations)
-- [🧠 Concepts Practiced](#-concepts-practiced)
-- [▶️ How to Run](#️-how-to-run)
-- [🎓 Learning Outcomes](#-learning-outcomes)
-- [🔮 Future Improvements](#-future-improvements)
-- [⚠️ Limitations and Notes](#️-limitations-and-notes)
-- [👨‍💻 Author](#-author)
-- [📄 License](#-license)
-
----
-
-# 📂 Project Structure
-
-A simple recommended project structure is:
-
-```text
-📦 Air-Quality-Data-Analysis
-│
-├── 📓 Air_Quality(1).ipynb
-│   └── Complete EDA notebook
-│
-├── 📄 Air_Quality.csv
-│   └── Dataset used for the analysis
-│
-└── 📖 README.md
-    └── Project documentation
-```
-
-> Keep `Air_Quality.csv` in the same working directory as the notebook if you want to run the notebook without changing the file path.
-
----
-
-# 🛠️ Technologies Used
+## 🛠️ Technologies & Libraries
 
 | Technology | Purpose |
-|:---|:---|
+|---|---|
 | 🐍 **Python** | Main programming language |
-| 🐼 **Pandas** | Data loading, cleaning, transformation, grouping, and analysis |
-| 🔢 **NumPy** | Numerical computing and data support |
-| 📊 **Matplotlib** | Creating and customizing plots |
-| 🎨 **Seaborn** | Statistical data visualization |
-| 📓 **Jupyter Notebook** | Interactive analysis and documentation |
+| 🧮 **NumPy** | Numerical operations and data support |
+| 🐼 **Pandas** | Data loading, cleaning, grouping, and analysis |
+| 📊 **Matplotlib** | Data visualization |
+| 🎨 **Seaborn** | Statistical and advanced visualizations |
+| 📓 **Jupyter Notebook** | Interactive analysis environment |
 
 ---
 
-# 📊 Dataset
-
-The notebook loads the dataset using:
-
-```python
-df = pd.read_csv("Air_Quality.csv")
-```
-
-The dataset contains air-quality observations with **date, time, pollution measurements, and weather-related measurements**.
-
-The notebook specifically works with variables such as:
-
-| Column | Description / Usage |
-|:---|:---|
-| `Date` | Observation date |
-| `Time` | Observation time |
-| `CO(GT)` | CO concentration used for monthly analysis |
-| `NOx(GT)` | NOx concentration used for monthly analysis |
-| `NO2(GT)` | NO₂ concentration used for hourly analysis |
-| `C6H6(GT)` | Pollution variable included in correlation analysis |
-| `T` | Temperature |
-| `RH` | Relative Humidity |
-| `AH` | Absolute Humidity |
-| `DateTime` | Combined date and time created during analysis |
-| `Month` | Month number created for monthly grouping |
-| `Hour` | Hour of day created for hourly grouping |
-
-The notebook does not replace the original pollution or weather measurements. Instead, it creates additional helper columns such as `DateTime`, `Month`, and `Hour` to make time-based analysis easier.
-
----
-
-# 🔄 Analysis Workflow
-
-The project follows a structured EDA workflow:
+## 📁 Project Structure
 
 ```text
-                 📂 LOAD DATA
-                      │
-                      ▼
-              🔎 INSPECT DATA
-                      │
-                      ▼
-            🧹 CHECK MISSING VALUES
-                      │
-                      ▼
-               🧼 CLEAN DATA
-                      │
-                      ▼
-              🧬 CHECK DATA TYPES
-                      │
-                      ▼
-             📅 TRANSFORM DATE
-                      │
-                      ▼
-            ⏰ CREATE DATETIME
-                      │
-          ┌───────────┴───────────┐
-          ▼                       ▼
-     📆 MONTHLY                  ⏰ HOURLY
-     ANALYSIS                    ANALYSIS
-          │                       │
-     ┌────┼────┐             ┌────┴────┐
-     ▼    ▼    ▼             ▼         ▼
-    CO   NOx   RH            NO₂        T
-     │    │    │             │         │
-     └────┴────┘             └────┬────┘
-                                  │
-                                  ▼
-                         🔗 CORRELATION
-                                  │
-                                  ▼
-                           🔑 KEY FINDINGS
+RELIANCE-Stock-Analysis/
+│
+├── 📓 RELIANCE.ipynb
+├── 📄 RELIANCE.csv
+└── 📘 README.md
 ```
+
+### File Description
+
+- **`RELIANCE.ipynb`**  
+  Main Jupyter Notebook containing the complete analysis, Python code, visualizations, and findings.
+
+- **`RELIANCE.csv`**  
+  Dataset containing historical RELIANCE stock-market records.
+
+- **`README.md`**  
+  Project documentation and usage guide.
 
 ---
 
-# 1️⃣ Import Libraries
+## 📊 Dataset Information
 
-The project begins by importing the main Python libraries required for analysis:
+The dataset contains **5,306 records** and **13 columns**.
+
+The analyzed dataset covers the period from:
+
+**3 January 2000 to 30 April 2021**
+
+### Dataset Columns
+
+| Column | Description |
+|---|---|
+| `Date` | Trading date |
+| `Symbol` | Stock symbol |
+| `Series` | Stock series/category |
+| `Prev Close` | Previous trading day's closing price |
+| `Open` | Opening price |
+| `High` | Highest price recorded during the trading session |
+| `Low` | Lowest price recorded during the trading session |
+| `Last` | Last traded price |
+| `Close` | Closing price |
+| `VWAP` | Volume Weighted Average Price |
+| `Volume` | Trading volume |
+| `Trades` | Number of trades |
+| `Deliverable Volume` | Deliverable trading volume |
+
+---
+
+# 🔍 Analysis Workflow
+
+## 1️⃣ Import Libraries & Load Dataset
+
+The project begins by importing the required Python libraries and loading the RELIANCE CSV dataset using Pandas.
 
 ```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+
+data = pd.read_csv("RELIANCE.csv")
 ```
 
-### Why these libraries?
-
-### 🐼 Pandas
-
-Pandas is the main library used for:
-
-- Reading the CSV file
-- Working with DataFrames
-- Checking missing values
-- Cleaning records
-- Converting dates
-- Grouping observations
-- Calculating averages
-
-### 🔢 NumPy
-
-NumPy provides numerical computing support and is imported as part of the Data Science workflow.
-
-### 📊 Matplotlib
-
-Matplotlib is used to create and customize figures, titles, labels, grids, and other chart elements.
-
-### 🎨 Seaborn
-
-Seaborn is used for the project's line plots and correlation heatmap.
+The complete dataset is then displayed for an initial overview.
 
 ---
 
-# 2️⃣ Load Dataset
+## 2️⃣ Initial Data Exploration
 
-The dataset is loaded into a Pandas DataFrame:
-
-```python
-df = pd.read_csv("Air_Quality.csv")
-```
-
-The DataFrame is then displayed:
+The notebook checks both the first and last records using:
 
 ```python
-df
+data.head(5)
+data.tail(5)
 ```
 
-This allows the dataset to be inspected before cleaning and transformation.
+Missing values are also checked using:
+
+```python
+data.isna().sum()
+```
+
+This helps understand the dataset before performing further processing.
 
 ---
 
-# 3️⃣ Missing Value Analysis
+## 3️⃣ Data Cleaning & Validation
 
-Before performing calculations, the notebook checks for missing values:
+The project checks missing values in important columns such as:
+
+- `Trades`
+- `Deliverable Volume`
+
+The notebook uses median-based handling for these columns.
+
+Additional validation includes:
 
 ```python
-df.isna().sum()
+data.info()
+data.dtypes
+data.duplicated().sum()
+data.describe()
 ```
 
-### Why is this important?
+These operations provide information about:
 
-Missing observations can affect:
-
-- Average calculations
-- Grouping operations
-- Visualizations
-- Correlation calculations
-- Overall interpretation
-
-Checking missing values before analysis is an important data-cleaning step.
+- Number of records
+- Column names
+- Data types
+- Missing values
+- Duplicate records
+- Statistical summaries
 
 ---
 
-# 4️⃣ Data Cleaning
+## 4️⃣ Date Preparation
 
-The notebook removes rows containing missing values:
-
-```python
-df.dropna(inplace=True)
-```
-
-After removing incomplete rows, the index is reset:
+The `Date` column is converted into datetime format:
 
 ```python
-df.reset_index(drop=True, inplace=True)
+data["Date"] = pd.to_datetime(data["Date"])
 ```
 
-The cleaned DataFrame is then displayed:
+This makes it possible to perform time-based analysis such as:
+
+- Year-wise filtering
+- Month-wise grouping
+- Monthly price analysis
+- Yearly VWAP calculations
+
+For detailed trend analysis, the notebook selects records from **2020**:
 
 ```python
-df
-```
-
-### Cleaning process
-
-```text
-Original Data
-     │
-     ▼
-Check Missing Values
-     │
-     ▼
-Remove Missing Rows
-     │
-     ▼
-Reset Index
-     │
-     ▼
-Clean DataFrame
+year_data = data[data["Date"].dt.year == 2020]
 ```
 
 ---
 
-# 5️⃣ Data Type Inspection
+# 📈 Visualizations & Analysis
 
-The notebook checks the data types of all columns:
+## 5️⃣ Monthly Maximum High Price
+
+The project calculates the maximum `High` price for every month of 2020.
 
 ```python
-df.dtypes
+monthly_high = (
+    year_data.groupby(year_data["Date"].dt.month)["High"].max()
+)
 ```
 
-This is particularly important because the project later performs operations involving:
+A line chart is then used to visualize monthly price peaks.
 
-- Dates
-- Times
-- Numeric pollution measurements
-- Weather measurements
+### What it helps show
 
-Correct data types make later transformations and calculations easier and more reliable.
+- Monthly maximum price movement
+- Periods with higher price peaks
+- Changes in the upper trading range during 2020
 
 ---
 
-# 6️⃣ Date Transformation
+## 6️⃣ Monthly Minimum Low Price
 
-The original `Date` values are transformed into a consistent Pandas datetime format.
-
-The notebook first converts each date using:
+The notebook also calculates the minimum `Low` price for each month of 2020.
 
 ```python
-from datetime import datetime
-
-all_dates = []
-
-for date in df["Date"]:
-    all_dates.append(
-        datetime.strptime(date, "%d/%m/%Y").strftime("%m/%d/%Y")
-    )
-
-new_dates = pd.Series(all_dates)
-
-df["Date"] = pd.to_datetime(new_dates)
+monthly_low = (
+    year_data.groupby(year_data["Date"].dt.month)["Low"].min()
+)
 ```
 
-The data types are then checked again:
+A line chart is used to visualize these monthly minimum prices.
 
-```python
-df.dtypes
-```
+### What it helps show
 
-### Why transform the date?
-
-A proper datetime column makes it easier to perform:
-
-- 📆 Monthly grouping
-- 📅 Date-based filtering
-- 📈 Trend analysis
-- ⏱️ Time-based calculations
+- Monthly price lows
+- Periods with comparatively lower market prices
+- Changes in the lower trading range
 
 ---
 
-# 7️⃣ Review Converted Dates
+## 7️⃣ Open vs Close Price Trend
 
-The notebook checks the transformed date column:
+The project compares the `Open` and `Close` prices throughout 2020.
 
-```python
-df["Date"]
-```
+This visualization provides a direct view of how the opening and closing prices moved over the selected period.
 
-This provides a direct view of the converted date values and confirms that the date transformation has been applied.
+### Why this comparison is useful
 
----
+Comparing Open and Close prices can help identify:
 
-# 8️⃣ DateTime Creation
-
-The project combines the date and time information into one `DateTime` column:
-
-```python
-df["DateTime"] = pd.to_datetime(
-    df["Date"].dt.strftime("%Y-%m-%d") + " " + df["Time"]
-)
-```
-
-The first few records are then displayed:
-
-```python
-df.head()
-```
-
-### Why create `DateTime`?
-
-A combined datetime value is more useful when working with detailed time-based observations.
-
-It can support future analysis such as:
-
-- Hourly trends
-- Daily trends
-- Time-based filtering
-- Time-series visualizations
+- Daily price movement
+- Changes between opening and closing levels
+- General price trends over time
 
 ---
 
-# 9️⃣ 📈 Monthly CO Analysis
+## 8️⃣ High vs Low Price Trend
 
-The project analyzes the average **CO concentration by month**.
+The notebook compares the daily `High` and `Low` prices for 2020.
 
-First, a month number is extracted from the `Date` column:
-
-```python
-df["Month"] = df["Date"].dt.month
-```
-
-Then the average CO concentration for each month is calculated:
-
-```python
-monthly_co = df.groupby("Month")["CO(GT)"].mean()
-```
-
-The result is visualized using a Seaborn line plot.
-
-### 📊 Visualization
-
-```python
-plt.figure(figsize=(10, 6))
-
-sns.lineplot(
-    monthly_co,
-    marker="o",
-    color="purple",
-    markersize=7,
-    linewidth=2,
-    markerfacecolor="white",
-    markeredgecolor="purple",
-    markeredgewidth=2
-)
-
-plt.title(
-    "Average CO Concentration by Month",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel("Month", fontsize=11, fontweight="bold")
-plt.ylabel("Average CO Concentration", fontsize=11, fontweight="bold")
-
-plt.grid(
-    linestyle="--",
-    linewidth=0.7,
-    alpha=0.7
-)
-
-plt.show()
-```
-
-### 🔍 What this visualization explores
-
-- Monthly changes in CO concentration
-- Higher and lower pollution periods
-- Possible seasonal movement in CO levels
+This gives a visual representation of the trading range and helps show how wide the price movement was during different periods.
 
 ---
 
-# 🔟 🟠 Monthly NOx Analysis
+## 9️⃣ Yearly VWAP Analysis
 
-The project also studies the average **NOx concentration by month**.
-
-The calculation is:
+The project calculates the yearly sum of the `VWAP` column:
 
 ```python
-monthly_nox = df.groupby("Month")["NOx(GT)"].mean()
+yearly_vwap = (
+    data.groupby(data["Date"].dt.year)["VWAP"].sum()
+)
 ```
 
-The values are visualized with a line chart:
+A bar chart is used to compare the resulting yearly values.
 
-```python
-plt.figure(figsize=(10, 6))
+### VWAP
 
-sns.lineplot(
-    monthly_nox,
-    marker="o",
-    color="darkorange",
-    markersize=7,
-    linewidth=2,
-    markerfacecolor="white",
-    markeredgecolor="darkorange",
-    markeredgewidth=2
-)
+**VWAP** stands for **Volume Weighted Average Price**.
 
-plt.title(
-    "Average NOx Concentration by Month",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel("Month", fontsize=11, fontweight="bold")
-plt.ylabel("Average NOx Concentration", fontsize=11, fontweight="bold")
-
-plt.grid(
-    linestyle="--",
-    linewidth=0.7,
-    alpha=0.7
-)
-
-plt.show()
-```
-
-### 🔍 What this analysis explores
-
-- Monthly NOx variation
-- Pollution peaks and declines
-- Possible seasonal patterns
+It is a market-related measure that considers both price and trading volume. In this project, the yearly VWAP values are summarized and visualized to compare the values across the years present in the dataset.
 
 ---
 
-# 1️⃣1️⃣ 💧 Monthly Relative Humidity Analysis
+# 🔗 🔟 Correlation Analysis
 
-The notebook analyzes average **Relative Humidity (RH)** by month.
-
-The monthly average is calculated with:
+The notebook performs correlation analysis on the following numerical columns:
 
 ```python
-monthly_rh = df.groupby("Month")["RH"].mean()
-```
-
-The result is visualized using a line plot:
-
-```python
-plt.figure(figsize=(10, 6))
-
-sns.lineplot(
-    monthly_rh,
-    marker="o",
-    color="royalblue",
-    markersize=7,
-    linewidth=2,
-    markerfacecolor="white",
-    markeredgecolor="royalblue",
-    markeredgewidth=2
-)
-
-plt.title(
-    "Average Relative Humidity by Month",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel("Month", fontsize=11, fontweight="bold")
-plt.ylabel("Average Relative Humidity (%)", fontsize=11, fontweight="bold")
-
-plt.grid(
-    linestyle="--",
-    linewidth=0.7,
-    alpha=0.7
-)
-
-plt.show()
-```
-
-### 🔍 What this visualization explores
-
-- Humidity variation across months
-- Comparatively higher humidity periods
-- Comparatively lower humidity periods
-- Seasonal weather patterns
-
----
-
-# 1️⃣2️⃣ 🌫️ Hourly NO₂ Analysis
-
-The project analyzes the average **NO₂ concentration by hour of the day**.
-
-First, the hour is extracted from the `Time` column:
-
-```python
-df["Hour"] = pd.to_datetime(df["Time"]).dt.hour
-```
-
-Then average NO₂ is calculated:
-
-```python
-hourly_co = df.groupby("Hour")["NO2(GT)"].mean()
-```
-
-The result is visualized using a line plot:
-
-```python
-plt.figure(figsize=(10, 6))
-
-sns.lineplot(
-    hourly_co,
-    marker="o",
-    color="crimson",
-    markersize=7,
-    linewidth=2,
-    markerfacecolor="white",
-    markeredgecolor="crimson",
-    markeredgewidth=2
-)
-
-plt.title(
-    "Average NO2 Concentration by Hour",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel("Hour of Day", fontsize=11, fontweight="bold")
-plt.ylabel("Average NO2 Concentration", fontsize=11, fontweight="bold")
-
-plt.grid(
-    linestyle="--",
-    linewidth=0.7,
-    alpha=0.7
-)
-
-plt.show()
-```
-
-### 🔍 What this analysis explores
-
-- Daily NO₂ patterns
-- Hours with comparatively higher NO₂
-- Hours with comparatively lower NO₂
-- Changes in pollution during different parts of the day
-
----
-
-# 1️⃣3️⃣ 🌡️ Hourly Temperature Analysis
-
-The notebook examines average **temperature by hour of the day**.
-
-The hour is extracted using:
-
-```python
-df["Hour"] = pd.to_datetime(df["Time"]).dt.hour
-```
-
-The average temperature for each hour is calculated:
-
-```python
-monthly_temp = df.groupby("Hour")["T"].mean()
-```
-
-The result is visualized using:
-
-```python
-plt.figure(figsize=(10, 6))
-
-sns.lineplot(
-    monthly_temp,
-    marker="o",
-    color="teal",
-    markersize=7,
-    linewidth=2,
-    markerfacecolor="white",
-    markeredgecolor="teal",
-    markeredgewidth=2
-)
-
-plt.title(
-    "Average Temperature by Hour",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel("Hour of Day", fontsize=11, fontweight="bold")
-plt.ylabel("Average Temperature", fontsize=11, fontweight="bold")
-
-plt.grid(
-    linestyle="--",
-    linewidth=0.7,
-    alpha=0.7
-)
-
-plt.show()
-```
-
-### 🔍 What this analysis explores
-
-- Daily temperature movement
-- Warmer and cooler hours
-- The relationship between time of day and temperature patterns
-
----
-
-# 1️⃣4️⃣ 🔥 Pollution & Weather Correlation
-
-The notebook performs correlation analysis between selected pollution and weather variables.
-
-The variables included are:
-
-```text
-CO(GT)
-NOx(GT)
-NO2(GT)
-C6H6(GT)
-T
-RH
-AH
-```
-
-They are selected using:
-
-```python
-weather_pollution = [
-    "CO(GT)",
-    "NOx(GT)",
-    "NO2(GT)",
-    "C6H6(GT)",
-    "T",
-    "RH",
-    "AH"
+num_col = [
+    "Prev Close",
+    "Open",
+    "High",
+    "Low",
+    "Last",
+    "Close",
+    "VWAP"
 ]
 ```
 
-The correlation matrix is calculated and displayed as a heatmap:
+The correlation matrix is generated using:
 
 ```python
-plt.figure(figsize=(10, 7))
-
-sns.heatmap(
-    df[weather_pollution].corr(),
-    annot=True,
-    cmap="Oranges"
-)
-
-plt.title(
-    "Relationship Between Pollution and Weather",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.show()
+corr = data[num_col].corr()
 ```
 
----
+A Seaborn heatmap is then created to make the relationships easier to interpret.
 
-## 🔗 Understanding Correlation
+### Variables Compared
 
-The notebook uses correlation to explore linear relationships between variables.
+- Previous Close
+- Open
+- High
+- Low
+- Last
+- Close
+- VWAP
 
-| Correlation Value | General Interpretation |
-|:---:|:---|
-| Near **+1** | Strong positive relationship |
-| Near **0** | Weak or little linear relationship |
-| Near **-1** | Strong negative relationship |
+### Why Correlation Analysis?
 
-### ⚠️ Important
+Correlation analysis helps identify how strongly numerical variables move in relation to each other.
 
-> **Correlation shows association, not causation.**
-
-A strong correlation does not by itself prove that one variable causes another.
-
----
-
-# 🔑 Key Analysis & Findings
-
-The notebook summarizes the analysis into several major observations.
-
-## 🌫️ 1. CO Pollution
-
-CO concentration varies across different months.
-
-The monthly line chart makes it possible to observe periods where the average CO concentration is comparatively higher or lower.
+The heatmap provides a visual overview of these relationships and makes it easier to identify variables with stronger or weaker linear relationships.
 
 ---
 
-## 🟠 2. NOx Pollution
+# 🏆 Key Findings
 
-NOx levels show noticeable monthly variation.
+According to the analysis included in the notebook, the following maximum recorded values were identified:
 
-The visualization can be used to observe peaks, declines, and possible seasonal movement in NOx concentration.
+| 📌 Indicator | 🔢 Maximum Recorded Value |
+|---|---:|
+| 🚀 High Price | **₹3,298.00** |
+| 📈 Open Price | **₹3,298.00** |
+| 💰 Close Price | **₹3,220.85** |
+| 📊 VWAP | **₹3,197.75** |
+| 📦 Trading Volume | **65,230,890** |
+| 🔄 Trades | **1,428,490** |
+| 📦 Deliverable Volume | **34,958,880** |
 
----
+The dataset contains:
 
-## 💧 3. Relative Humidity
+- **5,306 records**
+- **13 columns**
+- Historical data from **3 January 2000 to 30 April 2021**
 
-Relative humidity changes across months.
-
-This provides a simple view of how weather conditions vary over the period represented in the dataset.
-
----
-
-## ⏰ 4. Hourly NO₂
-
-NO₂ concentration varies throughout the day.
-
-The hourly line chart helps identify periods with comparatively higher or lower average NO₂ concentration.
-
----
-
-## 🌡️ 5. Temperature
-
-Temperature also changes according to the hour of the day.
-
-The hourly temperature chart provides a visual representation of daily temperature movement.
+These figures summarize the key values highlighted in the notebook.
 
 ---
 
-## 🔗 6. Pollution & Weather Relationships
+# 📊 Charts Included
 
-The correlation heatmap compares:
+The project includes several visualizations to make the analysis easier to understand:
 
-```text
-CO(GT)
-NOx(GT)
-NO2(GT)
-C6H6(GT)
-T
-RH
-AH
-```
+### 📈 Monthly Maximum High Price
+Shows the maximum High price recorded in each month of 2020.
 
-This provides an overview of the linear relationships present among selected pollution and weather variables.
+### 📉 Monthly Minimum Low Price
+Shows the minimum Low price recorded in each month of 2020.
 
----
+### 💹 Open vs Close Price
+Compares daily Open and Close prices during 2020.
 
-# 📊 Analysis Summary
+### 📊 High vs Low Price
+Shows the daily relationship between the highest and lowest prices during 2020.
 
-| 🌍 Indicator | 📌 Analysis Type | 📈 Visualization |
-|:---|:---|:---|
-| 🌫️ CO | Monthly average | Line plot |
-| 🟠 NOx | Monthly average | Line plot |
-| 💧 Relative Humidity | Monthly average | Line plot |
-| 🌫️ NO₂ | Hourly average | Line plot |
-| 🌡️ Temperature | Hourly average | Line plot |
-| 🔗 Pollution & Weather | Correlation | Heatmap |
+### 💰 Yearly VWAP
+Displays yearly aggregated VWAP values using a bar chart.
 
----
-
-# 📈 Visualizations Included
-
-The project contains **six main analytical visualizations/analysis outputs**.
-
-### 1. 🌫️ Average CO Concentration by Month
-
-Shows how average CO concentration changes across months.
-
-### 2. 🟠 Average NOx Concentration by Month
-
-Shows monthly changes in average NOx concentration.
-
-### 3. 💧 Average Relative Humidity by Month
-
-Shows monthly changes in average RH.
-
-### 4. 🌫️ Average NO₂ Concentration by Hour
-
-Shows how average NO₂ concentration changes during different hours of the day.
-
-### 5. 🌡️ Average Temperature by Hour
-
-Shows the average temperature pattern across hours.
-
-### 6. 🔥 Pollution & Weather Correlation Heatmap
-
-Shows correlation values among selected pollution and weather variables.
-
----
-
-# 🧠 Concepts Practiced
-
-This project demonstrates several practical Data Science concepts.
-
-## 🐍 Python
-
-- Importing libraries
-- Loops
-- Lists
-- String formatting
-- Datetime handling
-
-## 🐼 Pandas
-
-- `read_csv()`
-- DataFrame inspection
-- `isna()`
-- `dropna()`
-- `reset_index()`
-- `dtypes`
-- `groupby()`
-- `mean()`
-- Date transformation
-- Creating new columns
-
-## 📅 Datetime
-
-- Converting strings to datetime
-- Extracting month
-- Extracting hour
-- Combining date and time
-- Time-based grouping
-
-## 📊 Visualization
-
-- Creating figures
-- Line plots
-- Heatmaps
-- Titles
-- Axis labels
-- Markers
-- Grid lines
-- Figure sizing
-
-## 🔗 Statistics
-
-- Mean
-- Correlation
-- Grouped averages
-- Relationship analysis
-
----
-
-# 🧩 Project Architecture
-
-The analysis can be represented as:
-
-```text
-┌───────────────────────────────┐
-│       📄 Air_Quality.csv      │
-│          Raw Dataset          │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│       🔎 Data Inspection      │
-│   Missing Values • Dtypes     │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│        🧹 Data Cleaning       │
-│   Remove Missing Rows         │
-│   Reset Index                 │
-└───────────────┬───────────────┘
-                │
-                ▼
-┌───────────────────────────────┐
-│       📅 Time Processing      │
-│ Date • DateTime • Month • Hour│
-└───────────────┬───────────────┘
-                │
-        ┌───────┴────────┐
-        ▼                ▼
-┌───────────────┐  ┌───────────────┐
-│ 📆 Monthly    │  │ ⏰ Hourly     │
-│ Analysis      │  │ Analysis      │
-│ CO / NOx / RH │  │ NO₂ / Temp    │
-└───────┬───────┘  └───────┬───────┘
-        │                   │
-        └─────────┬─────────┘
-                  ▼
-        ┌───────────────────┐
-        │ 🔥 Correlation    │
-        │ Pollution/Weather │
-        └─────────┬─────────┘
-                  ▼
-        ┌───────────────────┐
-        │ 🔑 Key Findings   │
-        └───────────────────┘
-```
+### 🔥 Correlation Heatmap
+Displays correlations between major numerical price-related variables.
 
 ---
 
 # ▶️ How to Run the Project
 
-## 1. Install Python
+## Step 1: Install Python
 
-Install Python 3.x on your system.
+Make sure Python is installed on your computer.
 
-Check the installed version:
+You can check your Python version with:
 
 ```bash
 python --version
@@ -996,9 +392,9 @@ python --version
 
 ---
 
-## 2. Install Required Libraries
+## Step 2: Install Required Libraries
 
-Run:
+Install the required packages using:
 
 ```bash
 pip install numpy pandas matplotlib seaborn jupyter
@@ -1006,25 +402,27 @@ pip install numpy pandas matplotlib seaborn jupyter
 
 ---
 
-## 3. Keep the Dataset in the Correct Folder
+## Step 3: Keep the Files Together
 
-Make sure the dataset is available as:
+Make sure the following files are inside the same project folder:
 
 ```text
-Air_Quality.csv
+RELIANCE.ipynb
+RELIANCE.csv
+README.md
 ```
 
-The notebook uses:
+The notebook loads the dataset using:
 
 ```python
-pd.read_csv("Air_Quality.csv")
+pd.read_csv("RELIANCE.csv")
 ```
 
-So the CSV should normally be placed in the same directory as the notebook.
+Therefore, `RELIANCE.csv` should be available in the notebook's working directory.
 
 ---
 
-## 4. Open Jupyter Notebook
+## Step 4: Open Jupyter Notebook
 
 Run:
 
@@ -1035,336 +433,153 @@ jupyter notebook
 Then open:
 
 ```text
-Air_Quality(1).ipynb
+RELIANCE.ipynb
 ```
 
 ---
 
-## 5. Run the Notebook
+## Step 5: Run the Notebook
 
-Run the notebook cells from top to bottom.
+Execute the cells from top to bottom.
 
-Recommended sequence:
+The notebook will:
 
-```text
-1. Import libraries
-2. Load dataset
-3. Check missing values
-4. Clean missing rows
-5. Verify data quality
-6. Inspect data types
-7. Transform Date
-8. Review Date
-9. Review cleaned DataFrame
-10. Create DateTime
-11. Analyze monthly CO
-12. Analyze monthly NOx
-13. Analyze monthly RH
-14. Analyze hourly NO₂
-15. Analyze hourly temperature
-16. Analyze pollution/weather correlation
-17. Review findings
-18. Read conclusion
-```
+1. Import the libraries
+2. Load the dataset
+3. Explore the data
+4. Check missing values
+5. Validate the dataset
+6. Convert dates
+7. Filter 2020 records
+8. Generate visualizations
+9. Perform VWAP analysis
+10. Calculate correlations
+11. Display key findings
 
 ---
 
-# 📌 Expected Output
+# 💡 Learning Outcomes
 
-After running the notebook successfully, you should see:
+This project provides practical experience with several important data-analysis concepts.
 
-```text
-📂 Dataset loaded
-      ↓
-🔎 Missing values checked
-      ↓
-🧹 Missing rows removed
-      ↓
-🧬 Data types inspected
-      ↓
-📅 Date converted
-      ↓
-⏰ DateTime created
-      ↓
-📆 Monthly CO chart
-      ↓
-🟠 Monthly NOx chart
-      ↓
-💧 Monthly RH chart
-      ↓
-🌫️ Hourly NO₂ chart
-      ↓
-🌡️ Hourly temperature chart
-      ↓
-🔥 Correlation heatmap
-      ↓
-🔑 Key findings
-```
+### 🐼 Pandas
 
----
+You practice:
 
-# 🎓 Learning Outcomes
+- Reading CSV files
+- Selecting columns
+- Filtering rows
+- Handling missing values
+- Grouping data
+- Working with datetime values
+- Calculating descriptive statistics
 
-This project is useful for practicing a complete beginner-to-intermediate EDA workflow.
+### 🧮 NumPy
 
-After completing the project, you can understand how to:
+You use NumPy as part of the Python data-analysis environment and numerical workflow.
 
-### 📂 Work with real-world tabular data
+### 📊 Matplotlib & Seaborn
 
-Load a CSV dataset and inspect its structure using Pandas.
+You practice:
 
-### 🧹 Clean data
+- Line charts
+- Bar charts
+- Heatmaps
+- Chart labels
+- Legends
+- Grid lines
+- Figure sizing
+- Visualization formatting
 
-Identify missing values and remove incomplete rows before analysis.
+### 📅 Time-Series Analysis
 
-### 📅 Handle dates and times
+The project demonstrates how a date column can be converted and used to:
 
-Convert string dates into datetime values and extract useful components such as month and hour.
+- Filter a specific year
+- Group records by month
+- Analyze yearly values
+- Visualize price trends
 
-### 📊 Perform grouped analysis
+### 🔗 Statistical Analysis
 
-Calculate monthly and hourly averages using `groupby()` and `mean()`.
-
-### 📈 Create visualizations
-
-Use Seaborn and Matplotlib to communicate patterns visually.
-
-### 🔗 Analyze relationships
-
-Use a correlation matrix and heatmap to examine relationships between pollution and weather variables.
-
-### 🧠 Interpret analytical results
-
-Move from raw data to charts and then to meaningful observations about pollution and weather patterns.
+The correlation section provides practical experience with understanding relationships between numerical variables.
 
 ---
 
-# 💡 Why This Project Is Useful
+# 📌 Important Notes
 
-Air-quality datasets are a good practical example for learning Data Science because they combine multiple types of information:
-
-```text
-📅 Date
-⏰ Time
-🌫️ Pollution
-🌡️ Temperature
-💧 Humidity
-```
-
-This makes it possible to practice both **time-based analysis** and **relationship analysis** within one project.
-
-The project demonstrates how raw environmental observations can be transformed into visual patterns that are easier to explore and communicate.
+- This project is an **educational data-analysis project**.
+- The analysis is based on the dataset loaded by the notebook.
+- The 2020 charts specifically use the filtered `year_data` dataset.
+- The yearly VWAP visualization uses the full dataset.
+- The results and values shown in this README are based on the findings documented in the notebook.
+- This project should not be treated as financial advice or as a recommendation to buy or sell any security.
 
 ---
 
-# 🔮 Future Improvements
+# 🚀 Possible Future Improvements
 
-The current notebook provides a solid foundation for additional analysis.
+The project can be extended further by adding:
 
-Possible extensions include:
+- 📅 Interactive date-range selection
+- 📈 Moving averages such as 20-day and 50-day averages
+- 📊 Daily return calculations
+- 📉 Volatility analysis
+- 📦 Volume trend visualization
+- 🕯️ Candlestick charts
+- 📈 Additional technical indicators
+- 🔍 More detailed monthly and yearly comparisons
+- 📊 Interactive dashboards
+- 🤖 Basic predictive analysis
+- 📌 Automated report generation
 
-## 📅 More Time-Series Analysis
-
-- Daily pollution trends
-- Weekly pollution trends
-- Yearly comparisons
-- Rolling averages
-- Long-term trend analysis
-
-## 🌫️ More Pollutant Analysis
-
-Additional pollution variables could be explored individually through:
-
-- Monthly averages
-- Hourly averages
-- Distribution plots
-- Comparison charts
-
-## 🌡️ Weather Analysis
-
-Future analysis could examine:
-
-- Temperature vs CO
-- Temperature vs NO₂
-- Humidity vs pollutants
-- Absolute humidity vs pollution
-
-## 📊 Additional Visualizations
-
-Possible additions include:
-
-- Histograms
-- Box plots
-- Scatter plots
-- Pair plots
-- Area charts
-- Distribution plots
-- Interactive charts
-
-## 🔗 Advanced Correlation Analysis
-
-The correlation section could be extended with:
-
-- Larger variable selections
-- Scatter plots
-- Regression lines
-- Separate pollutant-weather comparisons
-
-## 🖥️ Interactive Dashboard
-
-The analysis could be converted into an interactive dashboard using tools such as:
-
-```text
-Streamlit
-Plotly
-Dash
-```
-
-A future dashboard could include:
-
-```text
-🌫️ Pollution Selector
-📅 Date Filter
-⏰ Hour Filter
-📊 Dynamic Charts
-🔗 Correlation View
-```
+These additions could turn the current exploratory notebook into a more advanced stock-market analytics project.
 
 ---
 
-# ⚠️ Limitations and Notes
+# 🎓 Project Purpose
 
-- The analysis is based on the data available in `Air_Quality.csv`.
-- Missing rows are removed using `dropna()`.
-- The project focuses on exploratory analysis rather than predictive modeling.
-- The monthly analyses use average values grouped by month.
-- The hourly analyses use average values grouped by hour.
-- The correlation heatmap shows linear association, not causation.
-- The project does not claim that correlation proves a direct cause-and-effect relationship.
-- The current notebook does not implement machine-learning prediction.
-- The exact patterns depend on the dataset supplied with the project.
+This project demonstrates how Python can be used to transform raw stock-market data into meaningful information through:
 
-> 📌 **Important:** This project is intended for educational and analytical purposes. Its visual patterns and observations should be interpreted in the context of the supplied dataset.
+**Data → Cleaning → Exploration → Analysis → Visualization → Insights**
 
----
-
-# 🏆 Project Highlights
-
-### ⭐ Clean EDA Workflow
-
-The notebook follows a logical sequence from loading and cleaning the dataset to visualization and findings.
-
-### ⭐ Time-Based Analysis
-
-Both monthly and hourly patterns are explored.
-
-### ⭐ Pollution Analysis
-
-CO, NOx, and NO₂ are examined through dedicated visualizations.
-
-### ⭐ Weather Analysis
-
-Relative humidity and temperature are analyzed over time.
-
-### ⭐ Correlation Analysis
-
-Pollution and weather variables are compared using a correlation heatmap.
-
-### ⭐ Beginner-Friendly Structure
-
-Each major analysis step is separated and explained inside the notebook using Markdown headings.
-
----
-
-# 🤝 Contributing
-
-If you want to improve this project, you can extend the notebook with additional analysis or visualizations.
-
-A typical workflow is:
-
-```text
-1. Fork the project
-2. Create a new branch
-3. Add your improvement
-4. Test the notebook
-5. Commit your changes
-6. Push the branch
-7. Open a Pull Request
-```
-
-Some useful contributions could include:
-
-- Better visualizations
-- More detailed statistical analysis
-- Interactive dashboards
-- Additional time-based analysis
-- Improved data-cleaning techniques
-- Advanced correlation analysis
-- Machine-learning extensions
+It is especially useful for practicing the fundamentals of **Data Analysis, Pandas, NumPy, Matplotlib, Seaborn, and basic financial-data exploration**.
 
 ---
 
 # 👨‍💻 Author
 
-<div align="center">
+**Ayush Donga**
 
-## **Ayush Donga**
+B.Sc. IT Student | Python & Data Analysis Learner
 
-🎓 **B.Sc. IT Student**
-
-🐍 **Python & Data Analysis Learner**
-
-📊 **Aspiring Data Scientist**
-
-🤖 **AI & Machine Learning Enthusiast**
-
-### Building practical projects while learning Data Science 🚀
-
-</div>
+This project was created as part of practical learning and project-based exploration of Python data analysis.
 
 ---
 
-# 🙏 Acknowledgements
+## ⭐ Project Highlights
 
-This project uses the Python Data Science ecosystem:
-
-- 🐍 Python
-- 🐼 Pandas
-- 🔢 NumPy
-- 📊 Matplotlib
-- 🎨 Seaborn
-- 📓 Jupyter Notebook
-
-These tools make it possible to load, clean, transform, analyze, and visualize structured environmental data efficiently.
-
----
-
-# 📄 License
-
-This project is created for **educational and learning purposes**.
-
-You may study the code, experiment with the notebook, modify the analysis, and extend the project for your own learning.
-
-If you reuse the project as a base for another project, keeping attribution is appreciated.
+```text
+📈 RELIANCE Stock Market Analysis
+│
+├── 🗂️ Data Loading
+├── 🔍 Data Exploration
+├── 🧹 Data Cleaning
+├── 📅 Date & Year Analysis
+├── 📈 Monthly High Analysis
+├── 📉 Monthly Low Analysis
+├── 💹 Open vs Close Analysis
+├── 📊 High vs Low Analysis
+├── 💰 Yearly VWAP Analysis
+├── 🔗 Correlation Analysis
+├── 🔥 Heatmap Visualization
+└── 📝 Key Findings
+```
 
 ---
 
-<div align="center">
+## ⭐ If You Like This Project
 
----
+If you are learning Python or Data Analysis, this project can be used as a starting point for building more advanced financial-data analysis projects.
 
-# 🌍 Air Quality Data Analysis
-
-### 📊 Turning Environmental Data Into Visual Insights
-
-**Load → Clean → Transform → Analyze → Visualize → Understand**
-
----
-
-### 🐍 Made with Python
-
-**Pandas • NumPy • Matplotlib • Seaborn • Jupyter**
-
-### ⭐ Keep Learning • Keep Building • Keep Analyzing 🚀
-
-</div>
+**Made with ❤️ using Python, Pandas, NumPy, Matplotlib & Seaborn.**
