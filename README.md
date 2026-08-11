@@ -1,96 +1,92 @@
 <div align="center">
 
-# 🚢 Titanic Dataset | Data Analysis Project
+# 🌍 World Happiness Data Analysis
 
-### 📊 Exploratory Data Analysis with Python
-
-**Clean 🧹 · Explore 🔎 · Analyze 📈 · Visualize 📊 · Understand 💡**
+### 📊 Exploring Global Happiness with Python
 
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Analysis-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org/)
 [![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0?style=for-the-badge)](https://seaborn.pydata.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 
 <br>
 
-> **An exploratory analysis of passenger survival patterns across gender, class, age, embarkation port, and numerical passenger attributes.**
+**📂 Load → 🔎 Explore → 🧹 Check → 📊 Analyze → 📈 Visualize → 💡 Understand**
 
 </div>
 
 ---
 
-# 📌 Project Overview
+## 📌 Project Overview
 
-The **Titanic Dataset | Data Analysis Project** is an exploratory data analysis project created using **Python, Pandas, NumPy, Matplotlib, and Seaborn**.
+**World Happiness Data Analysis** is an Exploratory Data Analysis (EDA) project created using **Python, Pandas, NumPy, Matplotlib, and Seaborn**.
 
-The notebook follows a structured data-analysis workflow, beginning with dataset loading and inspection and continuing through data-quality checks, descriptive statistics, passenger survival analysis, visualization, and correlation analysis.
+The project analyzes the **2015 World Happiness dataset** to understand how happiness scores vary between countries and regions and how happiness relates to factors such as **economy, family, health, freedom, trust, generosity, and the Dystopia Residual**.
 
-The main purpose of this project is to understand the structure of the Titanic passenger dataset and explore how survival outcomes vary across different passenger characteristics.
+The notebook follows a clean and practical Data Science workflow, beginning with dataset loading and data-quality checks and continuing through country comparisons, regional analysis, happiness classification, visualization, and correlation analysis.
 
-### 🔍 The analysis focuses on:
+### 🔍 Main areas explored
 
-- 👥 Survival by gender
-- 🎟️ Survival by passenger class
-- 🧳 Passenger distribution across classes
-- 🎂 Age distribution by survival status
-- 🍩 Overall survival proportion
-- ⚓ Survival by embarkation port
-- 🔗 Correlations between numerical variables
+- 🏆 Top 10 happiest countries
+- 📉 Bottom 10 happiest countries
+- 🕊️ Freedom vs Happiness Score
+- 🌎 Average happiness by region
+- 😊 Happiness-level classification
+- 🔗 Correlation between numerical indicators
+- 📊 Descriptive statistics
 - 🧹 Missing-value and duplicate checks
 
-> ✨ The project is implemented as a Jupyter Notebook and is suitable for practicing the fundamentals of Data Analysis and Data Visualization.
+> 💡 **Project goal:** Turn a structured global happiness dataset into clear comparisons, visual patterns, and analytical insights using Python.
 
 ---
 
-# 🎯 Project Goals
+# 🎯 Objectives
 
-The notebook is designed to:
+The main objectives of this project are:
 
-- 🧹 Inspect and prepare the Titanic dataset
-- 🔎 Understand the structure and quality of the data
-- 📋 Review the first and last records
-- 🧬 Understand column data types
-- 📊 Generate descriptive statistics
-- ♻️ Check for duplicate records
-- 👥 Analyze survival patterns by gender
-- 🎟️ Compare survival across passenger classes
-- 🎂 Explore age distribution and survival
-- ⚓ Analyze survival based on embarkation port
-- 🔗 Examine relationships between numerical variables
-- 📈 Present findings through easy-to-read visualizations
+- 📂 Load the World Happiness dataset
+- 🔎 Understand the dataset structure and columns
+- 🧹 Check missing values and duplicate records
+- 🧬 Inspect column data types
+- 📐 Generate descriptive statistics
+- 🏆 Identify the top 10 happiest countries
+- 📉 Identify the bottom 10 happiest countries
+- 🕊️ Explore the relationship between Freedom and Happiness Score
+- 🌎 Compare average happiness across regions
+- 😊 Categorize countries into High, Medium, and Low Happiness
+- 🔗 Analyze correlations between numerical variables
+- 📈 Present results through clear and attractive visualizations
+- 💡 Summarize the most important findings from the analysis
 
 ---
 
 # 🗂️ Table of Contents
 
 - [📌 Project Overview](#-project-overview)
-- [🎯 Project Goals](#-project-goals)
+- [🎯 Objectives](#-objectives)
 - [📂 Project Structure](#-project-structure)
 - [🛠️ Technology Stack](#️-technology-stack)
 - [📊 Dataset](#-dataset)
 - [🔄 Analysis Workflow](#-analysis-workflow)
 - [📥 Load the Dataset](#-1-load-the-dataset)
-- [👀 Explore the Dataset](#-2-explore-the-dataset)
-- [🧹 Data Cleaning](#-3-data-cleaning)
-- [🧬 Data Types & Columns](#-4-data-types--columns)
-- [📐 Descriptive Statistics](#-5-descriptive-statistics)
-- [♻️ Duplicate Check](#-6-duplicate-check)
-- [📈 Survival Analysis](#-7-survival-analysis)
-- [👩 Survival by Gender](#-survival-by-gender)
-- [🎟️ Survival by Passenger Class](#-survival-by-passenger-class)
-- [🧳 Passengers per Class](#-total-passengers-per-class)
-- [🎂 Age Distribution](#-age-distribution-by-survival)
-- [🍩 Overall Survival](#-overall-passenger-survival)
-- [⚓ Embarkation Analysis](#-survival-by-embarkation-port)
-- [🔥 Correlation Analysis](#-correlation-analysis)
+- [🔎 Initial Data Exploration](#-2-initial-data-exploration)
+- [🧹 Data Quality Check](#-3-data-quality-check)
+- [📐 Descriptive Statistics](#-4-descriptive-statistics)
+- [🏆 Top 10 Happiest Countries](#-5-top-10-happiest-countries)
+- [📉 Bottom 10 Happiest Countries](#-6-bottom-10-happiest-countries)
+- [🕊️ Freedom vs Happiness](#-7-freedom-vs-happiness)
+- [🌎 Happiness by Region](#-8-happiness-by-region)
+- [😊 Happiness Classification](#-9-happiness-level-classification)
+- [🔗 Correlation Analysis](#-10-correlation-analysis)
 - [🔑 Key Findings](#-key-findings)
 - [📊 Visualization Summary](#-visualization-summary)
-- [🎓 Learning Outcomes](#-learning-outcomes)
+- [🧠 Concepts Practiced](#-concepts-practiced)
 - [▶️ How to Run](#️-how-to-run)
+- [🎓 Learning Outcomes](#-learning-outcomes)
 - [🔮 Future Improvements](#-future-improvements)
-- [⚠️ Notes](#️-notes)
+- [⚠️ Notes & Limitations](#️-notes--limitations)
 - [🤝 Contributing](#-contributing)
 - [👨‍💻 Author](#-author)
 - [📄 License](#-license)
@@ -100,13 +96,13 @@ The notebook is designed to:
 # 📂 Project Structure
 
 ```text
-📦 Titanic-Data-Analysis
+📦 World-Happiness-Data-Analysis
 │
-├── 📓 Titanic.ipynb
+├── 📓 Happiness_dataset.ipynb
 │   └── Complete exploratory data analysis notebook
 │
-├── 📄 titanic_dataset.csv
-│   └── Titanic passenger dataset
+├── 📄 2015.csv
+│   └── World Happiness dataset used in the notebook
 │
 └── 📖 README.md
     └── Project documentation
@@ -116,9 +112,9 @@ The notebook is designed to:
 
 | File | Purpose |
 |---|---|
-| `Titanic.ipynb` | Main Jupyter Notebook containing the complete analysis |
-| `titanic_dataset.csv` | Dataset loaded and analyzed by the notebook |
-| `README.md` | Documentation for the project |
+| `Happiness_dataset.ipynb` | Main Jupyter Notebook containing the complete analysis |
+| `2015.csv` | Dataset loaded by the notebook |
+| `README.md` | Project documentation |
 
 ---
 
@@ -127,11 +123,11 @@ The notebook is designed to:
 | Technology | Purpose |
 |---|---|
 | 🐍 **Python** | Core programming language |
-| 🐼 **Pandas** | Data loading, cleaning, transformation, and analysis |
+| 🐼 **Pandas** | Data loading, grouping, transformation, and analysis |
 | 🔢 **NumPy** | Numerical computing support |
-| 📊 **Matplotlib** | Creating and formatting visualizations |
-| 🎨 **Seaborn** | Statistical plots and data visualization |
-| 📓 **Jupyter Notebook** | Interactive development and analysis |
+| 📊 **Matplotlib** | Creating and formatting charts |
+| 🎨 **Seaborn** | Statistical visualization |
+| 📓 **Jupyter Notebook** | Interactive analysis environment |
 
 ---
 
@@ -140,633 +136,480 @@ The notebook is designed to:
 The notebook loads the dataset with:
 
 ```python
-data = pd.read_csv("titanic_dataset.csv")
+df = pd.read_csv("2015.csv")
 ```
 
-The dataset contains:
+The dataset contains **158 countries** and **12 columns**.
 
-```text
-👥 Records  : 891
-📋 Columns  : 12
-```
-
-The notebook works with passenger information and survival-related attributes.
-
-### Important Variables Used
+### 📋 Dataset Columns
 
 | Column | Description |
 |---|---|
-| `Survived` | Survival outcome |
-| `Sex` | Passenger gender |
-| `Pclass` | Passenger class |
-| `Age` | Passenger age |
-| `SibSp` | Number of siblings/spouses aboard |
-| `Parch` | Number of parents/children aboard |
-| `Fare` | Passenger fare |
-| `Embarked` | Port of embarkation |
+| `Country` | Country name |
+| `Region` | Geographical region |
+| `Happiness Rank` | Ranking based on Happiness Score |
+| `Happiness Score` | Overall happiness score |
+| `Standard Error` | Standard error associated with the happiness score |
+| `Economy (GDP per Capita)` | Economic contribution indicator |
+| `Family` | Family/social support indicator |
+| `Health (Life Expectancy)` | Health and life-expectancy indicator |
+| `Freedom` | Freedom to make life choices |
+| `Trust (Government Corruption)` | Trust/corruption-related indicator |
+| `Generosity` | Generosity indicator |
+| `Dystopia Residual` | Dystopia Residual component |
 
-The notebook also displays the complete list of columns using:
+### 📌 Dataset Summary
 
-```python
-print(list(data.columns))
+```text
+🌍 Countries     : 158
+📋 Columns       : 12
+📊 Numeric Data  : 10 columns
+🔤 Text Data     : Country, Region
 ```
+
+The notebook confirms that all 158 records are non-null across the 12 columns.
 
 ---
 
 # 🔄 Analysis Workflow
 
-The project follows a simple and practical EDA pipeline:
+The complete project follows this workflow:
 
 ```text
-                 📄 Titanic Dataset
-                         │
-                         ▼
-                 📥 Load CSV File
-                         │
-                         ▼
-                  👀 Explore Data
-                         │
-                         ▼
-                🧹 Check Missing Data
-                         │
-                         ▼
-                🛠️ Handle Age Values
-                         │
-                         ▼
-               🧬 Inspect Data Types
-                         │
-                         ▼
-                📐 Descriptive Stats
-                         │
-                         ▼
-                ♻️ Duplicate Check
-                         │
-                         ▼
-              👥 Survival Analysis
-                         │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-       👩 Gender       🎟️ Class       🎂 Age
-          │              │              │
-          └──────────────┼──────────────┘
-                         ▼
-                  ⚓ Embarkation
-                         │
-                         ▼
-                  🔗 Correlation
-                         │
-                         ▼
-                   🔑 Findings
+                 📄 2015.csv
+                     │
+                     ▼
+              📥 Load Dataset
+                     │
+                     ▼
+              🔎 Explore Data
+                     │
+                     ▼
+             🧹 Quality Checks
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+      Missing     Duplicate   Data Types
+       Values       Check       Check
+          │          │          │
+          └──────────┼──────────┘
+                     ▼
+              📐 Statistics
+                     │
+                     ▼
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+   🏆 Top 10      📉 Bottom 10   🕊️ Freedom
+        │            │            │
+        └────────────┼────────────┘
+                     ▼
+               🌎 Regions
+                     │
+                     ▼
+               😊 Classification
+                     │
+                     ▼
+               🔗 Correlation
+                     │
+                     ▼
+                🔑 Findings
 ```
 
 ---
 
 # 📥 1. Load the Dataset
 
-The first step loads the Titanic CSV dataset into a Pandas DataFrame:
+The project starts by importing the required libraries:
 
 ```python
-data = pd.read_csv("titanic_dataset.csv")
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 ```
 
-The DataFrame is then displayed to provide an initial view of the dataset.
+The CSV file is then loaded:
+
+```python
+df = pd.read_csv("2015.csv")
+```
+
+The DataFrame is displayed to inspect the initial dataset.
 
 ---
 
-# 👀 2. Explore the Dataset
+# 🔎 2. Initial Data Exploration
 
-## 🔝 First 5 Records
+The notebook explores the dataset using several basic Pandas operations.
 
-The notebook uses:
-
-```python
-data.head(5)
-```
-
-This gives a quick preview of the first five passenger records.
-
-## 🔚 Last 5 Records
-
-The final five records are displayed with:
+### First 5 Records
 
 ```python
-data.tail(5)
+df.head(5)
 ```
 
-These previews help verify that the dataset has loaded correctly and provide a first look at its structure.
+### Column Names
+
+```python
+print(list(df.columns))
+```
+
+These operations provide an initial understanding of the dataset structure and available variables.
 
 ---
 
-# 🧹 3. Data Cleaning
+# 🧹 3. Data Quality Check
 
-The notebook checks missing values using:
-
-```python
-data.isna().sum()
-```
-
-This identifies how many missing values are present in each column.
-
-### Why check missing values?
-
-Missing data can affect:
-
-- 📊 Statistical calculations
-- 📈 Visualizations
-- 🔎 Comparisons
-- 🧮 Numerical analysis
-
----
-
-## 🛠️ Handling Missing Age Values
-
-The notebook attempts to handle missing values in the `Age` column using the median:
+The notebook checks for missing values:
 
 ```python
-data["Age"] = data["Age"].fillna(
-    data["Age"].median(),
-    inplace=True
-)
+df.isna().sum()
 ```
 
-The intended approach is median-based filling.
-
-### Why Median?
-
-The median is less influenced by unusually high or low values than the mean, making it a common choice when filling missing age observations.
-
-The notebook then checks the `Age` column again:
-
-```python
-data["Age"].isna().sum()
-```
-
-> ⚠️ **Implementation note:** The notebook code uses `inplace=True` inside an assignment. In Pandas, this pattern can result in assigning `None` back to the column. This README documents the code as it appears in the notebook rather than silently changing the implementation.
-
----
-
-# 🧬 4. Data Types & Columns
-
-The notebook checks the data types of all columns:
-
-```python
-data.dtypes
-```
-
-It also displays the complete list of columns:
-
-```python
-print(list(data.columns))
-```
-
-Understanding data types is important because different variables require different types of analysis.
-
-For example:
+The output shows:
 
 ```text
-🔢 Numerical → Age, Fare, Pclass, SibSp, Parch
-🔤 Categorical → Sex, Embarked
-🎯 Target → Survived
+Missing values = 0
 ```
 
----
+for every column.
 
-# ℹ️ Dataset Information
-
-The notebook uses:
-
-```python
-data.info()
-```
-
-This provides a compact overview of:
-
-- 📌 Number of records
-- 📋 Number of columns
-- 🔢 Data types
-- ✅ Non-null values
-- 💾 Memory usage
-
-This is one of the most useful first checks when beginning an EDA project.
-
----
-
-# 📐 5. Descriptive Statistics
-
-The notebook generates statistical summaries using:
-
-```python
-data.describe()
-```
-
-This provides information such as:
-
-- Count
-- Mean
-- Standard deviation
-- Minimum
-- 25th percentile
-- Median
-- 75th percentile
-- Maximum
-
-This helps understand the distribution of numerical passenger attributes.
-
----
-
-# ♻️ 6. Duplicate Check
+### ♻️ Duplicate Check
 
 Duplicate records are checked using:
 
 ```python
-data.duplicated().sum()
+df.duplicated().sum()
 ```
 
-The notebook reports:
+The result is:
 
 ```text
-Duplicate Records = 0
+Duplicate records = 0
 ```
 
-This means the duplicate check did not identify repeated complete rows in the dataset.
+### 🧬 Data Types
 
----
+The notebook checks:
 
-# 📈 7. Survival Analysis
+```python
+df.dtypes
+```
 
-The main analytical focus of the project is understanding passenger survival.
+The dataset contains:
 
-The target variable is:
+- `str` columns for `Country` and `Region`
+- `int64` for `Happiness Rank`
+- `float64` for the remaining numerical indicators
+
+### ℹ️ Dataset Information
+
+```python
+df.info()
+```
+
+This confirms:
 
 ```text
-Survived
-```
-
-where the notebook interprets the categories as:
-
-```text
-0 → Did not survive
-1 → Survived
-```
-
-The project examines survival from several perspectives:
-
-```text
-👩 Gender
-🎟️ Passenger Class
-🎂 Age
-⚓ Embarkation Port
-🍩 Overall Survival
+158 entries
+12 columns
+All columns have 158 non-null values
 ```
 
 ---
 
-# 👩 Survival by Gender
+# 📐 4. Descriptive Statistics
 
-The notebook creates a Seaborn count plot:
-
-```python
-plt.figure(figsize=(10,8))
-
-sns.countplot(
-    data=data,
-    x="Sex",
-    hue="Survived",
-    palette="viridis"
-)
-
-plt.title(
-    "Survival by Gender",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel(
-    "Gender",
-    fontsize=11,
-    fontweight="bold"
-)
-
-plt.ylabel(
-    "Count",
-    fontsize=11,
-    fontweight="bold"
-)
-
-plt.show()
-```
-
-### 📊 What this chart shows
-
-The chart compares the number of survivors and non-survivors for each gender category.
-
-### 🔑 Main observation
-
-The notebook finds that:
-
-> 👩 **Female passengers had a much higher survival count than male passengers** in the gender comparison.
-
-This visualization makes the difference between survival outcomes across gender categories easy to observe.
-
----
-
-# 🎟️ Survival by Passenger Class
-
-The project compares survival across:
-
-```text
-1st Class
-2nd Class
-3rd Class
-```
-
-The visualization uses:
+The notebook generates descriptive statistics using:
 
 ```python
-sns.countplot(
-    data=data,
-    x="Pclass",
-    hue="Survived"
-)
+df.describe()
 ```
 
-### 📊 What this chart shows
+### 📊 Happiness Score Statistics
 
-The chart compares survivors and non-survivors within each passenger class.
-
-### 🔑 Main observation
-
-According to the notebook:
-
-> 🎟️ **1st-class passengers showed the strongest survival outcome relative to their class size**, while 3rd class had substantially more non-survivors.
-
-This demonstrates why passenger class is an important variable to examine when studying survival patterns.
-
----
-
-# 🧳 Total Passengers per Class
-
-The notebook calculates passenger counts by class:
-
-```python
-count_class = (
-    data.groupby("Pclass")["Sex"].count()
-)
-```
-
-A bar chart is then created.
-
-### 📊 Purpose
-
-This visualization shows how many passengers belonged to each class.
-
-It provides useful context for interpreting the survival-by-class chart because survival counts can be influenced by the number of passengers in each class.
-
----
-
-# 🎂 Age Distribution by Survival
-
-The project examines passenger age using a histogram:
-
-```python
-plt.figure(figsize=(10,7))
-
-sns.histplot(
-    data=data,
-    x="Age",
-    hue="Survived",
-    bins=20,
-    kde=True
-)
-
-plt.title(
-    "Age Distribution by Survival",
-    fontsize=18,
-    fontweight="bold"
-)
-
-plt.xlabel(
-    "Age",
-    fontsize=11,
-    fontweight="bold"
-)
-
-plt.ylabel(
-    "Count",
-    fontsize=11,
-    fontweight="bold"
-)
-
-plt.show()
-```
-
-### 🔎 What this chart explores
-
-- Passenger age distribution
-- Differences in age distributions between survival groups
-- Concentration of passengers across different age ranges
-- How survival categories are distributed across age
-
-The notebook notes that survival outcomes varied across passenger ages.
-
----
-
-# 🍩 Overall Passenger Survival
-
-The overall number of passengers in each survival category is calculated with:
-
-```python
-survival_count = data["Survived"].value_counts()
-```
-
-The notebook then creates a donut-style chart.
-
-### Visualization
-
-```python
-plt.pie(
-    survival_count,
-    labels=survival_count.index,
-    autopct="%1.1f%%",
-    startangle=90
-)
-```
-
-A white circle is added to the center to create the donut appearance.
-
-### 📊 Main Result
-
-The notebook reports:
-
-| Survival Status | Passengers |
+| Statistic | Value |
 |---|---:|
-| 🟢 Survived | **302** |
-| 🔴 Did not survive | **589** |
-| 👥 Total | **891** |
+| Count | 158 |
+| Mean | 5.375734 |
+| Standard Deviation | 1.145010 |
+| Minimum | 2.839000 |
+| 25th Percentile | 4.526000 |
+| Median | 5.232500 |
+| 75th Percentile | 6.243750 |
+| Maximum | 7.587000 |
 
-This corresponds approximately to:
-
-```text
-🟢 Survived       → 33.9%
-🔴 Did not survive → 66.1%
-```
-
-The chart provides a quick overall view of the survival distribution.
+This gives a statistical overview of the distribution of Happiness Scores across the 158 countries.
 
 ---
 
-# ⚓ Survival by Embarkation Port
+# 🏆 5. Top 10 Happiest Countries
 
-The notebook analyzes survival based on the passenger's embarkation port.
-
-The chart compares:
-
-```text
-C → Cherbourg
-Q → Queenstown
-S → Southampton
-```
-
-The visualization uses:
+The notebook calculates the top 10 countries using:
 
 ```python
-sns.countplot(
-    data=data,
-    x="Embarked",
-    hue="Survived"
+top_10 = (
+    df.groupby("Country")["Happiness Score"]
+    .max()
+    .sort_values(ascending=False)
+    .head(10)
 )
 ```
 
-### 🔑 Main observation
+### 🥇 Top 10 Results
 
-The notebook reports:
+| Rank | Country | Happiness Score |
+|---:|---|---:|
+| 🥇 1 | Switzerland | **7.587** |
+| 🥈 2 | Iceland | **7.561** |
+| 🥉 3 | Denmark | **7.527** |
+| 4 | Norway | **7.522** |
+| 5 | Canada | **7.427** |
+| 6 | Finland | **7.406** |
+| 7 | Netherlands | **7.378** |
+| 8 | Sweden | **7.364** |
+| 9 | New Zealand | **7.286** |
+| 10 | Australia | **7.284** |
 
-> ⚓ **Southampton (S) was the largest embarkation group in the dataset, and its chart also shows a large number of non-survivors.**
+### 📊 Visualization
 
-This analysis demonstrates how a categorical variable can be compared with the survival target.
+A Seaborn bar chart is used to display the top 10 countries.
+
+```python
+sns.barplot(top_10, palette="viridis")
+```
+
+The values are also written above the bars for easier comparison.
 
 ---
 
-# 🔗 Correlation Analysis
+# 📉 6. Bottom 10 Happiest Countries
 
-The project selects the following numerical variables:
+The notebook identifies the bottom 10 countries using:
 
 ```python
-num_col = [
-    "Age",
-    "Pclass",
-    "SibSp",
-    "Parch",
-    "Fare"
-]
+bottom_10 = (
+    df.groupby("Country")["Happiness Score"]
+    .min()
+    .sort_values()
+    .head(10)
+)
 ```
 
-These variables represent:
+### 📉 Bottom 10 Results
 
-| Variable | Meaning |
-|---|---|
-| `Age` | Passenger age |
-| `Pclass` | Passenger class |
-| `SibSp` | Siblings/spouses aboard |
-| `Parch` | Parents/children aboard |
-| `Fare` | Passenger fare |
+| Rank | Country | Happiness Score |
+|---:|---|---:|
+| 1 | Togo | **2.839** |
+| 2 | Burundi | **2.905** |
+| 3 | Syria | **3.006** |
+| 4 | Benin | **3.340** |
+| 5 | Rwanda | **3.465** |
+| 6 | Afghanistan | **3.575** |
+| 7 | Burkina Faso | **3.587** |
+| 8 | Ivory Coast | **3.655** |
+| 9 | Guinea | **3.656** |
+| 10 | Chad | **3.667** |
+
+### 📊 Visualization
+
+A horizontal Seaborn bar chart is used to make the country comparison easy to read.
+
+---
+
+# 🕊️ 7. Freedom vs Happiness
+
+The notebook explores the relationship between:
+
+```text
+Freedom
+      ↕
+Happiness Score
+```
+
+using a scatter plot:
+
+```python
+sns.scatterplot(
+    data=df,
+    x="Freedom",
+    y="Happiness Score",
+    s=80
+)
+```
+
+### 🔍 What the scatter plot shows
+
+Each point represents a country.
+
+The visualization allows us to observe whether countries with higher Freedom values tend to have different Happiness Scores.
+
+### 💡 Main Observation
+
+The notebook reports an **observable relationship between Freedom and Happiness Score**.
+
+The correlation analysis later quantifies this relationship.
+
+---
+
+# 🌎 8. Happiness by Region
+
+The notebook calculates the average Happiness Score for each region:
+
+```python
+region_happiness = (
+    df.groupby("Region")["Happiness Score"]
+    .mean()
+    .sort_values(ascending=False)
+)
+```
+
+### 🌍 Regional Results
+
+| Region | Average Happiness Score |
+|---|---:|
+| 🇦🇺 Australia and New Zealand | **7.285** |
+| 🇺🇸 North America | **7.273** |
+| 🌍 Western Europe | **6.689619** |
+| 🌎 Latin America and Caribbean | **6.144682** |
+| 🌏 Eastern Asia | **5.626167** |
+| 🌍 Middle East and Northern Africa | **5.406900** |
+| 🌍 Central and Eastern Europe | **5.332931** |
+| 🌏 Southeastern Asia | **5.317444** |
+| 🌏 Southern Asia | **4.580857** |
+| 🌍 Sub-Saharan Africa | **4.202800** |
+
+### 📊 Visualization
+
+A horizontal bar chart is used to compare average Happiness Scores across regions.
+
+---
+
+# 😊 9. Happiness Level Classification
+
+The project creates a new categorical feature called:
+
+```text
+Happiness Level
+```
+
+Countries are classified using the following rules:
+
+| Happiness Score | Category |
+|---:|---|
+| `>= 6` | 🟢 High Happiness |
+| `>= 4 and < 6` | 🟡 Medium Happiness |
+| `< 4` | 🔴 Low Happiness |
+
+The classification function is:
+
+```python
+def happiness_level(score):
+    if score >= 6:
+        return "High Happiness"
+    elif score >= 4:
+        return "Medium Happiness"
+    else:
+        return "Low Happiness"
+```
+
+The new column is created using:
+
+```python
+df["Happiness Level"] = (
+    df["Happiness Score"].apply(happiness_level)
+)
+```
+
+---
+
+## 📊 Happiness Classification Results
+
+The notebook reports:
+
+| Happiness Level | Countries |
+|---|---:|
+| 🟡 Medium Happiness | **93** |
+| 🟢 High Happiness | **44** |
+| 🔴 Low Happiness | **21** |
+| **Total** | **158** |
+
+### 🍩 Visualization
+
+A donut-style pie chart is used to show the proportion of countries in each happiness category.
+
+```text
+🟡 Medium Happiness → 93
+🟢 High Happiness   → 44
+🔴 Low Happiness    → 21
+```
+
+This provides a quick overview of how the 158 countries are distributed across the three defined categories.
+
+---
+
+# 🔗 10. Correlation Analysis
+
+The notebook calculates a correlation matrix for all numerical columns:
+
+```python
+corr = df.select_dtypes(include="number").corr()
+```
+
+The numerical variables include:
+
+```text
+Happiness Rank
+Happiness Score
+Standard Error
+Economy (GDP per Capita)
+Family
+Health (Life Expectancy)
+Freedom
+Trust (Government Corruption)
+Generosity
+Dystopia Residual
+```
 
 ---
 
 # 🔥 Correlation Heatmap
 
-The correlation matrix is calculated using:
-
-```python
-data[num_col].corr()
-```
-
-The notebook visualizes the result using:
+The correlation matrix is visualized using:
 
 ```python
 sns.heatmap(
-    data[num_col].corr(),
+    corr,
     annot=True,
-    cmap="Purples",
-    fmt=".2f"
+    cmap="Greens"
 )
 ```
 
-### 📊 What the heatmap shows
+### 📊 Important Relationships with Happiness Score
 
-The heatmap helps examine relationships among:
+The notebook's correlation matrix shows:
 
-```text
-Age
-Pclass
-SibSp
-Parch
-Fare
-```
+| Variable | Correlation with Happiness Score |
+|---|---:|
+| 💰 Economy (GDP per Capita) | **0.780966** |
+| 👨‍👩‍👧 Family | **0.740605** |
+| ❤️ Health (Life Expectancy) | **0.724200** |
+| 🕊️ Freedom | **0.568211** |
+| 🌫️ Dystopia Residual | **0.530474** |
+| 🏛️ Trust (Government Corruption) | **0.395199** |
+| 🎁 Generosity | **0.180319** |
+| 📏 Standard Error | **-0.177254** |
 
-### 📌 How to read correlation
+### 💡 Interpretation
 
-| Correlation | General Interpretation |
-|---:|---|
-| `+1` | Strong positive linear relationship |
-| `0` | Little or no linear relationship |
-| `-1` | Strong negative linear relationship |
+Within this dataset, the strongest positive correlations with Happiness Score are observed for:
 
-> ⚠️ **Correlation does not prove causation.** It only describes the strength and direction of a linear relationship between variables.
+1. 💰 Economy
+2. 👨‍👩‍👧 Family
+3. ❤️ Health
+4. 🕊️ Freedom
 
----
-
-# 🔑 Key Findings
-
-The notebook summarizes the following observations:
-
-### 👥 Dataset
-
-- **891 passenger records**
-- **12 columns**
-- **0 duplicate records** reported by the notebook
-
-### 🧹 Data Quality
-
-- Missing values were checked.
-- `Age` was identified as requiring handling.
-- The notebook attempts median-based handling for missing age values.
-
-### 🍩 Overall Survival
-
-```text
-🟢 Survived       : 302
-🔴 Did not survive: 589
-👥 Total          : 891
-```
-
-### 👩 Gender
-
-Female passengers had a much higher survival count than male passengers in the gender comparison.
-
-### 🎟️ Passenger Class
-
-1st-class passengers showed the strongest survival outcome relative to their class size, while 3rd class had substantially more non-survivors.
-
-### ⚓ Embarkation
-
-Southampton (`S`) was the largest embarkation group and also showed a large number of non-survivors.
-
-### 🎂 Age
-
-The age-distribution visualization shows differences in survival outcomes across passenger ages.
-
-### 🔗 Numerical Relationships
-
-The correlation heatmap provides a visual summary of relationships among:
-
-```text
-Age
-Pclass
-SibSp
-Parch
-Fare
-```
+> ⚠️ **Correlation does not prove causation.** These values describe statistical relationships in the dataset and should not be interpreted as proof that one factor directly causes happiness.
 
 ---
 
@@ -774,120 +617,165 @@ Fare
 
 | # | Visualization | Purpose |
 |---:|---|---|
-| 1️⃣ | 👩 Survival by Gender | Compare survival across gender |
-| 2️⃣ | 🎟️ Survival by Passenger Class | Compare survival across classes |
-| 3️⃣ | 🧳 Total Passengers per Class | Show passenger distribution by class |
-| 4️⃣ | 🎂 Age Distribution by Survival | Explore age distribution across survival groups |
-| 5️⃣ | 🍩 Overall Passenger Survival | Show overall survival proportions |
-| 6️⃣ | ⚓ Survival by Embarkation Port | Compare survival across ports |
-| 7️⃣ | 🔥 Correlation Heatmap | Examine numerical relationships |
+| 1️⃣ | 🏆 Top 10 Happiest Countries | Compare highest Happiness Scores |
+| 2️⃣ | 📉 Bottom 10 Happiest Countries | Compare lowest Happiness Scores |
+| 3️⃣ | 🕊️ Freedom vs Happiness | Explore the relationship between Freedom and Happiness |
+| 4️⃣ | 🌎 Happiness by Region | Compare regional average Happiness Scores |
+| 5️⃣ | 🍩 Happiness Level | Show High/Medium/Low classification |
+| 6️⃣ | 🔥 Correlation Heatmap | Analyze relationships among numerical variables |
 
 ---
 
-# 🧠 Analysis Concepts Demonstrated
+# 🔑 Key Findings
+
+## 🏆 Country-Level Findings
+
+- 🥇 **Switzerland** has the highest Happiness Score at **7.587**.
+- 🥈 **Iceland** ranks second with **7.561**.
+- 🥉 **Denmark** ranks third with **7.527**.
+- 📉 **Togo** has the lowest Happiness Score at **2.839**.
+- Happiness Scores vary substantially across the countries included in the dataset.
+
+---
+
+## 🌎 Regional Findings
+
+- 🇦🇺 **Australia and New Zealand** have the highest regional average at **7.285**.
+- 🇺🇸 **North America** follows with **7.273**.
+- 🌍 **Western Europe** has an average of approximately **6.69**.
+- 🌍 **Sub-Saharan Africa** has the lowest regional average in this analysis at approximately **4.20**.
+
+---
+
+## 😊 Happiness Classification
+
+Out of 158 countries:
+
+```text
+🟡 Medium Happiness → 93
+🟢 High Happiness   → 44
+🔴 Low Happiness    → 21
+```
+
+The largest group is therefore **Medium Happiness** under the classification rules used in the notebook.
+
+---
+
+## 🔗 Correlation Findings
+
+The strongest positive relationships with Happiness Score in the notebook are:
+
+```text
+💰 Economy       → 0.780966
+👨‍👩‍👧 Family      → 0.740605
+❤️ Health        → 0.724200
+🕊️ Freedom       → 0.568211
+```
+
+These relationships provide useful analytical evidence for comparing economic, social, health, and freedom-related indicators with overall Happiness Score.
+
+---
+
+# 🧠 Concepts Practiced
 
 ## 🐍 Python
 
 - Importing libraries
-- Working with variables
-- Basic data-analysis workflow
+- Functions
+- Conditional statements
+- Applying custom functions to DataFrame columns
 
 ## 🐼 Pandas
 
 - `read_csv()`
 - DataFrames
 - `head()`
-- `tail()`
-- `isna()`
-- `fillna()`
-- `dtypes`
 - `columns`
+- `isna()`
+- `duplicated()`
+- `dtypes`
 - `info()`
 - `describe()`
-- `duplicated()`
 - `groupby()`
+- `sort_values()`
+- `head()`
 - `value_counts()`
+- `apply()`
+- `select_dtypes()`
+- `corr()`
 
 ## 🔢 NumPy
 
-NumPy is imported as part of the project's numerical Data Science environment.
+NumPy is included as part of the numerical Data Science toolkit used in the project.
 
 ## 📊 Matplotlib
 
-The project uses Matplotlib for:
-
-- Figure creation
-- Chart titles
+- Figure sizing
+- Titles
 - Axis labels
-- Plot formatting
-- Pie/donut visualization
+- Pie charts
+- Chart formatting
 
 ## 🎨 Seaborn
 
-Seaborn is used for:
-
-- Count plots
 - Bar plots
-- Histograms
-- Correlation heatmaps
+- Scatter plots
+- Heatmaps
+- Statistical visualization
 
 ## 📈 Exploratory Data Analysis
-
-The project demonstrates:
 
 ```text
 Data Loading
      ↓
-Data Cleaning
+Data Quality
      ↓
-Data Exploration
+Descriptive Statistics
      ↓
-Statistical Summary
+Country Comparison
      ↓
-Categorical Analysis
+Regional Analysis
      ↓
-Numerical Analysis
+Classification
+     ↓
+Correlation
      ↓
 Visualization
      ↓
-Interpretation
+Insights
 ```
 
 ---
 
 # 💡 Why This Project Is Useful
 
-The Titanic dataset is a practical way to learn the fundamentals of exploratory data analysis because it contains both **numerical** and **categorical** passenger information.
-
-The project demonstrates how raw passenger records can be transformed into useful visual insights.
-
-For example:
+The World Happiness dataset is a useful EDA dataset because it combines:
 
 ```text
-Raw Data
-   ↓
-Passenger Attributes
-   ↓
-Survival Categories
-   ↓
-Grouped Analysis
-   ↓
-Charts
-   ↓
-Insights
+🌍 Country
+🌎 Region
+📊 Happiness Score
+💰 Economy
+👨‍👩‍👧 Family
+❤️ Health
+🕊️ Freedom
+🏛️ Trust
+🎁 Generosity
 ```
 
-This makes the project useful for practicing the basic workflow used in many real-world Data Science projects.
+This allows a beginner Data Analyst to practice both **categorical analysis** and **numerical analysis** in one project.
+
+Instead of only calculating statistics, the project converts those statistics into visual comparisons and interpretable findings.
 
 ---
 
-# ▶️ How to Run the Project
+# ▶️ How to Run
 
 ## 1️⃣ Install Python
 
-Install Python 3.x on your computer.
+Install Python 3.x.
 
-Check the installed version:
+Check your version:
 
 ```bash
 python --version
@@ -897,48 +785,42 @@ python --version
 
 ## 2️⃣ Install Required Libraries
 
-Run:
-
 ```bash
 pip install numpy pandas matplotlib seaborn jupyter
 ```
 
 ---
 
-## 3️⃣ Keep the Dataset in the Project Folder
+## 3️⃣ Keep the Files Together
 
-The notebook expects:
-
-```text
-titanic_dataset.csv
-```
-
-Keep it in the same working directory as:
+Your project folder should contain:
 
 ```text
-Titanic.ipynb
+Happiness_dataset.ipynb
+2015.csv
+README.md
 ```
 
-The notebook loads it with:
+The notebook loads:
 
 ```python
-pd.read_csv("titanic_dataset.csv")
+pd.read_csv("2015.csv")
 ```
+
+Therefore, the CSV should normally be in the notebook's working directory.
 
 ---
 
 ## 4️⃣ Start Jupyter Notebook
 
-Run:
-
 ```bash
 jupyter notebook
 ```
 
-Open:
+Then open:
 
 ```text
-Titanic.ipynb
+Happiness_dataset.ipynb
 ```
 
 ---
@@ -951,25 +833,23 @@ Run the cells from top to bottom.
 
 ```text
 1. 📚 Import libraries
-2. 📥 Load dataset
-3. 👀 Preview first records
-4. 🔚 Preview last records
+2. 📂 Load dataset
+3. 🔎 Explore first records
+4. 📋 Inspect columns
 5. 🧹 Check missing values
-6. 🛠️ Handle Age values
+6. ♻️ Check duplicates
 7. 🧬 Check data types
-8. 🗂️ Review columns
-9. ℹ️ Check dataset information
-10. 📐 Generate descriptive statistics
-11. ♻️ Check duplicates
-12. 👩 Analyze gender survival
-13. 🎟️ Analyze passenger class
-14. 🧳 Count passengers by class
-15. 🎂 Analyze age distribution
-16. 🍩 Analyze overall survival
-17. ⚓ Analyze embarkation
-18. 🔗 Select numerical variables
-19. 🔥 Generate correlation heatmap
-20. 🔑 Review findings
+8. ℹ️ Inspect DataFrame information
+9. 📐 Generate descriptive statistics
+10. 🏆 Analyze top 10 countries
+11. 📉 Analyze bottom 10 countries
+12. 🕊️ Analyze Freedom vs Happiness
+13. 🌎 Analyze happiness by region
+14. 😊 Create happiness categories
+15. 🍩 Visualize happiness levels
+16. 🔗 Calculate correlations
+17. 🔥 Generate correlation heatmap
+18. 🔑 Review findings
 ```
 
 ---
@@ -977,36 +857,39 @@ Run the cells from top to bottom.
 # 📌 Expected Project Flow
 
 ```text
-             🚢 TITANIC DATA ANALYSIS
+                 🌍 WORLD HAPPINESS
                        │
                        ▼
-                📥 Load Dataset
+                 📥 Load 2015.csv
                        │
                        ▼
-                 🔎 Explore Data
+                  🔎 Explore
                        │
                        ▼
-                 🧹 Clean Data
+                 🧹 Validate
                        │
                        ▼
-              📊 Understand Dataset
+              📐 Statistics
                        │
-             ┌─────────┼─────────┐
-             ▼         ▼         ▼
-           👩 Sex    🎟️ Class   🎂 Age
-             │         │         │
-             └─────────┼─────────┘
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+       🏆 Top 10    📉 Bottom 10   🕊️ Freedom
+          │            │            │
+          └────────────┼────────────┘
                        ▼
-                   ⚓ Port
-                       │
-                       ▼
-                 🍩 Survival
+                  🌎 Regions
                        │
                        ▼
-                🔥 Correlation
+                😊 Classification
                        │
                        ▼
-                 🔑 Findings
+                 🔗 Correlation
+                       │
+                       ▼
+                  📊 Charts
+                       │
+                       ▼
+                  💡 Insights
 ```
 
 ---
@@ -1015,106 +898,89 @@ Run the cells from top to bottom.
 
 After completing this project, you will have practical experience with:
 
-### 🐼 Pandas
+### 🐼 Data Analysis
 
-- Loading datasets
-- Inspecting DataFrames
-- Detecting missing values
-- Working with columns
-- Grouping records
-- Counting categories
-- Generating summaries
+- Loading CSV datasets
+- Exploring DataFrames
+- Checking data quality
+- Generating descriptive statistics
+- Grouping and aggregating records
 
 ### 📊 Visualization
 
-- Count plots
-- Bar plots
-- Histograms
-- Pie/donut charts
+- Bar charts
+- Horizontal bar charts
+- Scatter plots
+- Donut/pie charts
 - Correlation heatmaps
 
-### 🧹 Data Cleaning
+### 🧠 Analytical Thinking
 
-- Missing-value detection
-- Missing-value handling
-- Duplicate checking
-- Dataset validation
+- Ranking countries
+- Comparing regions
+- Creating custom categories
+- Identifying relationships
+- Interpreting correlation values
+- Communicating findings
 
-### 🔗 Statistical Analysis
+### 🐍 Python Skills
 
-- Descriptive statistics
-- Correlation matrices
-- Numerical variable comparison
-
-### 🧠 Data Interpretation
-
-- Comparing categories
-- Identifying patterns
-- Summarizing observations
-- Turning charts into analytical findings
+- Writing functions
+- Using `if/elif/else`
+- Applying functions to DataFrame columns
+- Combining Pandas operations
+- Building a complete analysis workflow
 
 ---
 
 # 🔮 Future Improvements
 
-The current notebook can be extended into a more advanced Titanic analysis project.
+The current project can be expanded into a more advanced Data Science project.
 
-## 📊 More Survival Analysis
+## 📊 More Visualizations
 
 Add:
 
-- Survival rate instead of only survival count
-- Survival by age group
-- Survival by fare group
-- Survival by family size
-- Survival by title/name category
+- Distribution plots
+- Box plots
+- Pair plots
+- Country-level comparison charts
+- Regional distribution charts
 
-## 👨‍👩‍👧 Family Analysis
+## 🗺️ Geographic Analysis
 
-Create a new feature such as:
+Create a world map showing Happiness Scores by country.
+
+Possible tools:
 
 ```text
-Family Size = SibSp + Parch + 1
+Plotly
+GeoPandas
+Folium
 ```
 
-Then analyze survival based on family size.
-
-## 💰 Fare Analysis
+## 📈 Advanced Statistical Analysis
 
 Explore:
 
-- Average fare by class
-- Fare distribution
-- Fare vs survival
-- Fare vs passenger class
-
-## 🎂 Age Groups
-
-Create categories such as:
-
-```text
-Child
-Teenager
-Adult
-Senior
-```
-
-Then compare survival rates between groups.
+- Regression analysis
+- Statistical significance
+- Multiple-variable relationships
+- Outlier detection
 
 ## 🤖 Machine Learning
 
-The cleaned dataset could be used as a foundation for:
+Use the dataset to experiment with:
 
-- Logistic Regression
-- Decision Trees
+- Linear Regression
 - Random Forest
-- K-Nearest Neighbors
-- Model evaluation
-- Survival prediction
+- Decision Trees
+- Feature importance
+- Happiness-score prediction
 
 ## 🖥️ Interactive Dashboard
 
-The analysis could be converted into an interactive dashboard using:
+Convert the notebook into a dashboard using:
 
 ```text
 Streamlit
@@ -1122,28 +988,31 @@ Plotly
 Dash
 ```
 
-Possible filters:
+Possible controls:
 
 ```text
-🎟️ Passenger Class
-👩 Gender
-⚓ Embarkation Port
-🎂 Age Range
-💰 Fare Range
+🌎 Region Filter
+🏆 Happiness Rank
+📊 Happiness Score
+💰 Economy
+🕊️ Freedom
+❤️ Health
 ```
 
 ---
 
-# ⚠️ Notes
+# ⚠️ Notes & Limitations
 
-- This project is an **educational exploratory data analysis project**.
-- The analysis is based on the supplied `titanic_dataset.csv`.
-- The notebook reports **891 records and 12 columns**.
-- The duplicate check reports **0 duplicate records**.
-- The notebook checks missing values and attempts median-based handling for `Age`.
-- The visualizations use the variables and plotting logic already present in the notebook.
-- The findings describe patterns in the supplied dataset and should not be interpreted as broader historical conclusions beyond the data analyzed.
-- The notebook code is documented as provided, including the current `Age` assignment implementation.
+- This project analyzes the **2015 World Happiness dataset** loaded from `2015.csv`.
+- The notebook contains **158 country records and 12 columns**.
+- The analysis is descriptive and exploratory.
+- Correlation indicates statistical association, not causation.
+- The happiness classification thresholds are custom rules defined in the notebook:
+  - `>= 6` → High Happiness
+  - `>= 4 and < 6` → Medium Happiness
+  - `< 4` → Low Happiness
+- Regional averages are calculated using the mean Happiness Score for each region.
+- The findings describe the supplied dataset and should not be interpreted as current global happiness statistics.
 
 ---
 
@@ -1151,19 +1020,21 @@ Possible filters:
 
 <div align="center">
 
-| Area | Status |
+| Analysis Area | Status |
 |---|:---:|
-| 📥 Dataset Loading | ✅ |
+| 📂 Dataset Loading | ✅ |
 | 🔎 Data Exploration | ✅ |
 | 🧹 Missing-Value Check | ✅ |
+| ♻️ Duplicate Check | ✅ |
 | 🧬 Data-Type Analysis | ✅ |
 | 📐 Descriptive Statistics | ✅ |
-| ♻️ Duplicate Check | ✅ |
-| 👩 Gender Analysis | ✅ |
-| 🎟️ Class Analysis | ✅ |
-| 🎂 Age Analysis | ✅ |
-| 🍩 Survival Analysis | ✅ |
-| ⚓ Embarkation Analysis | ✅ |
+| 🏆 Top 10 Countries | ✅ |
+| 📉 Bottom 10 Countries | ✅ |
+| 🕊️ Freedom Analysis | ✅ |
+| 🌎 Regional Analysis | ✅ |
+| 😊 Happiness Classification | ✅ |
+| 🍩 Happiness Visualization | ✅ |
+| 🔗 Correlation Analysis | ✅ |
 | 🔥 Correlation Heatmap | ✅ |
 | 🔑 Key Findings | ✅ |
 
@@ -1173,7 +1044,7 @@ Possible filters:
 
 # 🤝 Contributing
 
-If you want to improve this project, you can:
+If you want to improve this project:
 
 ```text
 1. Fork the repository
@@ -1185,15 +1056,14 @@ If you want to improve this project, you can:
 7. Open a Pull Request
 ```
 
-Possible contributions:
+Possible improvements include:
 
-- 📊 New visualizations
-- 🧹 Improved data cleaning
-- 📈 Survival-rate analysis
-- 👨‍👩‍👧 Family-size analysis
-- 💰 Fare analysis
-- 🤖 Machine-learning models
-- 🖥️ Interactive dashboard
+- 📊 New charts
+- 🗺️ Geographic visualizations
+- 📈 Statistical models
+- 🤖 Machine-learning experiments
+- 🖥️ Interactive dashboards
+- 🧹 Improved data-processing techniques
 
 ---
 
@@ -1231,9 +1101,9 @@ You are free to study, modify, and extend the project according to your requirem
 
 ---
 
-# 🚢 Titanic Dataset | Data Analysis
+# 🌍 World Happiness Data Analysis
 
-### **Data → Cleaning → Exploration → Visualization → Insights**
+### **Data → Analysis → Visualization → Insights**
 
 **Built with 🐍 Python · 🐼 Pandas · 🔢 NumPy · 📊 Matplotlib · 🎨 Seaborn**
 
