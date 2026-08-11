@@ -1,100 +1,96 @@
 <div align="center">
 
-# 📈 RELIANCE Stock Market Analysis
+# 🚢 Titanic Dataset | Data Analysis Project
 
-### Historical Stock Data Exploration & Visualization with Python
+### 📊 Exploratory Data Analysis with Python
+
+**Clean 🧹 · Explore 🔎 · Analyze 📈 · Visualize 📊 · Understand 💡**
 
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Analysis-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org/)
-[![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0?style=for-the-badge)](https://seaborn.pydata.org/)
+[![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0?style=for-the-badge)](https://seaborn.pydata.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 
 <br>
 
-**Explore 📊 · Clean 🧹 · Analyze 🔎 · Visualize 📈 · Understand 💡**
+> **An exploratory analysis of passenger survival patterns across gender, class, age, embarkation port, and numerical passenger attributes.**
 
 </div>
 
 ---
 
-## 📌 About the Project
+# 📌 Project Overview
 
-**RELIANCE Stock Market Analysis** is an exploratory data analysis project built with **Python** and the core Data Science libraries **Pandas, NumPy, Matplotlib, and Seaborn**.
+The **Titanic Dataset | Data Analysis Project** is an exploratory data analysis project created using **Python, Pandas, NumPy, Matplotlib, and Seaborn**.
 
-The project analyzes historical RELIANCE stock-market records and focuses on understanding price movement, yearly and monthly behavior, trading activity, VWAP values, and relationships between important numerical market variables.
+The notebook follows a structured data-analysis workflow, beginning with dataset loading and inspection and continuing through data-quality checks, descriptive statistics, passenger survival analysis, visualization, and correlation analysis.
 
-The analysis is implemented in a Jupyter Notebook and follows a practical workflow:
+The main purpose of this project is to understand the structure of the Titanic passenger dataset and explore how survival outcomes vary across different passenger characteristics.
 
-```text
-📂 Load Dataset
-      ↓
-🔎 Explore Data
-      ↓
-🧹 Check & Clean Data
-      ↓
-📅 Prepare Date Information
-      ↓
-📆 Filter 2020 Data
-      ↓
-📈 Analyze High & Low Prices
-      ↓
-💹 Compare Open & Close
-      ↓
-💰 Analyze Yearly VWAP
-      ↓
-🔗 Calculate Correlations
-      ↓
-📊 Create Visualizations
-      ↓
-📝 Summarize Findings
-```
+### 🔍 The analysis focuses on:
 
-> 💡 **Project goal:** Practice real-world stock-data analysis using Python and turn raw historical records into clear visual insights.
+- 👥 Survival by gender
+- 🎟️ Survival by passenger class
+- 🧳 Passenger distribution across classes
+- 🎂 Age distribution by survival status
+- 🍩 Overall survival proportion
+- ⚓ Survival by embarkation port
+- 🔗 Correlations between numerical variables
+- 🧹 Missing-value and duplicate checks
+
+> ✨ The project is implemented as a Jupyter Notebook and is suitable for practicing the fundamentals of Data Analysis and Data Visualization.
 
 ---
 
-# 🎯 Project Objectives
+# 🎯 Project Goals
 
-The project is designed to:
+The notebook is designed to:
 
-- 📂 Load historical RELIANCE stock data from CSV
-- 🔎 Understand the structure and quality of the dataset
-- 🧹 Check missing values and duplicate records
-- 🧾 Inspect columns and data types
-- 📅 Convert the `Date` column to datetime format
-- 📆 Filter stock records for the year 2020
-- 📈 Analyze monthly maximum High prices
-- 📉 Analyze monthly minimum Low prices
-- 💹 Compare Open and Close prices
-- 📊 Compare High and Low prices
-- 💰 Analyze yearly VWAP values
-- 🔗 Study correlations between major price variables
-- 📊 Present findings through clean visualizations
+- 🧹 Inspect and prepare the Titanic dataset
+- 🔎 Understand the structure and quality of the data
+- 📋 Review the first and last records
+- 🧬 Understand column data types
+- 📊 Generate descriptive statistics
+- ♻️ Check for duplicate records
+- 👥 Analyze survival patterns by gender
+- 🎟️ Compare survival across passenger classes
+- 🎂 Explore age distribution and survival
+- ⚓ Analyze survival based on embarkation port
+- 🔗 Examine relationships between numerical variables
+- 📈 Present findings through easy-to-read visualizations
 
 ---
 
 # 🗂️ Table of Contents
 
-- [📌 About the Project](#-about-the-project)
-- [🎯 Project Objectives](#-project-objectives)
+- [📌 Project Overview](#-project-overview)
+- [🎯 Project Goals](#-project-goals)
 - [📂 Project Structure](#-project-structure)
 - [🛠️ Technology Stack](#️-technology-stack)
 - [📊 Dataset](#-dataset)
 - [🔄 Analysis Workflow](#-analysis-workflow)
-- [🔎 Data Exploration](#-data-exploration)
-- [🧹 Data Cleaning](#-data-cleaning)
-- [📅 Date Preparation](#-date-preparation)
-- [📈 Price Analysis](#-price-analysis)
-- [💰 VWAP Analysis](#-vwap-analysis)
-- [🔗 Correlation Analysis](#-correlation-analysis)
-- [📊 Visualizations](#-visualizations)
-- [🏆 Key Findings](#-key-findings)
+- [📥 Load the Dataset](#-1-load-the-dataset)
+- [👀 Explore the Dataset](#-2-explore-the-dataset)
+- [🧹 Data Cleaning](#-3-data-cleaning)
+- [🧬 Data Types & Columns](#-4-data-types--columns)
+- [📐 Descriptive Statistics](#-5-descriptive-statistics)
+- [♻️ Duplicate Check](#-6-duplicate-check)
+- [📈 Survival Analysis](#-7-survival-analysis)
+- [👩 Survival by Gender](#-survival-by-gender)
+- [🎟️ Survival by Passenger Class](#-survival-by-passenger-class)
+- [🧳 Passengers per Class](#-total-passengers-per-class)
+- [🎂 Age Distribution](#-age-distribution-by-survival)
+- [🍩 Overall Survival](#-overall-passenger-survival)
+- [⚓ Embarkation Analysis](#-survival-by-embarkation-port)
+- [🔥 Correlation Analysis](#-correlation-analysis)
+- [🔑 Key Findings](#-key-findings)
+- [📊 Visualization Summary](#-visualization-summary)
 - [🎓 Learning Outcomes](#-learning-outcomes)
 - [▶️ How to Run](#️-how-to-run)
 - [🔮 Future Improvements](#-future-improvements)
-- [⚠️ Important Notes](#️-important-notes)
+- [⚠️ Notes](#️-notes)
 - [🤝 Contributing](#-contributing)
 - [👨‍💻 Author](#-author)
 - [📄 License](#-license)
@@ -104,519 +100,794 @@ The project is designed to:
 # 📂 Project Structure
 
 ```text
-📦 RELIANCE-Stock-Analysis
+📦 Titanic-Data-Analysis
 │
-├── 📓 RELIANCE.ipynb
-│   └── Complete Jupyter Notebook analysis
+├── 📓 Titanic.ipynb
+│   └── Complete exploratory data analysis notebook
 │
-├── 📄 RELIANCE.csv
-│   └── Historical RELIANCE stock dataset
+├── 📄 titanic_dataset.csv
+│   └── Titanic passenger dataset
 │
 └── 📖 README.md
     └── Project documentation
 ```
 
-### 📁 File Details
+### 📁 File Description
 
 | File | Purpose |
 |---|---|
-| `RELIANCE.ipynb` | Contains the complete Python analysis and visualizations |
-| `RELIANCE.csv` | Historical stock-market dataset |
-| `README.md` | Project documentation |
+| `Titanic.ipynb` | Main Jupyter Notebook containing the complete analysis |
+| `titanic_dataset.csv` | Dataset loaded and analyzed by the notebook |
+| `README.md` | Documentation for the project |
 
 ---
 
 # 🛠️ Technology Stack
 
-| Technology | Used For |
+| Technology | Purpose |
 |---|---|
 | 🐍 **Python** | Core programming language |
-| 🐼 **Pandas** | Data loading, cleaning, grouping, and analysis |
-| 🔢 **NumPy** | Numerical operations |
-| 📊 **Matplotlib** | Plot creation and customization |
-| 🎨 **Seaborn** | Statistical visualizations |
-| 📓 **Jupyter Notebook** | Interactive analysis environment |
+| 🐼 **Pandas** | Data loading, cleaning, transformation, and analysis |
+| 🔢 **NumPy** | Numerical computing support |
+| 📊 **Matplotlib** | Creating and formatting visualizations |
+| 🎨 **Seaborn** | Statistical plots and data visualization |
+| 📓 **Jupyter Notebook** | Interactive development and analysis |
 
 ---
 
 # 📊 Dataset
 
-The dataset contains **5,306 records** and **13 columns**.
+The notebook loads the dataset with:
 
-### 📅 Dataset Period
-
-```text
-Start Date : 03 January 2000
-End Date   : 30 April 2021
-Records    : 5,306
-Columns    : 13
+```python
+data = pd.read_csv("titanic_dataset.csv")
 ```
 
-### 📋 Dataset Columns
+The dataset contains:
+
+```text
+👥 Records  : 891
+📋 Columns  : 12
+```
+
+The notebook works with passenger information and survival-related attributes.
+
+### Important Variables Used
 
 | Column | Description |
 |---|---|
-| `Date` | Trading date |
-| `Symbol` | Stock symbol |
-| `Series` | Stock series/category |
-| `Prev Close` | Previous trading day's closing price |
-| `Open` | Opening price |
-| `High` | Highest price during the trading session |
-| `Low` | Lowest price during the trading session |
-| `Last` | Last traded price |
-| `Close` | Closing price |
-| `VWAP` | Volume Weighted Average Price |
-| `Volume` | Trading volume |
-| `Trades` | Number of trades |
-| `Deliverable Volume` | Deliverable trading volume |
+| `Survived` | Survival outcome |
+| `Sex` | Passenger gender |
+| `Pclass` | Passenger class |
+| `Age` | Passenger age |
+| `SibSp` | Number of siblings/spouses aboard |
+| `Parch` | Number of parents/children aboard |
+| `Fare` | Passenger fare |
+| `Embarked` | Port of embarkation |
+
+The notebook also displays the complete list of columns using:
+
+```python
+print(list(data.columns))
+```
 
 ---
 
 # 🔄 Analysis Workflow
 
+The project follows a simple and practical EDA pipeline:
+
 ```text
-                     ┌─────────────────┐
-                     │  📄 CSV Dataset │
-                     └────────┬────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 🔎 Data Explore │
-                     └────────┬────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 🧹 Data Quality │
-                     └────────┬────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 📅 Date Convert │
-                     └────────┬────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 📆 2020 Filter  │
-                     └────────┬────────┘
-                              ↓
-              ┌───────────────┼───────────────┐
-              ↓               ↓               ↓
-        📈 High/Low      💹 Open/Close    💰 VWAP
-              │               │               │
-              └───────────────┼───────────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 🔗 Correlation  │
-                     └────────┬────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 📊 Visualize    │
-                     └────────┬────────┘
-                              ↓
-                     ┌─────────────────┐
-                     │ 🏆 Findings     │
-                     └─────────────────┘
+                 📄 Titanic Dataset
+                         │
+                         ▼
+                 📥 Load CSV File
+                         │
+                         ▼
+                  👀 Explore Data
+                         │
+                         ▼
+                🧹 Check Missing Data
+                         │
+                         ▼
+                🛠️ Handle Age Values
+                         │
+                         ▼
+               🧬 Inspect Data Types
+                         │
+                         ▼
+                📐 Descriptive Stats
+                         │
+                         ▼
+                ♻️ Duplicate Check
+                         │
+                         ▼
+              👥 Survival Analysis
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+       👩 Gender       🎟️ Class       🎂 Age
+          │              │              │
+          └──────────────┼──────────────┘
+                         ▼
+                  ⚓ Embarkation
+                         │
+                         ▼
+                  🔗 Correlation
+                         │
+                         ▼
+                   🔑 Findings
 ```
 
 ---
 
-# 🔎 Data Exploration
+# 📥 1. Load the Dataset
 
-The notebook starts by inspecting the dataset.
+The first step loads the Titanic CSV dataset into a Pandas DataFrame:
 
-### First Records
+```python
+data = pd.read_csv("titanic_dataset.csv")
+```
+
+The DataFrame is then displayed to provide an initial view of the dataset.
+
+---
+
+# 👀 2. Explore the Dataset
+
+## 🔝 First 5 Records
+
+The notebook uses:
 
 ```python
 data.head(5)
 ```
 
-### Last Records
+This gives a quick preview of the first five passenger records.
+
+## 🔚 Last 5 Records
+
+The final five records are displayed with:
 
 ```python
 data.tail(5)
 ```
 
-### Missing Values
+These previews help verify that the dataset has loaded correctly and provide a first look at its structure.
+
+---
+
+# 🧹 3. Data Cleaning
+
+The notebook checks missing values using:
 
 ```python
 data.isna().sum()
 ```
 
-### Dataset Information
+This identifies how many missing values are present in each column.
+
+### Why check missing values?
+
+Missing data can affect:
+
+- 📊 Statistical calculations
+- 📈 Visualizations
+- 🔎 Comparisons
+- 🧮 Numerical analysis
+
+---
+
+## 🛠️ Handling Missing Age Values
+
+The notebook attempts to handle missing values in the `Age` column using the median:
 
 ```python
-data.info()
+data["Age"] = data["Age"].fillna(
+    data["Age"].median(),
+    inplace=True
+)
 ```
 
-### Data Types
+The intended approach is median-based filling.
+
+### Why Median?
+
+The median is less influenced by unusually high or low values than the mean, making it a common choice when filling missing age observations.
+
+The notebook then checks the `Age` column again:
+
+```python
+data["Age"].isna().sum()
+```
+
+> ⚠️ **Implementation note:** The notebook code uses `inplace=True` inside an assignment. In Pandas, this pattern can result in assigning `None` back to the column. This README documents the code as it appears in the notebook rather than silently changing the implementation.
+
+---
+
+# 🧬 4. Data Types & Columns
+
+The notebook checks the data types of all columns:
 
 ```python
 data.dtypes
 ```
 
-### Duplicate Records
+It also displays the complete list of columns:
 
 ```python
-data.duplicated().sum()
+print(list(data.columns))
 ```
 
-### Descriptive Statistics
+Understanding data types is important because different variables require different types of analysis.
+
+For example:
+
+```text
+🔢 Numerical → Age, Fare, Pclass, SibSp, Parch
+🔤 Categorical → Sex, Embarked
+🎯 Target → Survived
+```
+
+---
+
+# ℹ️ Dataset Information
+
+The notebook uses:
+
+```python
+data.info()
+```
+
+This provides a compact overview of:
+
+- 📌 Number of records
+- 📋 Number of columns
+- 🔢 Data types
+- ✅ Non-null values
+- 💾 Memory usage
+
+This is one of the most useful first checks when beginning an EDA project.
+
+---
+
+# 📐 5. Descriptive Statistics
+
+The notebook generates statistical summaries using:
 
 ```python
 data.describe()
 ```
 
-These checks provide an initial understanding of the dataset before performing deeper analysis.
+This provides information such as:
+
+- Count
+- Mean
+- Standard deviation
+- Minimum
+- 25th percentile
+- Median
+- 75th percentile
+- Maximum
+
+This helps understand the distribution of numerical passenger attributes.
 
 ---
 
-# 🧹 Data Cleaning
+# ♻️ 6. Duplicate Check
 
-Data quality is checked before visualization and statistical analysis.
+Duplicate records are checked using:
 
-The notebook specifically examines missing values in fields such as:
+```python
+data.duplicated().sum()
+```
 
-- `Trades`
-- `Deliverable Volume`
-
-Median-based handling is used for these columns where required.
-
-The project also checks for duplicate rows and reviews the resulting DataFrame information.
-
-### Cleaning Workflow
+The notebook reports:
 
 ```text
-Raw Dataset
-    ↓
-Check Missing Values
-    ↓
-Inspect Data Types
-    ↓
-Handle Required Missing Data
-    ↓
-Check Duplicates
-    ↓
-Review Clean Dataset
+Duplicate Records = 0
+```
+
+This means the duplicate check did not identify repeated complete rows in the dataset.
+
+---
+
+# 📈 7. Survival Analysis
+
+The main analytical focus of the project is understanding passenger survival.
+
+The target variable is:
+
+```text
+Survived
+```
+
+where the notebook interprets the categories as:
+
+```text
+0 → Did not survive
+1 → Survived
+```
+
+The project examines survival from several perspectives:
+
+```text
+👩 Gender
+🎟️ Passenger Class
+🎂 Age
+⚓ Embarkation Port
+🍩 Overall Survival
 ```
 
 ---
 
-# 📅 Date Preparation
+# 👩 Survival by Gender
 
-The `Date` column is converted into a proper datetime format:
+The notebook creates a Seaborn count plot:
 
 ```python
-data["Date"] = pd.to_datetime(data["Date"])
+plt.figure(figsize=(10,8))
+
+sns.countplot(
+    data=data,
+    x="Sex",
+    hue="Survived",
+    palette="viridis"
+)
+
+plt.title(
+    "Survival by Gender",
+    fontsize=18,
+    fontweight="bold"
+)
+
+plt.xlabel(
+    "Gender",
+    fontsize=11,
+    fontweight="bold"
+)
+
+plt.ylabel(
+    "Count",
+    fontsize=11,
+    fontweight="bold"
+)
+
+plt.show()
 ```
 
-This enables time-based operations such as:
+### 📊 What this chart shows
 
-- Filtering by year
-- Grouping by month
-- Yearly aggregation
-- Time-series visualization
+The chart compares the number of survivors and non-survivors for each gender category.
+
+### 🔑 Main observation
+
+The notebook finds that:
+
+> 👩 **Female passengers had a much higher survival count than male passengers** in the gender comparison.
+
+This visualization makes the difference between survival outcomes across gender categories easy to observe.
 
 ---
 
-## 📆 2020 Analysis Dataset
+# 🎟️ Survival by Passenger Class
 
-For detailed price analysis, the notebook filters records belonging to 2020:
+The project compares survival across:
 
-```python
-year_data = data[data["Date"].dt.year == 2020]
+```text
+1st Class
+2nd Class
+3rd Class
 ```
 
-This `year_data` DataFrame is then used for the monthly and daily price visualizations.
-
----
-
-# 📈 Price Analysis
-
-## 1️⃣ Monthly Maximum High Price
-
-The notebook calculates the maximum `High` price for each month of 2020:
+The visualization uses:
 
 ```python
-monthly_high = (
-    year_data.groupby(year_data["Date"].dt.month)["High"].max()
+sns.countplot(
+    data=data,
+    x="Pclass",
+    hue="Survived"
 )
 ```
+
+### 📊 What this chart shows
+
+The chart compares survivors and non-survivors within each passenger class.
+
+### 🔑 Main observation
+
+According to the notebook:
+
+> 🎟️ **1st-class passengers showed the strongest survival outcome relative to their class size**, while 3rd class had substantially more non-survivors.
+
+This demonstrates why passenger class is an important variable to examine when studying survival patterns.
+
+---
+
+# 🧳 Total Passengers per Class
+
+The notebook calculates passenger counts by class:
+
+```python
+count_class = (
+    data.groupby("Pclass")["Sex"].count()
+)
+```
+
+A bar chart is then created.
 
 ### 📊 Purpose
 
-This analysis helps identify:
+This visualization shows how many passengers belonged to each class.
 
-- Monthly price peaks
-- Higher trading periods
-- Changes in the upper price range during 2020
-
-A line chart is used to display the monthly movement.
+It provides useful context for interpreting the survival-by-class chart because survival counts can be influenced by the number of passengers in each class.
 
 ---
 
-## 2️⃣ Monthly Minimum Low Price
+# 🎂 Age Distribution by Survival
 
-The minimum `Low` price for each month is calculated:
+The project examines passenger age using a histogram:
 
 ```python
-monthly_low = (
-    year_data.groupby(year_data["Date"].dt.month)["Low"].min()
+plt.figure(figsize=(10,7))
+
+sns.histplot(
+    data=data,
+    x="Age",
+    hue="Survived",
+    bins=20,
+    kde=True
+)
+
+plt.title(
+    "Age Distribution by Survival",
+    fontsize=18,
+    fontweight="bold"
+)
+
+plt.xlabel(
+    "Age",
+    fontsize=11,
+    fontweight="bold"
+)
+
+plt.ylabel(
+    "Count",
+    fontsize=11,
+    fontweight="bold"
+)
+
+plt.show()
+```
+
+### 🔎 What this chart explores
+
+- Passenger age distribution
+- Differences in age distributions between survival groups
+- Concentration of passengers across different age ranges
+- How survival categories are distributed across age
+
+The notebook notes that survival outcomes varied across passenger ages.
+
+---
+
+# 🍩 Overall Passenger Survival
+
+The overall number of passengers in each survival category is calculated with:
+
+```python
+survival_count = data["Survived"].value_counts()
+```
+
+The notebook then creates a donut-style chart.
+
+### Visualization
+
+```python
+plt.pie(
+    survival_count,
+    labels=survival_count.index,
+    autopct="%1.1f%%",
+    startangle=90
 )
 ```
 
-### 📉 Purpose
+A white circle is added to the center to create the donut appearance.
 
-This helps identify:
+### 📊 Main Result
 
-- Monthly price lows
-- Lower trading periods
-- Changes in the lower price range
+The notebook reports:
 
-The results are displayed using a line chart.
+| Survival Status | Passengers |
+|---|---:|
+| 🟢 Survived | **302** |
+| 🔴 Did not survive | **589** |
+| 👥 Total | **891** |
+
+This corresponds approximately to:
+
+```text
+🟢 Survived       → 33.9%
+🔴 Did not survive → 66.1%
+```
+
+The chart provides a quick overall view of the survival distribution.
 
 ---
 
-## 3️⃣ 💹 Open vs Close Price
+# ⚓ Survival by Embarkation Port
 
-The notebook compares:
+The notebook analyzes survival based on the passenger's embarkation port.
 
-```text
-Open
-vs
-Close
-```
-
-for the 2020 records.
-
-### Why is this useful?
-
-Comparing Open and Close prices gives a visual understanding of daily price movement and how the stock moved between the beginning and end of each trading session.
-
----
-
-## 4️⃣ 📊 High vs Low Price
-
-The project also compares:
+The chart compares:
 
 ```text
-High
-vs
-Low
+C → Cherbourg
+Q → Queenstown
+S → Southampton
 ```
 
-for the selected 2020 period.
-
-This provides a visual representation of the daily trading range.
-
-```text
-High ────────────────┐
-                     │ Trading Range
-Low  ────────────────┘
-```
-
-A wider difference between High and Low indicates a larger price range during that session.
-
----
-
-# 💰 VWAP Analysis
-
-### What is VWAP?
-
-**VWAP** stands for **Volume Weighted Average Price**.
-
-It is a market-data measure that considers both price and trading volume.
-
-The notebook calculates yearly VWAP values using:
+The visualization uses:
 
 ```python
-yearly_vwap = (
-    data.groupby(data["Date"].dt.year)["VWAP"].sum()
+sns.countplot(
+    data=data,
+    x="Embarked",
+    hue="Survived"
 )
 ```
 
-The result is displayed using a bar chart.
+### 🔑 Main observation
 
-### 📊 Purpose
+The notebook reports:
 
-The yearly visualization allows comparison of the VWAP values across the years represented in the dataset.
+> ⚓ **Southampton (S) was the largest embarkation group in the dataset, and its chart also shows a large number of non-survivors.**
 
-> **Note:** The notebook uses a yearly `sum()` of the `VWAP` column for this visualization. This README describes the notebook's implemented calculation rather than replacing it with a different VWAP methodology.
+This analysis demonstrates how a categorical variable can be compared with the survival target.
 
 ---
 
 # 🔗 Correlation Analysis
 
-The project calculates correlations between major numerical stock-price variables.
-
-### Variables Used
+The project selects the following numerical variables:
 
 ```python
 num_col = [
-    "Prev Close",
-    "Open",
-    "High",
-    "Low",
-    "Last",
-    "Close",
-    "VWAP"
+    "Age",
+    "Pclass",
+    "SibSp",
+    "Parch",
+    "Fare"
 ]
 ```
+
+These variables represent:
+
+| Variable | Meaning |
+|---|---|
+| `Age` | Passenger age |
+| `Pclass` | Passenger class |
+| `SibSp` | Siblings/spouses aboard |
+| `Parch` | Parents/children aboard |
+| `Fare` | Passenger fare |
+
+---
+
+# 🔥 Correlation Heatmap
 
 The correlation matrix is calculated using:
 
 ```python
-corr = data[num_col].corr()
+data[num_col].corr()
 ```
 
-Then a heatmap is generated using Seaborn.
+The notebook visualizes the result using:
 
-### 🔥 Correlation Heatmap
+```python
+sns.heatmap(
+    data[num_col].corr(),
+    annot=True,
+    cmap="Purples",
+    fmt=".2f"
+)
+```
 
-The heatmap makes it easier to identify stronger and weaker linear relationships between:
+### 📊 What the heatmap shows
 
-- Previous Close
-- Open
-- High
-- Low
-- Last
-- Close
-- VWAP
+The heatmap helps examine relationships among:
 
-### 📌 Correlation Guide
+```text
+Age
+Pclass
+SibSp
+Parch
+Fare
+```
 
-| Value | General Meaning |
+### 📌 How to read correlation
+
+| Correlation | General Interpretation |
 |---:|---|
-| `+1` | Strong positive relationship |
+| `+1` | Strong positive linear relationship |
 | `0` | Little or no linear relationship |
-| `-1` | Strong negative relationship |
+| `-1` | Strong negative linear relationship |
 
-> ⚠️ **Correlation does not prove causation.** It only describes the statistical relationship captured by the correlation calculation.
-
----
-
-# 📊 Visualizations
-
-The project includes several visual analyses:
-
-| # | Visualization | Analysis |
-|---:|---|---|
-| 1️⃣ | 📈 Monthly High | Maximum High price by month in 2020 |
-| 2️⃣ | 📉 Monthly Low | Minimum Low price by month in 2020 |
-| 3️⃣ | 💹 Open vs Close | Daily Open and Close movement |
-| 4️⃣ | 📊 High vs Low | Daily trading range |
-| 5️⃣ | 💰 Yearly VWAP | Year-wise VWAP aggregation |
-| 6️⃣ | 🔥 Correlation Heatmap | Relationships between numerical price variables |
+> ⚠️ **Correlation does not prove causation.** It only describes the strength and direction of a linear relationship between variables.
 
 ---
 
-# 🏆 Key Findings
+# 🔑 Key Findings
 
-The notebook highlights the following maximum recorded values:
+The notebook summarizes the following observations:
 
-| Indicator | Maximum Recorded Value |
-|---|---:|
-| 🚀 High Price | **₹3,298.00** |
-| 📈 Open Price | **₹3,298.00** |
-| 💰 Close Price | **₹3,220.85** |
-| 📊 VWAP | **₹3,197.75** |
-| 📦 Trading Volume | **65,230,890** |
-| 🔄 Trades | **1,428,490** |
-| 📦 Deliverable Volume | **34,958,880** |
+### 👥 Dataset
 
-### Dataset Summary
+- **891 passenger records**
+- **12 columns**
+- **0 duplicate records** reported by the notebook
+
+### 🧹 Data Quality
+
+- Missing values were checked.
+- `Age` was identified as requiring handling.
+- The notebook attempts median-based handling for missing age values.
+
+### 🍩 Overall Survival
 
 ```text
-📊 Records  : 5,306
-📋 Columns  : 13
-📅 Period   : 03 Jan 2000 → 30 Apr 2021
-📆 Detailed : 2020 price analysis
+🟢 Survived       : 302
+🔴 Did not survive: 589
+👥 Total          : 891
 ```
 
-These values represent the results documented in the notebook and should be interpreted within the context of the supplied dataset.
+### 👩 Gender
+
+Female passengers had a much higher survival count than male passengers in the gender comparison.
+
+### 🎟️ Passenger Class
+
+1st-class passengers showed the strongest survival outcome relative to their class size, while 3rd class had substantially more non-survivors.
+
+### ⚓ Embarkation
+
+Southampton (`S`) was the largest embarkation group and also showed a large number of non-survivors.
+
+### 🎂 Age
+
+The age-distribution visualization shows differences in survival outcomes across passenger ages.
+
+### 🔗 Numerical Relationships
+
+The correlation heatmap provides a visual summary of relationships among:
+
+```text
+Age
+Pclass
+SibSp
+Parch
+Fare
+```
 
 ---
 
-# 💡 What This Project Demonstrates
+# 📊 Visualization Summary
 
-This project is more than a simple charting exercise. It demonstrates a practical workflow for working with historical financial data:
+| # | Visualization | Purpose |
+|---:|---|---|
+| 1️⃣ | 👩 Survival by Gender | Compare survival across gender |
+| 2️⃣ | 🎟️ Survival by Passenger Class | Compare survival across classes |
+| 3️⃣ | 🧳 Total Passengers per Class | Show passenger distribution by class |
+| 4️⃣ | 🎂 Age Distribution by Survival | Explore age distribution across survival groups |
+| 5️⃣ | 🍩 Overall Passenger Survival | Show overall survival proportions |
+| 6️⃣ | ⚓ Survival by Embarkation Port | Compare survival across ports |
+| 7️⃣ | 🔥 Correlation Heatmap | Examine numerical relationships |
+
+---
+
+# 🧠 Analysis Concepts Demonstrated
+
+## 🐍 Python
+
+- Importing libraries
+- Working with variables
+- Basic data-analysis workflow
+
+## 🐼 Pandas
+
+- `read_csv()`
+- DataFrames
+- `head()`
+- `tail()`
+- `isna()`
+- `fillna()`
+- `dtypes`
+- `columns`
+- `info()`
+- `describe()`
+- `duplicated()`
+- `groupby()`
+- `value_counts()`
+
+## 🔢 NumPy
+
+NumPy is imported as part of the project's numerical Data Science environment.
+
+## 📊 Matplotlib
+
+The project uses Matplotlib for:
+
+- Figure creation
+- Chart titles
+- Axis labels
+- Plot formatting
+- Pie/donut visualization
+
+## 🎨 Seaborn
+
+Seaborn is used for:
+
+- Count plots
+- Bar plots
+- Histograms
+- Correlation heatmaps
+
+## 📈 Exploratory Data Analysis
+
+The project demonstrates:
 
 ```text
-Raw Market Data
-      ↓
-Data Quality Checks
-      ↓
-Data Preparation
-      ↓
-Time-Based Filtering
-      ↓
-Grouped Analysis
-      ↓
-Statistical Analysis
-      ↓
+Data Loading
+     ↓
+Data Cleaning
+     ↓
+Data Exploration
+     ↓
+Statistical Summary
+     ↓
+Categorical Analysis
+     ↓
+Numerical Analysis
+     ↓
 Visualization
-      ↓
+     ↓
 Interpretation
 ```
 
-It shows how Pandas can be used to transform a raw CSV file into a structured dataset that can be analyzed with NumPy and visualized using Matplotlib and Seaborn.
+---
+
+# 💡 Why This Project Is Useful
+
+The Titanic dataset is a practical way to learn the fundamentals of exploratory data analysis because it contains both **numerical** and **categorical** passenger information.
+
+The project demonstrates how raw passenger records can be transformed into useful visual insights.
+
+For example:
+
+```text
+Raw Data
+   ↓
+Passenger Attributes
+   ↓
+Survival Categories
+   ↓
+Grouped Analysis
+   ↓
+Charts
+   ↓
+Insights
+```
+
+This makes the project useful for practicing the basic workflow used in many real-world Data Science projects.
 
 ---
 
-# 🎓 Learning Outcomes
+# ▶️ How to Run the Project
 
-By completing this project, you practice:
+## 1️⃣ Install Python
 
-### 🐼 Pandas
+Install Python 3.x on your computer.
 
-- Reading CSV files
-- DataFrame operations
-- Selecting columns
-- Filtering rows
-- Handling missing values
-- Grouping data
-- Aggregating data
-- Datetime operations
-- Descriptive statistics
-
-### 🔢 NumPy
-
-- Numerical data handling
-- Data Science workflow integration
-- Numeric column processing
-
-### 📊 Matplotlib
-
-- Line charts
-- Bar charts
-- Figure customization
-- Titles and labels
-- Grid and legend formatting
-
-### 🎨 Seaborn
-
-- Statistical charts
-- Heatmaps
-- Visual comparison of numerical variables
-
-### 📅 Time-Series Concepts
-
-- Date conversion
-- Year filtering
-- Month grouping
-- Yearly aggregation
-- Price trend visualization
-
-### 🔗 Statistical Concepts
-
-- Correlation matrices
-- Relationship analysis
-- Descriptive statistics
-
----
-
-# ▶️ How to Run
-
-## 1. Install Python
-
-Install Python 3.x.
-
-Check the version:
+Check the installed version:
 
 ```bash
 python --version
@@ -624,7 +895,9 @@ python --version
 
 ---
 
-## 2. Install Dependencies
+## 2️⃣ Install Required Libraries
+
+Run:
 
 ```bash
 pip install numpy pandas matplotlib seaborn jupyter
@@ -632,27 +905,31 @@ pip install numpy pandas matplotlib seaborn jupyter
 
 ---
 
-## 3. Prepare the Project Folder
+## 3️⃣ Keep the Dataset in the Project Folder
 
-Keep these files together:
+The notebook expects:
 
 ```text
-RELIANCE.ipynb
-RELIANCE.csv
-README.md
+titanic_dataset.csv
 ```
 
-The notebook loads:
+Keep it in the same working directory as:
+
+```text
+Titanic.ipynb
+```
+
+The notebook loads it with:
 
 ```python
-pd.read_csv("RELIANCE.csv")
+pd.read_csv("titanic_dataset.csv")
 ```
-
-so the CSV should normally be in the notebook's working directory.
 
 ---
 
-## 4. Start Jupyter Notebook
+## 4️⃣ Start Jupyter Notebook
+
+Run:
 
 ```bash
 jupyter notebook
@@ -661,92 +938,183 @@ jupyter notebook
 Open:
 
 ```text
-RELIANCE.ipynb
+Titanic.ipynb
 ```
 
 ---
 
-## 5. Run the Notebook
+## 5️⃣ Run the Notebook
 
 Run the cells from top to bottom.
 
-### Recommended Order
+### Recommended order
 
 ```text
-1. 📚 Import Libraries
-2. 📂 Load Dataset
-3. 🔎 Explore Dataset
-4. 🧹 Check Data Quality
-5. 📅 Convert Date
-6. 📆 Filter 2020
-7. 📈 Analyze Monthly High
-8. 📉 Analyze Monthly Low
-9. 💹 Compare Open & Close
-10. 📊 Compare High & Low
-11. 💰 Analyze Yearly VWAP
-12. 🔗 Calculate Correlation
-13. 🔥 Display Heatmap
-14. 🏆 Review Findings
+1. 📚 Import libraries
+2. 📥 Load dataset
+3. 👀 Preview first records
+4. 🔚 Preview last records
+5. 🧹 Check missing values
+6. 🛠️ Handle Age values
+7. 🧬 Check data types
+8. 🗂️ Review columns
+9. ℹ️ Check dataset information
+10. 📐 Generate descriptive statistics
+11. ♻️ Check duplicates
+12. 👩 Analyze gender survival
+13. 🎟️ Analyze passenger class
+14. 🧳 Count passengers by class
+15. 🎂 Analyze age distribution
+16. 🍩 Analyze overall survival
+17. ⚓ Analyze embarkation
+18. 🔗 Select numerical variables
+19. 🔥 Generate correlation heatmap
+20. 🔑 Review findings
 ```
 
 ---
 
-# ⚠️ Important Notes
+# 📌 Expected Project Flow
 
-- This is an **educational exploratory data-analysis project**.
-- The analysis is based on the supplied RELIANCE dataset.
-- Detailed price charts use the records filtered for **2020**.
-- The yearly VWAP chart uses the full dataset.
-- The notebook's VWAP analysis uses a yearly `sum()` aggregation.
-- Correlation indicates statistical association and does not establish causation.
-- Historical stock-market analysis does not guarantee future performance.
-- This project is **not financial advice** and should not be used alone to make investment decisions.
+```text
+             🚢 TITANIC DATA ANALYSIS
+                       │
+                       ▼
+                📥 Load Dataset
+                       │
+                       ▼
+                 🔎 Explore Data
+                       │
+                       ▼
+                 🧹 Clean Data
+                       │
+                       ▼
+              📊 Understand Dataset
+                       │
+             ┌─────────┼─────────┐
+             ▼         ▼         ▼
+           👩 Sex    🎟️ Class   🎂 Age
+             │         │         │
+             └─────────┼─────────┘
+                       ▼
+                   ⚓ Port
+                       │
+                       ▼
+                 🍩 Survival
+                       │
+                       ▼
+                🔥 Correlation
+                       │
+                       ▼
+                 🔑 Findings
+```
 
 ---
 
-# 🚀 Future Improvements
+# 🎓 Learning Outcomes
 
-The project can be expanded with:
+After completing this project, you will have practical experience with:
 
-### 📈 Technical Analysis
+### 🐼 Pandas
 
-- Moving averages
-- Exponential moving averages
-- RSI
-- MACD
-- Bollinger Bands
-- Daily returns
-- Volatility analysis
+- Loading datasets
+- Inspecting DataFrames
+- Detecting missing values
+- Working with columns
+- Grouping records
+- Counting categories
+- Generating summaries
 
-### 📊 Advanced Visualizations
+### 📊 Visualization
 
-- Candlestick charts
-- Volume-price charts
-- Interactive charts
-- Rolling-average plots
-- Monthly heatmaps
+- Count plots
+- Bar plots
+- Histograms
+- Pie/donut charts
+- Correlation heatmaps
 
-### 📅 Advanced Time-Series Analysis
+### 🧹 Data Cleaning
 
-- Daily return trends
-- Monthly return comparison
-- Year-over-year performance
-- Volatility by year
-- Drawdown analysis
+- Missing-value detection
+- Missing-value handling
+- Duplicate checking
+- Dataset validation
 
-### 🤖 Machine Learning
+### 🔗 Statistical Analysis
 
-Future versions could explore:
+- Descriptive statistics
+- Correlation matrices
+- Numerical variable comparison
 
-- Price trend prediction
-- Regression models
-- Time-series forecasting
-- Feature engineering
+### 🧠 Data Interpretation
+
+- Comparing categories
+- Identifying patterns
+- Summarizing observations
+- Turning charts into analytical findings
+
+---
+
+# 🔮 Future Improvements
+
+The current notebook can be extended into a more advanced Titanic analysis project.
+
+## 📊 More Survival Analysis
+
+Add:
+
+- Survival rate instead of only survival count
+- Survival by age group
+- Survival by fare group
+- Survival by family size
+- Survival by title/name category
+
+## 👨‍👩‍👧 Family Analysis
+
+Create a new feature such as:
+
+```text
+Family Size = SibSp + Parch + 1
+```
+
+Then analyze survival based on family size.
+
+## 💰 Fare Analysis
+
+Explore:
+
+- Average fare by class
+- Fare distribution
+- Fare vs survival
+- Fare vs passenger class
+
+## 🎂 Age Groups
+
+Create categories such as:
+
+```text
+Child
+Teenager
+Adult
+Senior
+```
+
+Then compare survival rates between groups.
+
+## 🤖 Machine Learning
+
+The cleaned dataset could be used as a foundation for:
+
+- Logistic Regression
+- Decision Trees
+- Random Forest
+- K-Nearest Neighbors
 - Model evaluation
+- Survival prediction
 
-### 🖥️ Dashboard
+## 🖥️ Interactive Dashboard
 
-The notebook could also be converted into an interactive dashboard using:
+The analysis could be converted into an interactive dashboard using:
 
 ```text
 Streamlit
@@ -754,38 +1122,50 @@ Plotly
 Dash
 ```
 
-Possible dashboard controls:
+Possible filters:
 
 ```text
-📅 Date Range
-📊 Price Metric
-📈 Chart Type
-📦 Volume
-🔍 Year / Month Filter
+🎟️ Passenger Class
+👩 Gender
+⚓ Embarkation Port
+🎂 Age Range
+💰 Fare Range
 ```
 
 ---
 
-# 🏅 Project Highlights
+# ⚠️ Notes
+
+- This project is an **educational exploratory data analysis project**.
+- The analysis is based on the supplied `titanic_dataset.csv`.
+- The notebook reports **891 records and 12 columns**.
+- The duplicate check reports **0 duplicate records**.
+- The notebook checks missing values and attempts median-based handling for `Age`.
+- The visualizations use the variables and plotting logic already present in the notebook.
+- The findings describe patterns in the supplied dataset and should not be interpreted as broader historical conclusions beyond the data analyzed.
+- The notebook code is documented as provided, including the current `Age` assignment implementation.
+
+---
+
+# 🏆 Project Highlights
 
 <div align="center">
 
-| 📌 Area | ✅ Included |
+| Area | Status |
 |---|:---:|
-| CSV Data Loading | ✅ |
-| Data Exploration | ✅ |
-| Missing Value Check | ✅ |
-| Duplicate Check | ✅ |
-| Date Conversion | ✅ |
-| 2020 Filtering | ✅ |
-| Monthly High Analysis | ✅ |
-| Monthly Low Analysis | ✅ |
-| Open vs Close | ✅ |
-| High vs Low | ✅ |
-| Yearly VWAP | ✅ |
-| Correlation Matrix | ✅ |
-| Heatmap | ✅ |
-| Key Findings | ✅ |
+| 📥 Dataset Loading | ✅ |
+| 🔎 Data Exploration | ✅ |
+| 🧹 Missing-Value Check | ✅ |
+| 🧬 Data-Type Analysis | ✅ |
+| 📐 Descriptive Statistics | ✅ |
+| ♻️ Duplicate Check | ✅ |
+| 👩 Gender Analysis | ✅ |
+| 🎟️ Class Analysis | ✅ |
+| 🎂 Age Analysis | ✅ |
+| 🍩 Survival Analysis | ✅ |
+| ⚓ Embarkation Analysis | ✅ |
+| 🔥 Correlation Heatmap | ✅ |
+| 🔑 Key Findings | ✅ |
 
 </div>
 
@@ -793,26 +1173,27 @@ Possible dashboard controls:
 
 # 🤝 Contributing
 
-If you want to improve this project:
+If you want to improve this project, you can:
 
 ```text
 1. Fork the repository
 2. Create a new branch
-3. Make your changes
+3. Add your analysis or improvement
 4. Test the notebook
 5. Commit your changes
 6. Push the branch
 7. Open a Pull Request
 ```
 
-Ideas for contributions include:
+Possible contributions:
 
-- More financial indicators
-- Better visualizations
-- Interactive dashboards
-- Improved data cleaning
-- Advanced statistical analysis
-- Machine-learning extensions
+- 📊 New visualizations
+- 🧹 Improved data cleaning
+- 📈 Survival-rate analysis
+- 👨‍👩‍👧 Family-size analysis
+- 💰 Fare analysis
+- 🤖 Machine-learning models
+- 🖥️ Interactive dashboard
 
 ---
 
@@ -844,17 +1225,15 @@ This project is created for **educational and learning purposes**.
 
 You are free to study, modify, and extend the project according to your requirements.
 
-> Please remember that this project is an educational stock-data analysis and is not financial advice.
-
 ---
 
 <div align="center">
 
 ---
 
-## 📈 RELIANCE Stock Market Analysis
+# 🚢 Titanic Dataset | Data Analysis
 
-### **Data → Analysis → Visualization → Insights**
+### **Data → Cleaning → Exploration → Visualization → Insights**
 
 **Built with 🐍 Python · 🐼 Pandas · 🔢 NumPy · 📊 Matplotlib · 🎨 Seaborn**
 
