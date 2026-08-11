@@ -1,17 +1,17 @@
-# 🦠 COVID-19 Data Analysis
+# 🌍 Air Quality Data Analysis
 
 <div align="center">
 
-## 📊 Exploratory Data Analysis of COVID-19 Cases
+### 📊 Exploratory Data Analysis using Python
 
-**Load • Clean • Explore • Analyze • Visualize • Discover**
+**Clean • Transform • Explore • Visualize • Understand**
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)](https://matplotlib.org/)
-[![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0?style=for-the-badge)](https://seaborn.pydata.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-4C72B0?style=for-the-badge)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
 </div>
 
@@ -19,118 +19,112 @@
 
 ## 📌 Project Overview
 
-**COVID-19 Data Analysis** is an exploratory data analysis project created in Python using **Pandas, NumPy, Matplotlib, and Seaborn**.
+**Air Quality Data Analysis** is an Exploratory Data Analysis (EDA) project created using **Python, Pandas, NumPy, Matplotlib, and Seaborn**.
 
-The project analyzes a COVID-19 dataset at the country and date level. It focuses on understanding confirmed cases, deaths, recoveries, active cases, country-level differences, the COVID-19 death trend in India, and relationships between numerical variables.
+The project works with air-quality observations containing **pollution measurements, date and time information, and weather-related variables**. The main purpose is to clean the dataset, transform the date and time information into useful formats, and explore pollution and weather patterns through visualizations.
 
-The complete analysis is organized in a Jupyter Notebook and follows a clear data-analysis workflow:
+The analysis focuses on:
+
+- 🌫️ Monthly **CO** concentration
+- 🟠 Monthly **NOx** concentration
+- 💧 Monthly **Relative Humidity**
+- ⏰ Hourly **NO₂** concentration
+- 🌡️ Hourly **Temperature**
+- 🔥 Relationships between pollution and weather variables
+
+The complete analysis is implemented in the Jupyter Notebook:
 
 ```text
-📂 Load Dataset
-      ↓
-🧹 Check Data Quality
-      ↓
-🔎 Explore Dataset
-      ↓
-🌍 Analyze Countries
-      ↓
-📊 Compare COVID-19 Indicators
-      ↓
-🇮🇳 Analyze India's Death Trend
-      ↓
-🔗 Correlation Analysis
-      ↓
-📋 Create Country Summary
-      ↓
-🔑 Identify Key Findings
-      ↓
-✅ Conclusion
+Air_Quality(1).ipynb
 ```
-
-> **Project Focus:** Exploratory Data Analysis (EDA) using Python.
 
 ---
 
-# 🎯 Objectives
+# 🎯 Project Objectives
 
 The main objectives of this project are:
 
-- 📂 Load and understand the COVID-19 dataset
-- 🧹 Check missing values and data types
-- 📅 Convert the date column into a proper datetime format
-- 🌍 Explore the countries included in the dataset
-- 🦠 Analyze confirmed COVID-19 cases by country
-- 🕯️ Analyze COVID-19 deaths by country
-- 💚 Compare recoveries across countries
-- ⚠️ Analyze active COVID-19 cases
-- 🇮🇳 Study the COVID-19 death trend in India
-- 🔗 Analyze correlations between numerical variables
-- 📋 Create a final country-wise summary
-- 🔑 Extract key analytical findings from the dataset
+- 📂 Load the air-quality dataset into a Pandas DataFrame
+- 🔎 Inspect the dataset and its structure
+- 🧹 Identify and remove missing observations
+- 🔄 Reset the DataFrame index after cleaning
+- 🧬 Inspect column data types
+- 📅 Convert the `Date` column into Pandas datetime format
+- ⏰ Combine date and time into a `DateTime` column
+- 📆 Analyze monthly CO concentration
+- 🟠 Analyze monthly NOx concentration
+- 💧 Analyze monthly Relative Humidity
+- 🌫️ Analyze hourly NO₂ concentration
+- 🌡️ Analyze hourly temperature
+- 🔗 Study relationships between pollution and weather variables
+- 📊 Present findings using clear visualizations
 
 ---
 
 # 🗂️ Table of Contents
 
 - [📌 Project Overview](#-project-overview)
-- [🎯 Objectives](#-objectives)
-- [📂 Project Files](#-project-files)
-- [🛠️ Technology Stack](#️-technology-stack)
+- [🎯 Project Objectives](#-project-objectives)
+- [📂 Project Structure](#-project-structure)
+- [🛠️ Technologies Used](#️-technologies-used)
 - [📊 Dataset](#-dataset)
 - [🔄 Analysis Workflow](#-analysis-workflow)
 - [1️⃣ Import Libraries](#1️⃣-import-libraries)
 - [2️⃣ Load Dataset](#2️⃣-load-dataset)
-- [3️⃣ Dataset Structure](#3️⃣-dataset-structure)
-- [4️⃣ Data Quality Check](#4️⃣-data-quality-check)
-- [5️⃣ Country-Level Overview](#5️⃣-country-level-overview)
-- [6️⃣ Confirmed Cases](#6️⃣-confirmed-cases-by-country)
-- [7️⃣ Deaths](#7️⃣-covid-19-deaths-by-country)
-- [8️⃣ India Death Trend](#8️⃣-covid-19-death-trend-in-india)
-- [9️⃣ Recoveries](#9️⃣-covid-19-recoveries-by-country)
-- [🔟 Correlation Analysis](#-correlation-analysis)
-- [📋 Final Summary](#-final-country-wise-summary)
-- [🔑 Key Findings](#-key-analysis--findings)
+- [3️⃣ Missing Value Analysis](#3️⃣-missing-value-analysis)
+- [4️⃣ Data Cleaning](#4️⃣-data-cleaning)
+- [5️⃣ Data Type Inspection](#5️⃣-data-type-inspection)
+- [6️⃣ Date Transformation](#6️⃣-date-transformation)
+- [7️⃣ DateTime Creation](#7️⃣-datetime-creation)
+- [8️⃣ Monthly CO Analysis](#8️⃣-monthly-co-analysis)
+- [9️⃣ Monthly NOx Analysis](#9️⃣-monthly-nox-analysis)
+- [🔟 Monthly Relative Humidity Analysis](#-monthly-relative-humidity-analysis)
+- [1️⃣1️⃣ Hourly NO₂ Analysis](#1️⃣1️⃣-hourly-no₂-analysis)
+- [1️⃣2️⃣ Hourly Temperature Analysis](#1️⃣2️⃣-hourly-temperature-analysis)
+- [1️⃣3️⃣ Pollution and Weather Correlation](#1️⃣3️⃣-pollution-and-weather-correlation)
+- [🔑 Key Findings](#-key-findings)
 - [📈 Visualizations](#-visualizations)
-- [▶️ How to Run](#️-how-to-run-the-project)
+- [🧠 Concepts Practiced](#-concepts-practiced)
+- [▶️ How to Run](#️-how-to-run)
 - [🎓 Learning Outcomes](#-learning-outcomes)
 - [🔮 Future Improvements](#-future-improvements)
-- [⚠️ Notes](#️-notes)
+- [⚠️ Limitations and Notes](#️-limitations-and-notes)
 - [👨‍💻 Author](#-author)
 - [📄 License](#-license)
 
 ---
 
-# 📂 Project Files
+# 📂 Project Structure
 
-The project is organized around the following files:
+A simple recommended project structure is:
 
 ```text
-📦 COVID-19-Data-Analysis
+📦 Air-Quality-Data-Analysis
 │
-├── 📓 Covid-19.ipynb
-│   └── Complete exploratory data analysis notebook
+├── 📓 Air_Quality(1).ipynb
+│   └── Complete EDA notebook
 │
-├── 📄 Covid19_dataset.csv
-│   └── COVID-19 dataset used for analysis
+├── 📄 Air_Quality.csv
+│   └── Dataset used for the analysis
 │
 └── 📖 README.md
     └── Project documentation
 ```
 
-The notebook contains the complete workflow, including data loading, data-quality checks, country-level analysis, visualizations, correlation analysis, summary creation, and findings.
+> Keep `Air_Quality.csv` in the same working directory as the notebook if you want to run the notebook without changing the file path.
 
 ---
 
-# 🛠️ Technology Stack
+# 🛠️ Technologies Used
 
 | Technology | Purpose |
-|---|---|
+|:---|:---|
 | 🐍 **Python** | Main programming language |
-| 🐼 **Pandas** | Data loading, cleaning, grouping, aggregation, and analysis |
-| 🔢 **NumPy** | Numerical data handling |
-| 📊 **Matplotlib** | Creating charts and plots |
-| 🎨 **Seaborn** | Statistical visualizations |
-| 📓 **Jupyter Notebook** | Interactive development and analysis |
+| 🐼 **Pandas** | Data loading, cleaning, transformation, grouping, and analysis |
+| 🔢 **NumPy** | Numerical computing and data support |
+| 📊 **Matplotlib** | Creating and customizing plots |
+| 🎨 **Seaborn** | Statistical data visualization |
+| 📓 **Jupyter Notebook** | Interactive analysis and documentation |
 
 ---
 
@@ -139,79 +133,80 @@ The notebook contains the complete workflow, including data loading, data-qualit
 The notebook loads the dataset using:
 
 ```python
-data = pd.read_csv("Covid19_dataset.csv")
+df = pd.read_csv("Air_Quality.csv")
 ```
 
-The dataset is analyzed using Pandas.
+The dataset contains air-quality observations with **date, time, pollution measurements, and weather-related measurements**.
 
-The notebook works with the following important fields:
+The notebook specifically works with variables such as:
 
-| Column | Meaning |
-|---|---|
-| `Date` | Date of the COVID-19 record |
-| `Country` | Country represented by the record |
-| `Confirmed_Cases` | Recorded confirmed COVID-19 cases |
-| `Deaths` | Recorded COVID-19 deaths |
-| `Recovered` | Recorded recovered cases |
-| `Active_Cases` | Recorded active cases |
+| Column | Description / Usage |
+|:---|:---|
+| `Date` | Observation date |
+| `Time` | Observation time |
+| `CO(GT)` | CO concentration used for monthly analysis |
+| `NOx(GT)` | NOx concentration used for monthly analysis |
+| `NO2(GT)` | NO₂ concentration used for hourly analysis |
+| `C6H6(GT)` | Pollution variable included in correlation analysis |
+| `T` | Temperature |
+| `RH` | Relative Humidity |
+| `AH` | Absolute Humidity |
+| `DateTime` | Combined date and time created during analysis |
+| `Month` | Month number created for monthly grouping |
+| `Hour` | Hour of day created for hourly grouping |
 
-The project uses these fields for country comparison, trend analysis, summary statistics, and correlation analysis.
+The notebook does not replace the original pollution or weather measurements. Instead, it creates additional helper columns such as `DateTime`, `Month`, and `Hour` to make time-based analysis easier.
 
 ---
 
 # 🔄 Analysis Workflow
 
-The complete notebook follows this roadmap:
+The project follows a structured EDA workflow:
 
 ```text
-                 START
-                   │
-                   ▼
-          📂 Load COVID Dataset
-                   │
-                   ▼
-          🔎 Inspect Data Structure
-                   │
-                   ▼
-          🧹 Check Data Quality
-                   │
-          ┌────────┴────────┐
-          ▼                 ▼
-     Missing Values      Data Types
-          │                 │
-          └────────┬────────┘
-                   ▼
-          📅 Convert Date
-                   │
-                   ▼
-          🌍 Country Analysis
-                   │
-        ┌──────────┼──────────┐
-        ▼          ▼          ▼
-   🦠 Cases     🕯️ Deaths   💚 Recoveries
-        │          │          │
-        └──────────┼──────────┘
-                   ▼
-          🇮🇳 India Trend
-                   │
-                   ▼
-          🔗 Correlation
-                   │
-                   ▼
-          📋 Final Summary
-                   │
-                   ▼
-          🔑 Key Findings
-                   │
-                   ▼
-                 END
+                 📂 LOAD DATA
+                      │
+                      ▼
+              🔎 INSPECT DATA
+                      │
+                      ▼
+            🧹 CHECK MISSING VALUES
+                      │
+                      ▼
+               🧼 CLEAN DATA
+                      │
+                      ▼
+              🧬 CHECK DATA TYPES
+                      │
+                      ▼
+             📅 TRANSFORM DATE
+                      │
+                      ▼
+            ⏰ CREATE DATETIME
+                      │
+          ┌───────────┴───────────┐
+          ▼                       ▼
+     📆 MONTHLY                  ⏰ HOURLY
+     ANALYSIS                    ANALYSIS
+          │                       │
+     ┌────┼────┐             ┌────┴────┐
+     ▼    ▼    ▼             ▼         ▼
+    CO   NOx   RH            NO₂        T
+     │    │    │             │         │
+     └────┴────┘             └────┬────┘
+                                  │
+                                  ▼
+                         🔗 CORRELATION
+                                  │
+                                  ▼
+                           🔑 KEY FINDINGS
 ```
 
 ---
 
-# 1️⃣ 📚 Import Required Libraries
+# 1️⃣ Import Libraries
 
-The project uses four major Python libraries:
+The project begins by importing the main Python libraries required for analysis:
 
 ```python
 import numpy as np
@@ -224,658 +219,766 @@ import seaborn as sns
 
 ### 🐼 Pandas
 
-Pandas is used for:
+Pandas is the main library used for:
 
 - Reading the CSV file
 - Working with DataFrames
-- Checking data types
-- Finding missing values
-- Grouping records
-- Calculating maximum values
-- Creating the final summary
+- Checking missing values
+- Cleaning records
+- Converting dates
+- Grouping observations
+- Calculating averages
 
 ### 🔢 NumPy
 
-NumPy is imported for numerical data handling and identifying numeric columns.
+NumPy provides numerical computing support and is imported as part of the Data Science workflow.
 
 ### 📊 Matplotlib
 
-Matplotlib is used as the base visualization library.
+Matplotlib is used to create and customize figures, titles, labels, grids, and other chart elements.
 
 ### 🎨 Seaborn
 
-Seaborn is used to create cleaner statistical charts such as:
-
-- Bar plots
-- Line plots
-- Heatmaps
+Seaborn is used for the project's line plots and correlation heatmap.
 
 ---
 
-# 2️⃣ 📂 Load Dataset
+# 2️⃣ Load Dataset
 
-The dataset is loaded using:
+The dataset is loaded into a Pandas DataFrame:
 
 ```python
-data = pd.read_csv("Covid19_dataset.csv")
+df = pd.read_csv("Air_Quality.csv")
 ```
 
 The DataFrame is then displayed:
 
 ```python
-data
+df
 ```
 
-This is the first step of the analysis because all later operations are performed on the loaded DataFrame.
+This allows the dataset to be inspected before cleaning and transformation.
 
 ---
 
-# 3️⃣ 🔎 Dataset Structure
+# 3️⃣ Missing Value Analysis
 
-The notebook checks the available columns using:
+Before performing calculations, the notebook checks for missing values:
 
 ```python
-print(list(data.columns))
+df.isna().sum()
 ```
 
-This provides an overview of the fields available in the dataset.
+### Why is this important?
 
-Understanding the column names is important before selecting columns for analysis.
+Missing observations can affect:
+
+- Average calculations
+- Grouping operations
+- Visualizations
+- Correlation calculations
+- Overall interpretation
+
+Checking missing values before analysis is an important data-cleaning step.
 
 ---
 
-# 4️⃣ 🧹 Data Quality Check
+# 4️⃣ Data Cleaning
 
-Data quality is checked before performing detailed analysis.
-
-The notebook uses:
+The notebook removes rows containing missing values:
 
 ```python
-data.isna().sum()
+df.dropna(inplace=True)
 ```
 
-This identifies the number of missing values in each column.
-
-Checking missing values helps determine whether the dataset requires cleaning before analysis.
-
----
-
-## 🔤 Data Types
-
-The notebook checks column data types using:
+After removing incomplete rows, the index is reset:
 
 ```python
-data.dtypes
+df.reset_index(drop=True, inplace=True)
 ```
 
-This helps identify whether columns are stored as:
-
-- Numeric values
-- Text/object values
-- Date-related values
-
----
-
-## 📅 Convert Date Column
-
-The `Date` column is converted into a Pandas datetime format:
+The cleaned DataFrame is then displayed:
 
 ```python
-data["Date"] = pd.to_datetime(data["Date"])
+df
 ```
 
-After conversion, the notebook checks the data types again:
+### Cleaning process
 
-```python
-data.dtypes
-```
-
-Using a proper datetime format is important for time-based analysis, including the India death trend.
-
----
-
-# 5️⃣ 🌍 Country-Level Dataset Overview
-
-The notebook identifies all unique countries:
-
-```python
-print(list(data["Country"].unique()))
-```
-
-It also calculates the total number of unique countries:
-
-```python
-data["Country"].nunique()
-```
-
-This provides an overview of the geographical coverage of the dataset.
-
----
-
-## 📊 Country Record Counts
-
-The project also uses:
-
-```python
-data["Country"].value_counts()
-```
-
-This counts how many records are available for each country.
-
-This helps understand how frequently each country appears in the dataset.
-
----
-
-# 6️⃣ 🦠 Confirmed COVID-19 Cases by Country
-
-The notebook calculates the maximum recorded confirmed cases for each country:
-
-```python
-country_base = data.groupby("Country")["Confirmed_Cases"].max()
-```
-
-The result is then displayed:
-
-```python
-country_base
+```text
+Original Data
+     │
+     ▼
+Check Missing Values
+     │
+     ▼
+Remove Missing Rows
+     │
+     ▼
+Reset Index
+     │
+     ▼
+Clean DataFrame
 ```
 
 ---
 
-## 📊 Confirmed Cases Visualization
+# 5️⃣ Data Type Inspection
 
-A Seaborn bar plot is used:
+The notebook checks the data types of all columns:
 
 ```python
-plt.figure(figsize=(14,7))
+df.dtypes
+```
 
-sns.barplot(country_base, palette="viridis")
+This is particularly important because the project later performs operations involving:
 
-for i,v in enumerate(country_base.values):
-    plt.text(
-        i,
-        v + 5000,
-        str(v),
-        ha="center",
-        fontsize=9,
-        weight="bold"
+- Dates
+- Times
+- Numeric pollution measurements
+- Weather measurements
+
+Correct data types make later transformations and calculations easier and more reliable.
+
+---
+
+# 6️⃣ Date Transformation
+
+The original `Date` values are transformed into a consistent Pandas datetime format.
+
+The notebook first converts each date using:
+
+```python
+from datetime import datetime
+
+all_dates = []
+
+for date in df["Date"]:
+    all_dates.append(
+        datetime.strptime(date, "%d/%m/%Y").strftime("%m/%d/%Y")
     )
 
-plt.title(
-    "Country wise total confirmed cases of COVID-19",
-    weight="bold",
-    fontsize=20
+new_dates = pd.Series(all_dates)
+
+df["Date"] = pd.to_datetime(new_dates)
+```
+
+The data types are then checked again:
+
+```python
+df.dtypes
+```
+
+### Why transform the date?
+
+A proper datetime column makes it easier to perform:
+
+- 📆 Monthly grouping
+- 📅 Date-based filtering
+- 📈 Trend analysis
+- ⏱️ Time-based calculations
+
+---
+
+# 7️⃣ Review Converted Dates
+
+The notebook checks the transformed date column:
+
+```python
+df["Date"]
+```
+
+This provides a direct view of the converted date values and confirms that the date transformation has been applied.
+
+---
+
+# 8️⃣ DateTime Creation
+
+The project combines the date and time information into one `DateTime` column:
+
+```python
+df["DateTime"] = pd.to_datetime(
+    df["Date"].dt.strftime("%Y-%m-%d") + " " + df["Time"]
 )
-
-plt.tight_layout()
-plt.show()
 ```
 
-### What the chart shows
+The first few records are then displayed:
 
-The chart compares the maximum recorded confirmed COVID-19 cases between countries in the dataset.
+```python
+df.head()
+```
 
-The values are displayed directly above the bars, making the comparison easier to read.
+### Why create `DateTime`?
+
+A combined datetime value is more useful when working with detailed time-based observations.
+
+It can support future analysis such as:
+
+- Hourly trends
+- Daily trends
+- Time-based filtering
+- Time-series visualizations
 
 ---
 
-# 7️⃣ 🕯️ COVID-19 Deaths by Country
+# 9️⃣ 📈 Monthly CO Analysis
 
-The notebook calculates the maximum recorded deaths for each country:
+The project analyzes the average **CO concentration by month**.
+
+First, a month number is extracted from the `Date` column:
 
 ```python
-country_deaths = data.groupby("Country")["Deaths"].max()
+df["Month"] = df["Date"].dt.month
 ```
 
-The result is displayed before visualization.
-
----
-
-## 📊 Deaths Visualization
-
-The project creates a bar chart using Seaborn:
+Then the average CO concentration for each month is calculated:
 
 ```python
-plt.figure(figsize=(14, 7))
-
-sns.barplot(country_deaths, palette="viridis")
-
-for i,v in enumerate(country_deaths.values):
-    plt.text(
-        i,
-        v + 5,
-        str(v),
-        ha="center",
-        weight="bold",
-        fontsize=10
-    )
-
-plt.title(
-    "Total COVID-19 Deaths by Country",
-    weight="bold",
-    fontsize=20
-)
-
-plt.xlabel("Deaths", weight="bold")
-plt.ylabel("Country", weight="bold")
-
-plt.tight_layout()
-plt.show()
+monthly_co = df.groupby("Month")["CO(GT)"].mean()
 ```
 
-### Purpose
+The result is visualized using a Seaborn line plot.
 
-This visualization provides a country-level comparison of the maximum recorded COVID-19 deaths in the dataset.
-
----
-
-# 8️⃣ 🇮🇳 COVID-19 Death Trend in India
-
-The project specifically analyzes India.
-
-The India records are selected using:
+### 📊 Visualization
 
 ```python
-india = data[data["Country"] == "India"]
-```
-
-The resulting DataFrame contains the COVID-19 records for India.
-
----
-
-## 📈 India Death Trend Visualization
-
-The notebook uses a line plot:
-
-```python
-plt.figure(figsize=(14, 6))
+plt.figure(figsize=(10, 6))
 
 sns.lineplot(
-    data=india,
-    x="Date",
-    y="Deaths",
+    monthly_co,
+    marker="o",
+    color="purple",
+    markersize=7,
+    linewidth=2,
+    markerfacecolor="white",
+    markeredgecolor="purple",
+    markeredgewidth=2
+)
+
+plt.title(
+    "Average CO Concentration by Month",
+    fontsize=18,
+    fontweight="bold"
+)
+
+plt.xlabel("Month", fontsize=11, fontweight="bold")
+plt.ylabel("Average CO Concentration", fontsize=11, fontweight="bold")
+
+plt.grid(
+    linestyle="--",
+    linewidth=0.7,
+    alpha=0.7
+)
+
+plt.show()
+```
+
+### 🔍 What this visualization explores
+
+- Monthly changes in CO concentration
+- Higher and lower pollution periods
+- Possible seasonal movement in CO levels
+
+---
+
+# 🔟 🟠 Monthly NOx Analysis
+
+The project also studies the average **NOx concentration by month**.
+
+The calculation is:
+
+```python
+monthly_nox = df.groupby("Month")["NOx(GT)"].mean()
+```
+
+The values are visualized with a line chart:
+
+```python
+plt.figure(figsize=(10, 6))
+
+sns.lineplot(
+    monthly_nox,
+    marker="o",
+    color="darkorange",
+    markersize=7,
+    linewidth=2,
+    markerfacecolor="white",
+    markeredgecolor="darkorange",
+    markeredgewidth=2
+)
+
+plt.title(
+    "Average NOx Concentration by Month",
+    fontsize=18,
+    fontweight="bold"
+)
+
+plt.xlabel("Month", fontsize=11, fontweight="bold")
+plt.ylabel("Average NOx Concentration", fontsize=11, fontweight="bold")
+
+plt.grid(
+    linestyle="--",
+    linewidth=0.7,
+    alpha=0.7
+)
+
+plt.show()
+```
+
+### 🔍 What this analysis explores
+
+- Monthly NOx variation
+- Pollution peaks and declines
+- Possible seasonal patterns
+
+---
+
+# 1️⃣1️⃣ 💧 Monthly Relative Humidity Analysis
+
+The notebook analyzes average **Relative Humidity (RH)** by month.
+
+The monthly average is calculated with:
+
+```python
+monthly_rh = df.groupby("Month")["RH"].mean()
+```
+
+The result is visualized using a line plot:
+
+```python
+plt.figure(figsize=(10, 6))
+
+sns.lineplot(
+    monthly_rh,
+    marker="o",
+    color="royalblue",
+    markersize=7,
+    linewidth=2,
+    markerfacecolor="white",
+    markeredgecolor="royalblue",
+    markeredgewidth=2
+)
+
+plt.title(
+    "Average Relative Humidity by Month",
+    fontsize=18,
+    fontweight="bold"
+)
+
+plt.xlabel("Month", fontsize=11, fontweight="bold")
+plt.ylabel("Average Relative Humidity (%)", fontsize=11, fontweight="bold")
+
+plt.grid(
+    linestyle="--",
+    linewidth=0.7,
+    alpha=0.7
+)
+
+plt.show()
+```
+
+### 🔍 What this visualization explores
+
+- Humidity variation across months
+- Comparatively higher humidity periods
+- Comparatively lower humidity periods
+- Seasonal weather patterns
+
+---
+
+# 1️⃣2️⃣ 🌫️ Hourly NO₂ Analysis
+
+The project analyzes the average **NO₂ concentration by hour of the day**.
+
+First, the hour is extracted from the `Time` column:
+
+```python
+df["Hour"] = pd.to_datetime(df["Time"]).dt.hour
+```
+
+Then average NO₂ is calculated:
+
+```python
+hourly_co = df.groupby("Hour")["NO2(GT)"].mean()
+```
+
+The result is visualized using a line plot:
+
+```python
+plt.figure(figsize=(10, 6))
+
+sns.lineplot(
+    hourly_co,
     marker="o",
     color="crimson",
     markersize=7,
-    linewidth=2.5,
+    linewidth=2,
     markerfacecolor="white",
     markeredgecolor="crimson",
     markeredgewidth=2
 )
 
+plt.title(
+    "Average NO2 Concentration by Hour",
+    fontsize=18,
+    fontweight="bold"
+)
+
+plt.xlabel("Hour of Day", fontsize=11, fontweight="bold")
+plt.ylabel("Average NO2 Concentration", fontsize=11, fontweight="bold")
+
 plt.grid(
     linestyle="--",
     linewidth=0.7,
-    alpha=0.5
+    alpha=0.7
 )
-
-plt.title(
-    "COVID-19 Deaths in India Over Time",
-    weight="bold",
-    fontsize=20
-)
-
-plt.xlabel("Date", weight="bold")
-plt.ylabel("Total Deaths", weight="bold")
 
 plt.show()
 ```
 
-### What this analysis does
+### 🔍 What this analysis explores
 
-The line chart shows how the recorded death count for India changes across the dates available in the dataset.
-
-It provides a simple time-based view of India's COVID-19 death records.
+- Daily NO₂ patterns
+- Hours with comparatively higher NO₂
+- Hours with comparatively lower NO₂
+- Changes in pollution during different parts of the day
 
 ---
 
-# 9️⃣ 💚 COVID-19 Recoveries by Country
+# 1️⃣3️⃣ 🌡️ Hourly Temperature Analysis
 
-The project calculates maximum recorded recoveries for each country:
+The notebook examines average **temperature by hour of the day**.
+
+The hour is extracted using:
 
 ```python
-country_recovered = (
-    data.groupby("Country")["Recovered"]
-    .max()
-    .sort_values(ascending=False)
-)
+df["Hour"] = pd.to_datetime(df["Time"]).dt.hour
 ```
 
-Sorting in descending order makes it easier to compare countries from the highest recovery value to the lowest.
-
----
-
-## 📊 Recovery Visualization
-
-A horizontal bar chart is generated:
+The average temperature for each hour is calculated:
 
 ```python
-plt.figure(figsize=(16, 7))
+monthly_temp = df.groupby("Hour")["T"].mean()
+```
 
-sns.barplot(
-    x=country_recovered.values,
-    y=country_recovered.index,
-    palette="viridis"
+The result is visualized using:
+
+```python
+plt.figure(figsize=(10, 6))
+
+sns.lineplot(
+    monthly_temp,
+    marker="o",
+    color="teal",
+    markersize=7,
+    linewidth=2,
+    markerfacecolor="white",
+    markeredgecolor="teal",
+    markeredgewidth=2
 )
-
-for i, v in enumerate(country_recovered.values):
-    plt.text(
-        v + 500,
-        i,
-        str(v),
-        va="center",
-        weight="bold"
-    )
 
 plt.title(
-    "Total COVID-19 Recoveries by Country",
-    fontsize=20,
-    weight="bold"
+    "Average Temperature by Hour",
+    fontsize=18,
+    fontweight="bold"
 )
 
-plt.xlabel("Recovered Cases", weight="bold")
-plt.ylabel("Country", weight="bold")
+plt.xlabel("Hour of Day", fontsize=11, fontweight="bold")
+plt.ylabel("Average Temperature", fontsize=11, fontweight="bold")
 
-plt.tight_layout()
+plt.grid(
+    linestyle="--",
+    linewidth=0.7,
+    alpha=0.7
+)
+
 plt.show()
 ```
 
-### Purpose
+### 🔍 What this analysis explores
 
-This chart provides a visual comparison of the maximum recorded recovered cases across countries.
-
----
-
-# 🔟 🔗 Correlation Analysis
-
-Correlation analysis is used to study relationships between numerical COVID-19 variables.
-
-First, the notebook identifies numeric columns:
-
-```python
-num_col = list(
-    data.select_dtypes(include="number").columns
-)
-```
-
-The numeric columns are then displayed.
+- Daily temperature movement
+- Warmer and cooler hours
+- The relationship between time of day and temperature patterns
 
 ---
 
-## 🔗 Correlation Matrix
+# 1️⃣4️⃣ 🔥 Pollution & Weather Correlation
 
-The correlation matrix is calculated using:
+The notebook performs correlation analysis between selected pollution and weather variables.
 
-```python
-corr = data[num_col].corr()
+The variables included are:
+
+```text
+CO(GT)
+NOx(GT)
+NO2(GT)
+C6H6(GT)
+T
+RH
+AH
 ```
 
-A heatmap is created:
+They are selected using:
 
 ```python
-plt.figure(figsize=(12,8))
+weather_pollution = [
+    "CO(GT)",
+    "NOx(GT)",
+    "NO2(GT)",
+    "C6H6(GT)",
+    "T",
+    "RH",
+    "AH"
+]
+```
+
+The correlation matrix is calculated and displayed as a heatmap:
+
+```python
+plt.figure(figsize=(10, 7))
 
 sns.heatmap(
-    corr,
+    df[weather_pollution].corr(),
     annot=True,
-    cmap="Greens"
+    cmap="Oranges"
 )
 
 plt.title(
-    "Correlation Between COVID-19 Variables",
+    "Relationship Between Pollution and Weather",
     fontsize=18,
-    weight="bold"
+    fontweight="bold"
 )
 
 plt.show()
 ```
 
-### What correlation analysis provides
-
-The heatmap provides a visual representation of relationships between numerical variables.
-
-The values shown inside the heatmap help identify the strength and direction of relationships between variables in the dataset.
-
 ---
 
-# 📋 Final Country-Wise Summary
+## 🔗 Understanding Correlation
 
-The notebook creates a final summary table using:
+The notebook uses correlation to explore linear relationships between variables.
 
-```python
-summary = data.groupby("Country").agg({
-    "Confirmed_Cases": "max",
-    "Recovered": "max",
-    "Deaths": "max",
-    "Active_Cases": "max"
-})
-```
+| Correlation Value | General Interpretation |
+|:---:|:---|
+| Near **+1** | Strong positive relationship |
+| Near **0** | Weak or little linear relationship |
+| Near **-1** | Strong negative relationship |
 
-The resulting table combines four major COVID-19 indicators:
+### ⚠️ Important
 
-| Indicator | Aggregation |
-|---|---|
-| `Confirmed_Cases` | Maximum |
-| `Recovered` | Maximum |
-| `Deaths` | Maximum |
-| `Active_Cases` | Maximum |
+> **Correlation shows association, not causation.**
 
-This creates a compact country-wise view of the major indicators analyzed in the project.
+A strong correlation does not by itself prove that one variable causes another.
 
 ---
 
 # 🔑 Key Analysis & Findings
 
-The notebook reports the following findings based on the **maximum recorded values in the dataset**:
+The notebook summarizes the analysis into several major observations.
 
-| 🏆 Indicator | 🌍 Country | 🔢 Maximum Recorded Value |
-|---|---|---:|
-| 🦠 Confirmed Cases | **India** | **415,392** |
-| 🕯️ Deaths | **India** | **267** |
-| 💚 Recoveries | **India** | **212,262** |
-| ⚠️ Active Cases | **India** | **202,863** |
+## 🌫️ 1. CO Pollution
+
+CO concentration varies across different months.
+
+The monthly line chart makes it possible to observe periods where the average CO concentration is comparatively higher or lower.
 
 ---
 
-## 🇮🇳 India Analysis
+## 🟠 2. NOx Pollution
 
-According to the notebook's analysis:
+NOx levels show noticeable monthly variation.
 
-| 📊 Indicator | 🔢 Maximum Recorded Value |
-|---|---:|
-| 🦠 Confirmed Cases | **415,392** |
-| 💚 Recovered Cases | **212,262** |
-| 🕯️ Deaths | **267** |
-| ⚠️ Active Cases | **202,863** |
+The visualization can be used to observe peaks, declines, and possible seasonal movement in NOx concentration.
 
-These values are the maximum values reported by the notebook for India.
+---
 
-> **Important:** These findings describe the values present in the supplied dataset. They should not be interpreted as current real-world COVID-19 statistics.
+## 💧 3. Relative Humidity
+
+Relative humidity changes across months.
+
+This provides a simple view of how weather conditions vary over the period represented in the dataset.
+
+---
+
+## ⏰ 4. Hourly NO₂
+
+NO₂ concentration varies throughout the day.
+
+The hourly line chart helps identify periods with comparatively higher or lower average NO₂ concentration.
+
+---
+
+## 🌡️ 5. Temperature
+
+Temperature also changes according to the hour of the day.
+
+The hourly temperature chart provides a visual representation of daily temperature movement.
+
+---
+
+## 🔗 6. Pollution & Weather Relationships
+
+The correlation heatmap compares:
+
+```text
+CO(GT)
+NOx(GT)
+NO2(GT)
+C6H6(GT)
+T
+RH
+AH
+```
+
+This provides an overview of the linear relationships present among selected pollution and weather variables.
+
+---
+
+# 📊 Analysis Summary
+
+| 🌍 Indicator | 📌 Analysis Type | 📈 Visualization |
+|:---|:---|:---|
+| 🌫️ CO | Monthly average | Line plot |
+| 🟠 NOx | Monthly average | Line plot |
+| 💧 Relative Humidity | Monthly average | Line plot |
+| 🌫️ NO₂ | Hourly average | Line plot |
+| 🌡️ Temperature | Hourly average | Line plot |
+| 🔗 Pollution & Weather | Correlation | Heatmap |
 
 ---
 
 # 📈 Visualizations Included
 
-The notebook creates several visualizations to make the analysis easier to understand.
+The project contains **six main analytical visualizations/analysis outputs**.
 
-### 🦠 1. Confirmed Cases by Country
+### 1. 🌫️ Average CO Concentration by Month
 
-**Chart type:** Bar plot
+Shows how average CO concentration changes across months.
 
-Purpose:
+### 2. 🟠 Average NOx Concentration by Month
 
-- Compare maximum confirmed cases
-- Display country-level differences
-- Show values directly above bars
+Shows monthly changes in average NOx concentration.
 
----
+### 3. 💧 Average Relative Humidity by Month
 
-### 🕯️ 2. Deaths by Country
+Shows monthly changes in average RH.
 
-**Chart type:** Bar plot
+### 4. 🌫️ Average NO₂ Concentration by Hour
 
-Purpose:
+Shows how average NO₂ concentration changes during different hours of the day.
 
-- Compare maximum recorded deaths
-- Provide a country-level visual comparison
+### 5. 🌡️ Average Temperature by Hour
 
----
+Shows the average temperature pattern across hours.
 
-### 🇮🇳 3. Deaths in India Over Time
+### 6. 🔥 Pollution & Weather Correlation Heatmap
 
-**Chart type:** Line plot
-
-Purpose:
-
-- Observe the death trend across dates
-- Focus specifically on India
+Shows correlation values among selected pollution and weather variables.
 
 ---
 
-### 💚 4. Recoveries by Country
+# 🧠 Concepts Practiced
 
-**Chart type:** Horizontal bar plot
+This project demonstrates several practical Data Science concepts.
 
-Purpose:
+## 🐍 Python
 
-- Compare maximum recorded recoveries
-- Display countries in descending order
+- Importing libraries
+- Loops
+- Lists
+- String formatting
+- Datetime handling
 
----
+## 🐼 Pandas
 
-### 🔗 5. COVID-19 Correlation Heatmap
+- `read_csv()`
+- DataFrame inspection
+- `isna()`
+- `dropna()`
+- `reset_index()`
+- `dtypes`
+- `groupby()`
+- `mean()`
+- Date transformation
+- Creating new columns
 
-**Chart type:** Heatmap
+## 📅 Datetime
 
-Purpose:
-
-- Visualize correlations between numerical variables
-- Make relationships easier to identify
-
----
-
-# 🧠 Data Analysis Concepts Demonstrated
-
-This project covers several important concepts used in beginner-to-intermediate Data Science.
-
-## 📂 Data Loading
-
-```python
-pd.read_csv()
-```
-
-## 🔎 Data Exploration
-
-```python
-head()
-dtypes
-columns
-value_counts()
-nunique()
-```
-
-## 🧹 Data Quality
-
-```python
-isna().sum()
-```
-
-## 📅 Date Processing
-
-```python
-pd.to_datetime()
-```
-
-## 🌍 Grouping
-
-```python
-groupby()
-```
-
-## 📊 Aggregation
-
-```python
-max()
-agg()
-```
-
-## 🔢 Numeric Column Selection
-
-```python
-select_dtypes(include="number")
-```
-
-## 🔗 Correlation
-
-```python
-corr()
-```
+- Converting strings to datetime
+- Extracting month
+- Extracting hour
+- Combining date and time
+- Time-based grouping
 
 ## 📊 Visualization
 
-```python
-sns.barplot()
-sns.lineplot()
-sns.heatmap()
-```
+- Creating figures
+- Line plots
+- Heatmaps
+- Titles
+- Axis labels
+- Markers
+- Grid lines
+- Figure sizing
+
+## 🔗 Statistics
+
+- Mean
+- Correlation
+- Grouped averages
+- Relationship analysis
 
 ---
 
-# 🎓 Learning Outcomes
+# 🧩 Project Architecture
 
-After completing this project, the following skills can be practiced:
+The analysis can be represented as:
 
-### 🐍 Python
-
-- Importing libraries
-- Working with variables
-- DataFrame manipulation
-- Selecting and filtering data
-- Basic programming workflow
-
-### 🐼 Pandas
-
-- Reading CSV files
-- Creating DataFrames
-- Inspecting columns
-- Checking data types
-- Detecting missing values
-- Converting dates
-- Counting unique values
-- Grouping data
-- Aggregating data
-- Creating summary tables
-
-### 🔢 NumPy
-
-- Working with numerical data
-- Identifying numerical columns
-- Supporting data-analysis operations
-
-### 📊 Matplotlib
-
-- Creating figures
-- Setting figure size
-- Adding titles
-- Adding axis labels
-- Displaying charts
-- Formatting plots
-
-### 🎨 Seaborn
-
-- Bar plots
-- Line plots
-- Heatmaps
-- Statistical visualization
-
-### 📈 Data Analysis
-
-- Exploratory Data Analysis
-- Country comparison
-- Trend analysis
-- Correlation analysis
-- Summary generation
-- Finding key patterns
+```text
+┌───────────────────────────────┐
+│       📄 Air_Quality.csv      │
+│          Raw Dataset          │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│       🔎 Data Inspection      │
+│   Missing Values • Dtypes     │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│        🧹 Data Cleaning       │
+│   Remove Missing Rows         │
+│   Reset Index                 │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│       📅 Time Processing      │
+│ Date • DateTime • Month • Hour│
+└───────────────┬───────────────┘
+                │
+        ┌───────┴────────┐
+        ▼                ▼
+┌───────────────┐  ┌───────────────┐
+│ 📆 Monthly    │  │ ⏰ Hourly     │
+│ Analysis      │  │ Analysis      │
+│ CO / NOx / RH │  │ NO₂ / Temp    │
+└───────┬───────┘  └───────┬───────┘
+        │                   │
+        └─────────┬─────────┘
+                  ▼
+        ┌───────────────────┐
+        │ 🔥 Correlation    │
+        │ Pollution/Weather │
+        └─────────┬─────────┘
+                  ▼
+        ┌───────────────────┐
+        │ 🔑 Key Findings   │
+        └───────────────────┘
+```
 
 ---
 
@@ -883,9 +986,9 @@ After completing this project, the following skills can be practiced:
 
 ## 1. Install Python
 
-Python 3.10 or newer is recommended.
+Install Python 3.x on your system.
 
-Check your version:
+Check the installed version:
 
 ```bash
 python --version
@@ -903,19 +1006,25 @@ pip install numpy pandas matplotlib seaborn jupyter
 
 ---
 
-## 3. Keep the Dataset in the Correct Location
+## 3. Keep the Dataset in the Correct Folder
 
-The notebook expects:
+Make sure the dataset is available as:
 
 ```text
-Covid19_dataset.csv
+Air_Quality.csv
 ```
 
-The CSV file should be available in the same working directory as the notebook, unless the path in the notebook is changed.
+The notebook uses:
+
+```python
+pd.read_csv("Air_Quality.csv")
+```
+
+So the CSV should normally be placed in the same directory as the notebook.
 
 ---
 
-## 4. Start Jupyter Notebook
+## 4. Open Jupyter Notebook
 
 Run:
 
@@ -923,262 +1032,275 @@ Run:
 jupyter notebook
 ```
 
-Open the notebook:
+Then open:
 
 ```text
-Covid-19.ipynb
+Air_Quality(1).ipynb
 ```
 
 ---
 
 ## 5. Run the Notebook
 
-Run the cells from top to bottom.
+Run the notebook cells from top to bottom.
 
-Recommended order:
+Recommended sequence:
 
 ```text
 1. Import libraries
 2. Load dataset
-3. Inspect columns
-4. Check missing values
-5. Check data types
-6. Convert Date
-7. Explore countries
-8. Analyze confirmed cases
-9. Analyze deaths
-10. Analyze India
-11. Analyze recoveries
-12. Analyze correlation
-13. Generate final summary
-14. Review findings
-15. Read conclusion
+3. Check missing values
+4. Clean missing rows
+5. Verify data quality
+6. Inspect data types
+7. Transform Date
+8. Review Date
+9. Review cleaned DataFrame
+10. Create DateTime
+11. Analyze monthly CO
+12. Analyze monthly NOx
+13. Analyze monthly RH
+14. Analyze hourly NO₂
+15. Analyze hourly temperature
+16. Analyze pollution/weather correlation
+17. Review findings
+18. Read conclusion
 ```
 
 ---
 
-# 📌 Expected Project Flow
+# 📌 Expected Output
 
-When the notebook is executed successfully, the analysis progresses through:
+After running the notebook successfully, you should see:
 
 ```text
-📥 Dataset Loaded
-       ↓
-🔎 Dataset Inspected
-       ↓
-🧹 Data Quality Checked
-       ↓
-📅 Date Converted
-       ↓
-🌍 Countries Identified
-       ↓
-🦠 Confirmed Cases Compared
-       ↓
-🕯️ Deaths Compared
-       ↓
-🇮🇳 India Trend Analyzed
-       ↓
-💚 Recoveries Compared
-       ↓
-🔗 Correlation Calculated
-       ↓
-📋 Summary Generated
-       ↓
-🔑 Findings Presented
+📂 Dataset loaded
+      ↓
+🔎 Missing values checked
+      ↓
+🧹 Missing rows removed
+      ↓
+🧬 Data types inspected
+      ↓
+📅 Date converted
+      ↓
+⏰ DateTime created
+      ↓
+📆 Monthly CO chart
+      ↓
+🟠 Monthly NOx chart
+      ↓
+💧 Monthly RH chart
+      ↓
+🌫️ Hourly NO₂ chart
+      ↓
+🌡️ Hourly temperature chart
+      ↓
+🔥 Correlation heatmap
+      ↓
+🔑 Key findings
 ```
+
+---
+
+# 🎓 Learning Outcomes
+
+This project is useful for practicing a complete beginner-to-intermediate EDA workflow.
+
+After completing the project, you can understand how to:
+
+### 📂 Work with real-world tabular data
+
+Load a CSV dataset and inspect its structure using Pandas.
+
+### 🧹 Clean data
+
+Identify missing values and remove incomplete rows before analysis.
+
+### 📅 Handle dates and times
+
+Convert string dates into datetime values and extract useful components such as month and hour.
+
+### 📊 Perform grouped analysis
+
+Calculate monthly and hourly averages using `groupby()` and `mean()`.
+
+### 📈 Create visualizations
+
+Use Seaborn and Matplotlib to communicate patterns visually.
+
+### 🔗 Analyze relationships
+
+Use a correlation matrix and heatmap to examine relationships between pollution and weather variables.
+
+### 🧠 Interpret analytical results
+
+Move from raw data to charts and then to meaningful observations about pollution and weather patterns.
 
 ---
 
 # 💡 Why This Project Is Useful
 
-COVID-19 data provides a practical example for learning exploratory data analysis.
+Air-quality datasets are a good practical example for learning Data Science because they combine multiple types of information:
 
-Instead of analyzing an artificial collection of numbers, the project works with records containing:
+```text
+📅 Date
+⏰ Time
+🌫️ Pollution
+🌡️ Temperature
+💧 Humidity
+```
 
-- Dates
-- Countries
-- Confirmed cases
-- Deaths
-- Recoveries
-- Active cases
+This makes it possible to practice both **time-based analysis** and **relationship analysis** within one project.
 
-This allows common Data Science techniques to be practiced in a meaningful analytical context.
-
-The project also demonstrates how raw tabular data can be converted into visual information that is easier to compare and interpret.
+The project demonstrates how raw environmental observations can be transformed into visual patterns that are easier to explore and communicate.
 
 ---
 
 # 🔮 Future Improvements
 
-The current notebook provides a strong foundation for further analysis.
+The current notebook provides a solid foundation for additional analysis.
 
-Possible improvements include:
+Possible extensions include:
 
-## 📅 Time-Series Analysis
+## 📅 More Time-Series Analysis
 
-- Confirmed cases over time
-- Recoveries over time
-- Active cases over time
-- Country-specific time trends
-- Monthly trend analysis
+- Daily pollution trends
+- Weekly pollution trends
+- Yearly comparisons
+- Rolling averages
+- Long-term trend analysis
 
-## 🌍 Advanced Country Comparison
+## 🌫️ More Pollutant Analysis
 
-- Top countries by confirmed cases
-- Top countries by recoveries
-- Top countries by deaths
-- Active-case comparisons
-- Country ranking tables
+Additional pollution variables could be explored individually through:
+
+- Monthly averages
+- Hourly averages
+- Distribution plots
+- Comparison charts
+
+## 🌡️ Weather Analysis
+
+Future analysis could examine:
+
+- Temperature vs CO
+- Temperature vs NO₂
+- Humidity vs pollutants
+- Absolute humidity vs pollution
 
 ## 📊 Additional Visualizations
 
-- Box plots
-- Count plots
-- Area charts
+Possible additions include:
+
 - Histograms
+- Box plots
+- Scatter plots
 - Pair plots
-- Stacked bar charts
+- Area charts
+- Distribution plots
 - Interactive charts
 
-## 🧮 Additional Metrics
+## 🔗 Advanced Correlation Analysis
 
-- Recovery rate
-- Death rate
-- Active-case percentage
-- Cases per population, if population data is available
-- Country-wise growth rate
+The correlation section could be extended with:
 
-## 🖥️ Dashboard
+- Larger variable selections
+- Scatter plots
+- Regression lines
+- Separate pollutant-weather comparisons
 
-The analysis could be converted into an interactive dashboard using:
+## 🖥️ Interactive Dashboard
 
-- Streamlit
-- Plotly
-- Dash
-
-Possible dashboard controls could include:
+The analysis could be converted into an interactive dashboard using tools such as:
 
 ```text
-Country Filter
-Date Filter
-Metric Selector
-Chart Selector
+Streamlit
+Plotly
+Dash
 ```
 
-## 🤖 Advanced Data Science
+A future dashboard could include:
 
-The project could later be extended to include:
-
-- Time-series forecasting
-- Trend prediction
-- Machine learning
-- Clustering countries
-- Anomaly detection
-
-These features are not part of the current notebook, but they are possible future extensions.
+```text
+🌫️ Pollution Selector
+📅 Date Filter
+⏰ Hour Filter
+📊 Dynamic Charts
+🔗 Correlation View
+```
 
 ---
 
-# ⚠️ Notes & Limitations
+# ⚠️ Limitations and Notes
 
-- The analysis is based only on the supplied `Covid19_dataset.csv`.
-- The notebook uses **maximum recorded values** for several country-level comparisons.
-- The results therefore represent the dataset's recorded maximums, not necessarily totals calculated by summing every row.
-- The notebook specifically filters India for its death-trend analysis.
-- The project checks missing values but does not introduce a separate missing-value imputation workflow in the current notebook.
-- The correlation analysis considers the numeric columns available in the dataset.
-- The findings section reflects the values produced by the current notebook.
-- COVID-19 data can vary depending on source, reporting methodology, date, and revisions.
+- The analysis is based on the data available in `Air_Quality.csv`.
+- Missing rows are removed using `dropna()`.
+- The project focuses on exploratory analysis rather than predictive modeling.
+- The monthly analyses use average values grouped by month.
+- The hourly analyses use average values grouped by hour.
+- The correlation heatmap shows linear association, not causation.
+- The project does not claim that correlation proves a direct cause-and-effect relationship.
+- The current notebook does not implement machine-learning prediction.
+- The exact patterns depend on the dataset supplied with the project.
 
-> 📌 **Data interpretation note:** This project is intended for educational exploratory analysis. It is not a source for current public-health statistics.
-
----
-
-# 🧩 Project Architecture
-
-The project can be viewed as five simple analytical layers:
-
-```text
-┌─────────────────────────────────────┐
-│          📂 DATA SOURCE             │
-│       Covid19_dataset.csv           │
-└──────────────────┬──────────────────┘
-                   ↓
-┌─────────────────────────────────────┐
-│          🧹 DATA PREPARATION        │
-│   Missing Values • Data Types       │
-│   Date Conversion                   │
-└──────────────────┬──────────────────┘
-                   ↓
-┌─────────────────────────────────────┐
-│           🔎 EXPLORATION             │
-│ Countries • Records • Columns       │
-└──────────────────┬──────────────────┘
-                   ↓
-┌─────────────────────────────────────┐
-│          📊 ANALYSIS                │
-│ Cases • Deaths • Recovery • Active  │
-│ India Trend • Correlation           │
-└──────────────────┬──────────────────┘
-                   ↓
-┌─────────────────────────────────────┐
-│       📈 VISUALIZATION & FINDINGS   │
-│ Charts • Summary • Key Findings     │
-└─────────────────────────────────────┘
-```
+> 📌 **Important:** This project is intended for educational and analytical purposes. Its visual patterns and observations should be interpreted in the context of the supplied dataset.
 
 ---
 
 # 🏆 Project Highlights
 
-### ⭐ Complete EDA Workflow
+### ⭐ Clean EDA Workflow
 
-The notebook covers the major stages of a basic exploratory data-analysis project.
+The notebook follows a logical sequence from loading and cleaning the dataset to visualization and findings.
 
-### ⭐ Multiple Visualizations
+### ⭐ Time-Based Analysis
 
-Different chart types are used to analyze different aspects of the dataset.
+Both monthly and hourly patterns are explored.
 
-### ⭐ Country-Level Comparison
+### ⭐ Pollution Analysis
 
-COVID-19 indicators are compared across countries.
+CO, NOx, and NO₂ are examined through dedicated visualizations.
 
-### ⭐ India-Focused Analysis
+### ⭐ Weather Analysis
 
-A dedicated time-series visualization is created for India's recorded deaths.
+Relative humidity and temperature are analyzed over time.
 
 ### ⭐ Correlation Analysis
 
-A heatmap is used to explore relationships between numerical variables.
+Pollution and weather variables are compared using a correlation heatmap.
 
-### ⭐ Final Summary
+### ⭐ Beginner-Friendly Structure
 
-A country-wise summary combines confirmed cases, recoveries, deaths, and active cases.
+Each major analysis step is separated and explained inside the notebook using Markdown headings.
 
 ---
 
 # 🤝 Contributing
 
-If you want to improve this project, you can:
+If you want to improve this project, you can extend the notebook with additional analysis or visualizations.
+
+A typical workflow is:
 
 ```text
-1. Fork the repository
+1. Fork the project
 2. Create a new branch
 3. Add your improvement
-4. Run and test the notebook
+4. Test the notebook
 5. Commit your changes
 6. Push the branch
-7. Create a Pull Request
+7. Open a Pull Request
 ```
 
-Ideas for contributions include:
+Some useful contributions could include:
 
 - Better visualizations
-- Additional statistical analysis
-- Interactive dashboard
-- Improved data cleaning
-- Additional country comparisons
-- Time-series analysis
+- More detailed statistical analysis
+- Interactive dashboards
+- Additional time-based analysis
+- Improved data-cleaning techniques
+- Advanced correlation analysis
+- Machine-learning extensions
 
 ---
 
@@ -1186,7 +1308,7 @@ Ideas for contributions include:
 
 <div align="center">
 
-## Ayush Donga
+## **Ayush Donga**
 
 🎓 **B.Sc. IT Student**
 
@@ -1204,7 +1326,7 @@ Ideas for contributions include:
 
 # 🙏 Acknowledgements
 
-This project uses the Python Data Science ecosystem, including:
+This project uses the Python Data Science ecosystem:
 
 - 🐍 Python
 - 🐼 Pandas
@@ -1213,7 +1335,7 @@ This project uses the Python Data Science ecosystem, including:
 - 🎨 Seaborn
 - 📓 Jupyter Notebook
 
-These open-source tools provide the foundation for loading, analyzing, and visualizing structured data.
+These tools make it possible to load, clean, transform, analyze, and visualize structured environmental data efficiently.
 
 ---
 
@@ -1221,9 +1343,9 @@ These open-source tools provide the foundation for loading, analyzing, and visua
 
 This project is created for **educational and learning purposes**.
 
-You are free to study, modify, and extend the project according to your requirements.
+You may study the code, experiment with the notebook, modify the analysis, and extend the project for your own learning.
 
-If you use the project as a base for another project, keeping attribution is appreciated.
+If you reuse the project as a base for another project, keeping attribution is appreciated.
 
 ---
 
@@ -1231,14 +1353,18 @@ If you use the project as a base for another project, keeping attribution is app
 
 ---
 
-## 🦠 COVID-19 Data Analysis
+# 🌍 Air Quality Data Analysis
 
-### 📊 Turning Data Into Insights With Python
+### 📊 Turning Environmental Data Into Visual Insights
 
-**Load → Clean → Explore → Analyze → Visualize → Understand**
+**Load → Clean → Transform → Analyze → Visualize → Understand**
 
-### ⭐ If you find this project useful, consider giving the repository a Star!
+---
 
-**Made with ❤️ using Python, Pandas, NumPy, Matplotlib, Seaborn & Jupyter**
+### 🐍 Made with Python
+
+**Pandas • NumPy • Matplotlib • Seaborn • Jupyter**
+
+### ⭐ Keep Learning • Keep Building • Keep Analyzing 🚀
 
 </div>
