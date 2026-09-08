@@ -260,20 +260,20 @@ from database conditions.
   Query   Topic
   ------- ---------------------------------------------------
   1️⃣      CRUD operations on all tables <br>
-  2️⃣      Students enrolled after 2022
-  3️⃣      Mathematics department courses with `LIMIT`
-  4️⃣      Student count per course with filtering
-  5️⃣      Students enrolled in both SQL and Data Structures
-  6️⃣      Students enrolled in SQL or Data Structures
-  7️⃣      Average course credits
-  8️⃣      Maximum instructor salary in Computer Science
-  9️⃣      Student count by department
-  🔟      INNER JOIN for students and courses
-  1️⃣1️⃣    LEFT JOIN for all students and courses
-  1️⃣2️⃣    Subquery for students in highly enrolled courses
-  1️⃣3️⃣    Extract year from enrollment date
-  1️⃣4️⃣    Concatenate instructor names
-  1️⃣5️⃣    Running total using a window function
+  2️⃣      Students enrolled after 2022 <br>
+  3️⃣      Mathematics department courses with `LIMIT` <br>
+  4️⃣      Student count per course with filtering <br>
+  5️⃣      Students enrolled in both SQL and Data Structures <br>
+  6️⃣      Students enrolled in SQL or Data Structures <br>
+  7️⃣      Average course credits <br>
+  8️⃣      Maximum instructor salary in Computer Science <br>
+  9️⃣      Student count by department <br>
+  🔟      INNER JOIN for students and courses <br>
+  1️⃣1️⃣    LEFT JOIN for all students and courses <br>
+  1️⃣2️⃣    Subquery for students in highly enrolled courses <br>
+  1️⃣3️⃣    Extract year from enrollment date <br>
+  1️⃣4️⃣    Concatenate instructor names <br>
+  1️⃣5️⃣    Running total using a window function <br>
   1️⃣6️⃣    `CASE` classification of students
 
 Together, these queries provide practice from **basic SQL retrieval to
@@ -383,7 +383,7 @@ beginners, database practice, lab work, and portfolio projects**. 🎓💻
 ## 👨‍💻 Author
 
 <div align="center">
-### 🌟 Ayush Donga
+<b> Ayush Donga 💻</b>
 
 **B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
 
@@ -401,5 +401,5 @@ relationships, and write your own queries to explore the database
 further.
 
 <div align="center">
-**Happy Learning & Happy Querying! 🐬💻📚✨**
+<b>Happy Learning & Happy Querying! 🐬💻📚✨ </b>
 </div>
