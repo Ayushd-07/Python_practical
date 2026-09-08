@@ -259,7 +259,7 @@ from database conditions.
 
   Query   Topic
   ------- ---------------------------------------------------
-  1️⃣      CRUD operations on all tables
+  1️⃣      CRUD operations on all tables <br>
   2️⃣      Students enrolled after 2022
   3️⃣      Mathematics department courses with `LIMIT`
   4️⃣      Student count per course with filtering
@@ -382,6 +382,7 @@ beginners, database practice, lab work, and portfolio projects**. 🎓💻
 
 ## 👨‍💻 Author
 
+<div align="center">
 ### 🌟 Ayush Donga
 
 **B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
@@ -390,6 +391,8 @@ beginners, database practice, lab work, and portfolio projects**. 🎓💻
 
 **📄 Project:** `main.sql`
 
+</div>
+
 ## ⭐ Project Note
 
 This project is intended for **learning and practice**. You can modify
@@ -397,4 +400,6 @@ the sample records, add new departments or courses, create additional
 relationships, and write your own queries to explore the database
 further.
 
+<div align="center">
 **Happy Learning & Happy Querying! 🐬💻📚✨**
+</div>
