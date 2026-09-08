@@ -384,31 +384,11 @@ beginners, database practice, lab work, and portfolio projects**. 🎓💻
 
 ### 🌟 Ayush Donga
 
-**B.Sc IT Student \| SQL & Database Learner \| Aspiring AI/ML Engineer
-🤖**
+**B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
 
-I created this project as a practical way to strengthen my understanding
-of **MySQL, relational databases, SQL queries, and data handling**. The
-project combines database design with hands-on query practice, making
-each concept easier to understand through a realistic college-management
-scenario.
+**💻 Skills:** `🐬 MySQL` · `🐍 Python` · `📊 Data Science` · `🤖 AI/ML`
 
-I am continuously building my skills in **SQL, Python, Data Science,
-Artificial Intelligence, and Machine Learning**, with the goal of
-developing strong real-world technical expertise. 🚀📚
-
-**💡 Focus Areas**
-
-`🐬 MySQL` · `📊 Data Science` · `🐍 Python` · `🤖 AI/ML` ·
-`💻 Software Development`
-
-**✨ Project Type:** Academic / Learning / SQL Practice\
-**📄 Main File:** `main.sql`\
-**🎓 Role:** B.Sc IT Student & Developer
-
-> 💙 **Keep learning. Keep building. Keep improving.** 🚀
-
-------------------------------------------------------------------------
+**📄 Project:** `main.sql`
 
 ## ⭐ Project Note
 
