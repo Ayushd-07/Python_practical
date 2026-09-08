@@ -383,7 +383,7 @@ beginners, database practice, lab work, and portfolio projects**. 🎓💻
 ## 👨‍💻 Author
 
 <div align="center">
-<b> Ayush Donga 💻</b>
+<h2> Ayush Donga 💻</h2>
 
 **B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
 
@@ -401,5 +401,5 @@ relationships, and write your own queries to explore the database
 further.
 
 <div align="center">
-<b>Happy Learning & Happy Querying! 🐬💻📚✨ </b>
+<h3>Happy Learning & Happy Querying! 🐬💻📚✨ </h3>
 </div>
