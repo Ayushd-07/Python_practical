@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🎓 College Database Management System
+# 🗄️ MySQL SQL Practice Project
 
-### 🗄️ A MySQL-Based College Database with SQL Queries & Data Analysis Practice
+### 💻 Practical Database Design • SQL Queries • Data Analysis
 
 <p>
 <img src="https://img.shields.io/badge/MySQL-Database-00758F?style=for-the-badge&logo=mysql&logoColor=white">
@@ -19,7 +19,7 @@
 
 <br>
 
-**🏗️ Design Database → 📝 Insert Data → 🔍 Query Data → 🔗 Join Tables → 📊 Analyze Results**
+**🏗️ Create → 📝 Insert → 🔍 Query → 🔗 Join → 📊 Analyze → 🧠 Practice**
 
 </div>
 
@@ -27,175 +27,97 @@
 
 ## ✨ Project Overview
 
-The **College Database Management System** is a practical MySQL project
-created to demonstrate how a relational database can be designed,
-populated, queried, and analyzed.
+This project is a practical **MySQL SQL practice project** focused on database creation, relational data, query writing, and analytical SQL.
 
-The project represents a simple college environment containing:
+The complete implementation is contained in **`main.sql`**. The file is intended for hands-on practice, where queries can be executed, tested, modified, and studied to understand how SQL works with structured data.
 
-| 🧩 Module | 📌 Purpose |
-|---|---|
-| 👨‍🎓 **Students** | Stores student information and enrollment details |
-| 📚 **Courses** | Stores courses and credit information |
-| 👩‍🏫 **Instructors** | Stores instructor details and salaries |
-| 🏢 **Departments** | Stores college department information |
-| 📝 **Enrollments** | Connects students with courses |
+### 🎯 Main Purpose
+
+- 🎓 Practice SQL for college practicals and examinations
+- 🧑‍💻 Improve real-world database query skills
+- 🧠 Understand SQL query logic step by step
+- 🔗 Learn how related tables work together
+- 📊 Practice data analysis using SQL
+- 🚀 Build a strong foundation for Data Science and AI/ML
 
 > 💡 **Main SQL File:** `main.sql`
-
-This project is useful for **SQL learning, practical examination
-preparation, database laboratory work, assignments, and portfolio
-practice**. 🚀
 
 ---
 
 ## 🗂️ Database Structure
 
-### 🏷️ Database Name
+### 🗄️ Database
 
 ```sql
-CREATE DATABASE college_db;
-USE college_db;
+CREATE DATABASE smart_eventDB;
+USE smart_eventDB;
 ```
 
-### 📊 Main Tables
+### 📊 Tables
 
-```text
-🏢 departments
-      │
-      ├───────────────┐
-      │               │
-      ▼               ▼
-👨‍🎓 students     👩‍🏫 instructors
-      │
-      ▼
-📝 enrollments
-      ▲
-      │
-      ▼
-📚 courses
-```
+| # | 🧩 Table | 📌 Purpose |
+|---:|---|---|
+| 1️⃣ | `venues` | Defined and used by the SQL project |
+| 2️⃣ | `organizers` | Defined and used by the SQL project |
+| 3️⃣ | `attendees` | Defined and used by the SQL project |
+| 4️⃣ | `events` | Defined and used by the SQL project |
+| 5️⃣ | `tickets` | Defined and used by the SQL project |
+| 6️⃣ | `payments` | Defined and used by the SQL project |
 
-The tables are connected using IDs so that related information can be
-retrieved through SQL JOINs and subqueries. 🔗
-
----
-
-## 🏗️ Table Details
-
-### 👨‍🎓 `students`
-
-Stores basic student information.
-
-| Column | Type | Purpose |
-|---|---|---|
-| `StuID` | `INT` | Primary key |
-| `FirstName` | `VARCHAR` | Student first name |
-| `LastName` | `VARCHAR` | Student last name |
-| `Email` | `VARCHAR` | Student email |
-| `BirthDate` | `DATE` | Date of birth |
-| `EnrollmentDate` | `DATE` | College enrollment date |
-
-The database contains **10 initial student records**. 🎓
-
-### 📚 `courses`
-
-Stores courses offered by the college.
-
-| Column | Type | Purpose |
-|---|---|---|
-| `CourseID` | `INT` | Primary key |
-| `CourseName` | `VARCHAR` | Course name |
-| `DeptID` | `INT` | Department identifier |
-| `Credits` | `INT` | Course credits |
-
-Example courses include SQL, Data Structures, Database Management,
-Python Programming, Machine Learning, Artificial Intelligence,
-Statistics, Data Science, Data Analytics, and Cyber Security. 🤖
-
-### 👩‍🏫 `instructors`
-
-Stores instructor information.
-
-| Column | Type | Purpose |
-|---|---|---|
-| `InstructorID` | `INT` | Primary key |
-| `FirstName` | `VARCHAR` | First name |
-| `LastName` | `VARCHAR` | Last name |
-| `Email` | `VARCHAR` | Instructor email |
-| `DeptID` | `INT` | Department identifier |
-| `Salary` | `DECIMAL(10,2)` | Instructor salary |
-
-### 📝 `enrollments`
-
-Connects students with courses.
-
-| Column | Type | Purpose |
-|---|---|---|
-| `EnrollmentID` | `INT` | Primary key |
-| `StuID` | `INT` | Student identifier |
-| `CourseID` | `INT` | Course identifier |
-| `EnrollmentDate` | `DATE` | Enrollment date |
-
-This table is heavily used in JOIN and subquery examples. 🔗
-
-### 🏢 `departments`
-
-Stores department information.
-
-| Column | Type | Purpose |
-|---|---|---|
-| `DeptID` | `INT` | Primary key |
-| `DeptName` | `VARCHAR` | Department name |
+The database structure provides the foundation for the queries contained in the project. Tables can be connected through keys and relationships, allowing information to be retrieved together using SQL JOINs. 🔗
 
 ---
 
 # 🛠️ SQL Concepts Covered
 
-### 🟢 Basic SQL
+The project contains practical examples of the following concepts:
+
+- 🔹 **Database & Table Creation**
+- 🔹 **INSERT & Data Population**
+- 🔹 **UPDATE Operations**
+- 🔹 **DELETE Operations**
+- 🔹 **SELECT Queries**
+- 🔹 **Filtering with WHERE**
+- 🔹 **DISTINCT**
+- 🔹 **ORDER BY**
+- 🔹 **GROUP BY & HAVING**
+- 🔹 **JOIN Operations**
+- 🔹 **Aggregate Functions**
+- 🔹 **CASE Expressions**
+- 🔹 **Date Functions**
+- 🔹 **Window Functions**
+- 🔹 **Window Frame / Running Calculations**
+- 🔹 **Subqueries**
+
+### 🟢 SQL Learning Path
 
 ```text
-CREATE DATABASE
-CREATE TABLE
-INSERT
-SELECT
-WHERE
-UPDATE
-DELETE
-LIMIT
-```
-
-### 🟡 Intermediate SQL
-
-```text
-JOIN
-INNER JOIN
-LEFT JOIN
-GROUP BY
-HAVING
-COUNT()
-AVG()
-MAX()
-IN
-DISTINCT
-```
-
-### 🔴 Advanced SQL Practice
-
-```text
-Subqueries
-Nested Subqueries
-Date Functions
-String Functions
-CASE
-Window Functions
+🗄️ Database & Tables
+        ↓
+📝 Insert / Modify Data
+        ↓
+👀 SELECT Data
+        ↓
+🎯 WHERE Conditions
+        ↓
+↕️ ORDER BY
+        ↓
+📊 GROUP BY & Aggregation
+        ↓
+🔗 JOIN Tables
+        ↓
+🧠 Subqueries
+        ↓
+🏷️ CASE Expressions
+        ↓
+🪟 Window Functions
 ```
 
 ---
 
 # ✏️ CRUD Operations
 
-CRUD represents the four basic database operations:
+CRUD represents the four basic operations used when working with database data.
 
 ```text
 🟢 CREATE → INSERT
@@ -206,311 +128,349 @@ CRUD represents the four basic database operations:
 
 ### ➕ INSERT
 
+Adds new records to a table.
+
 ```sql
-INSERT INTO students
-(FirstName, LastName, Email, EnrollmentDate)
+INSERT INTO table_name
+(column1, column2)
 VALUES
-('Rahul', 'Shah', 'rahul@example.com', '2025-07-01');
+(value1, value2);
 ```
 
 ### 👀 SELECT
 
+Retrieves records from a table.
+
 ```sql
 SELECT *
-FROM students;
+FROM table_name;
 ```
 
 ### ✏️ UPDATE
 
+Changes existing records.
+
 ```sql
-UPDATE students
-SET Email = 'newemail@example.com'
-WHERE StuID = 1;
+UPDATE table_name
+SET column1 = value1
+WHERE condition;
 ```
 
 ### 🗑️ DELETE
 
+Removes records that match a condition.
+
 ```sql
-DELETE FROM students
-WHERE StuID = 1;
+DELETE FROM table_name
+WHERE condition;
 ```
 
-> ⚠️ Always verify your `WHERE` condition before using `UPDATE` or
-> `DELETE`.
+> ⚠️ **Important:** Always verify the `WHERE` condition before executing `UPDATE` or `DELETE`.
 
 ---
 
 # 🔍 Query Practice
 
-The `main.sql` file contains **16 main query tasks**.
+The main SQL file is designed for practical query writing and execution.
 
-| # | 🔎 Task | 🧠 Concept |
-|---:|---|---|
-| 1️⃣ | CRUD operations | `INSERT`, `SELECT`, `UPDATE`, `DELETE` |
-| 2️⃣ | Students enrolled after 2022 | `WHERE` |
-| 3️⃣ | Mathematics department courses | `JOIN`, `LIMIT` |
-| 4️⃣ | Courses with more than 5 students | `COUNT`, `GROUP BY`, `HAVING` |
-| 5️⃣ | Students in both SQL and Data Structures | `JOIN`, `IN`, `DISTINCT` |
-| 6️⃣ | Students in SQL or Data Structures | `IN` |
-| 7️⃣ | Average course credits | `AVG()` |
-| 8️⃣ | Maximum CS instructor salary | `MAX()` |
-| 9️⃣ | Students in each department | `LEFT JOIN`, `COUNT` |
-| 🔟 | Students and courses | `INNER JOIN` |
-| 1️⃣1️⃣ | All students and courses | `LEFT JOIN` |
-| 1️⃣2️⃣ | Students in highly enrolled courses | Nested Subquery |
-| 1️⃣3️⃣ | Enrollment year | `YEAR()` |
-| 1️⃣4️⃣ | Full name creation | `CONCAT()` |
-| 1️⃣5️⃣ | Running enrollment total | Window Function |
-| 1️⃣6️⃣ | Senior / Junior classification | `CASE` |
+A simple learning process is:
+
+```text
+📖 Read the Query
+       ↓
+🧠 Understand the Logic
+       ↓
+▶️ Execute the Query
+       ↓
+📊 Check the Output
+       ↓
+✏️ Change the Query
+       ↓
+🔁 Execute Again
+```
+
+Try changing conditions, columns, sorting, grouping, or join logic. This makes it easier to understand the effect of each SQL clause instead of only memorizing syntax. 💡
 
 ---
 
-## 📊 Aggregate Functions
+# 📊 Aggregate Functions
 
-### 🔢 `COUNT()`
+Aggregate functions perform calculations over multiple rows.
 
-Counts records.
+### 🔢 COUNT()
+
+Counts rows.
 
 ```sql
-SELECT COUNT(*) AS TotalStudents
-FROM students;
+SELECT COUNT(*)
+FROM table_name;
 ```
 
-### 📈 `AVG()`
+### 📈 AVG()
 
 Calculates an average.
 
 ```sql
-SELECT AVG(Credits) AS AverageCredits
-FROM courses;
+SELECT AVG(column_name)
+FROM table_name;
 ```
 
-### 🏆 `MAX()`
+### 🏆 MAX()
 
-Finds the highest value.
+Returns the highest value.
 
 ```sql
-SELECT MAX(Salary) AS MaximumSalary
-FROM instructors;
+SELECT MAX(column_name)
+FROM table_name;
 ```
 
-These functions are useful for converting database records into useful
-summary information. 📊
+### 📉 MIN()
+
+Returns the lowest value.
+
+```sql
+SELECT MIN(column_name)
+FROM table_name;
+```
+
+### ➕ SUM()
+
+Calculates a total.
+
+```sql
+SELECT SUM(column_name)
+FROM table_name;
+```
+
+### 🧩 GROUP BY
+
+Groups records so aggregate calculations can be performed for each category.
+
+```sql
+SELECT category, COUNT(*)
+FROM table_name
+GROUP BY category;
+```
+
+### 🎯 HAVING
+
+Filters grouped results.
+
+```sql
+SELECT category, COUNT(*)
+FROM table_name
+GROUP BY category
+HAVING COUNT(*) > 1;
+```
 
 ---
 
-## 🔗 JOIN Examples
+# 🔗 JOIN Operations
+
+JOINs are used to combine related information stored in different tables.
 
 ### 🔵 INNER JOIN
 
-Returns matching records from related tables.
+Returns records with matching values in both tables.
 
 ```sql
 SELECT
-    s.FirstName,
-    s.LastName,
-    c.CourseName
-FROM students s
-INNER JOIN enrollments e
-    ON s.StuID = e.StuID
-INNER JOIN courses c
-    ON e.CourseID = c.CourseID;
+    a.column_name,
+    b.column_name
+FROM table_a a
+INNER JOIN table_b b
+    ON a.id = b.id;
 ```
 
 ### 🟣 LEFT JOIN
 
-Keeps all records from the left table.
+Returns all rows from the left table and matching rows from the right table.
 
 ```sql
 SELECT
-    s.FirstName,
-    s.LastName,
-    c.CourseName
-FROM students s
-LEFT JOIN enrollments e
-    ON s.StuID = e.StuID
-LEFT JOIN courses c
-    ON e.CourseID = c.CourseID;
+    a.column_name,
+    b.column_name
+FROM table_a a
+LEFT JOIN table_b b
+    ON a.id = b.id;
 ```
 
 ### 💡 Quick Difference
 
 ```text
 INNER JOIN
-→ Only matching records
+→ Matching records only
 
 LEFT JOIN
 → All records from the left table
-  + matching records from the right table
+→ Matching records from the right table
 ```
+
+JOINs are an essential part of relational database querying because related information is often stored in separate tables. 🔗📊
 
 ---
 
-## 🧠 Subquery Example
+# 🧠 Subqueries
 
-A nested subquery can be used to find students based on course
-enrollment conditions.
+A **subquery** is a query written inside another SQL query.
+
+Example structure:
 
 ```sql
-SELECT *
-FROM students
-WHERE StuID IN (
-    SELECT StuID
-    FROM enrollments
-    WHERE CourseID IN (
-        SELECT CourseID
-        FROM enrollments
-        GROUP BY CourseID
-        HAVING COUNT(*) > 10
-    )
+SELECT column_name
+FROM table_name
+WHERE column_name IN (
+    SELECT column_name
+    FROM another_table
+    WHERE condition
 );
 ```
 
-A **subquery** is a query written inside another query. 🧩
-
----
-
-## 🗓️ Date Functions
-
-### `YEAR()`
-
-```sql
-SELECT
-    StuID,
-    FirstName,
-    LastName,
-    YEAR(EnrollmentDate) AS EnrollmentYear
-FROM students;
-```
-
-### `CURDATE()`
-
-Returns the current date.
-
-```sql
-SELECT CURDATE();
-```
-
-### `DATE_SUB()`
-
-Subtracts a specified time interval.
-
-```sql
-SELECT DATE_SUB(CURDATE(), INTERVAL 4 YEAR);
-```
-
----
-
-## 🔤 String Functions
-
-The project uses `CONCAT()` to combine first and last names.
-
-```sql
-SELECT
-    StuID,
-    CONCAT(FirstName, ' ', LastName) AS FullName
-FROM students;
-```
-
-Example:
+The inner query is executed as part of the logic of the outer query.
 
 ```text
-FirstName → Ayush
-LastName  → Donga
-FullName  → Ayush Donga
+🔍 Outer Query
+      │
+      ▼
+🧠 Inner Query
+      │
+      ▼
+📊 Result
 ```
+
+Subqueries are useful when one query needs information produced by another query.
 
 ---
 
-## 🪟 Window Function
+# 🏷️ CASE Expression
 
-The project includes a running total using a Window Function.
-
-```sql
-SELECT
-    *,
-    COUNT(*) OVER (
-        ORDER BY EnrollmentID
-        ROWS BETWEEN UNBOUNDED PRECEDING
-        AND CURRENT ROW
-    ) AS RunningTotalStudents
-FROM enrollments;
-```
-
-### 💡 Window Function vs GROUP BY
-
-```text
-GROUP BY
-→ Combines rows into groups.
-
-WINDOW FUNCTION
-→ Calculates across rows while keeping
-  individual rows visible.
-```
-
-This is an important step from basic SQL toward analytical SQL. 📈
-
----
-
-## 🏷️ CASE Expression
-
-The project classifies students using conditional logic.
+`CASE` is used to apply conditional logic inside a SQL query.
 
 ```sql
 SELECT
-    StuID,
-    FirstName,
-    LastName,
-    EnrollmentDate,
+    column_name,
     CASE
-        WHEN EnrollmentDate < DATE_SUB(CURDATE(), INTERVAL 4 YEAR)
-            THEN 'Senior'
-        ELSE 'Junior'
-    END AS StudentLevel
-FROM students;
+        WHEN condition THEN 'Result 1'
+        ELSE 'Result 2'
+    END AS category
+FROM table_name;
 ```
 
 Conceptually:
 
 ```text
-Condition TRUE  → Senior
-Condition FALSE → Junior
+Condition TRUE
+      ↓
+🏷️ Result 1
+
+Condition FALSE
+      ↓
+🏷️ Result 2
 ```
+
+It is useful for classification, labels, categories, and conditional results. 🎯
+
+---
+
+# 🗓️ Date & String Functions
+
+SQL functions can transform and extract information from dates and text.
+
+### 📅 Date Functions
+
+```sql
+SELECT YEAR(date_column)
+FROM table_name;
+```
+
+```sql
+SELECT CURDATE();
+```
+
+```sql
+SELECT DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
+```
+
+### 🔤 String Functions
+
+`CONCAT()` can combine multiple text values.
+
+```sql
+SELECT
+    CONCAT(first_name, ' ', last_name) AS full_name
+FROM table_name;
+```
+
+These functions are useful when database information needs to be transformed into a more meaningful format. ✨
+
+---
+
+# 🪟 Window Functions
+
+Window functions perform calculations across rows while keeping individual rows visible.
+
+Example:
+
+```sql
+SELECT
+    *,
+    COUNT(*) OVER (
+        ORDER BY id
+        ROWS BETWEEN UNBOUNDED PRECEDING
+        AND CURRENT ROW
+    ) AS running_total
+FROM table_name;
+```
+
+### 💡 GROUP BY vs Window Function
+
+```text
+GROUP BY
+→ Combines rows into groups
+→ Returns grouped results
+
+WINDOW FUNCTION
+→ Calculates across rows
+→ Keeps individual rows visible
+```
+
+Window functions are particularly useful for running totals, rankings, comparisons, and analytical SQL. 📈🧠
 
 ---
 
 # 🧪 Recommended Practice Flow
 
+For effective SQL practice, follow this sequence:
+
 ```text
-🏗️ Create Database
+🗄️ Understand Database
         ↓
-🏢 Create Tables
+🏗️ Understand Tables
         ↓
-📝 Insert Records
+📝 Work With Data
         ↓
-👀 SELECT Data
+👀 SELECT Records
         ↓
-✏️ Practice CRUD
+🎯 WHERE Conditions
         ↓
-🎯 Use WHERE & LIMIT
+↕️ ORDER BY
         ↓
-📊 Aggregate Data
+📊 GROUP BY + Aggregate Functions
         ↓
-🔗 Practice JOINs
+🔗 JOIN Tables
         ↓
-🧠 Practice Subqueries
+🧠 Subqueries
         ↓
 🗓️ Date & String Functions
         ↓
-🪟 Window Functions
-        ↓
 🏷️ CASE Expressions
         ↓
-🚀 Create Your Own Queries
+🪟 Window Functions
+        ↓
+🚀 Write Your Own Queries
 ```
 
-> 💡 **Best way to learn:** Run the query → check the output → change one
-> condition → run it again → understand the difference.
+> 💡 **Best method:** Run → Check Output → Change One Part → Run Again → Understand.
 
 ---
 
@@ -519,46 +479,48 @@ Condition FALSE → Junior
 ## 💻 Requirements
 
 - 🐬 **MySQL Server**
-- 🖥️ **MySQL Workbench** or another SQL editor
+- 🖥️ **MySQL Workbench** or another MySQL editor
 - 📄 **`main.sql`**
 
 ## 🚀 MySQL Workbench
 
-**1️⃣ Connect**
+### 1️⃣ Connect
 
-Open MySQL Workbench and connect to your MySQL server.
+Open MySQL Workbench and connect to your MySQL Server.
 
-**2️⃣ Open the file**
+### 2️⃣ Open the SQL File
 
 ```text
 main.sql
 ```
 
-**3️⃣ Execute the script**
+### 3️⃣ Run the Setup
 
-Run the database setup and sample data.
+Execute the database and table setup statements required by the project.
 
-**4️⃣ Select the database**
+### 4️⃣ Select the Database
 
 ```sql
-USE college_db;
+USE smart_eventDB;
 ```
 
-**5️⃣ Check tables**
+### 5️⃣ Check Tables
 
 ```sql
 SHOW TABLES;
 ```
 
-**6️⃣ Check table structure**
+### 6️⃣ Check Structure
 
 ```sql
-DESCRIBE students;
+DESCRIBE table_name;
 ```
 
-**7️⃣ Run the queries**
+### 7️⃣ Run Queries
 
-Execute the practice queries individually to understand their output.
+Execute the queries individually and inspect the output in the result grid.
+
+> ⚠️ **Tip:** Run setup statements before executing queries that depend on the created database or tables.
 
 ---
 
@@ -579,85 +541,84 @@ SHOW TABLES;
 ### 🔍 Describe a Table
 
 ```sql
-DESCRIBE courses;
+DESCRIBE table_name;
 ```
 
-### 👨‍🎓 View Students
+### 👀 View Records
 
 ```sql
-SELECT * FROM students;
+SELECT *
+FROM table_name;
 ```
 
-### 📚 View Courses
-
-```sql
-SELECT * FROM courses;
-```
-
-### 🏢 View Departments
-
-```sql
-SELECT * FROM departments;
-```
-
-### 📝 View Enrollments
-
-```sql
-SELECT * FROM enrollments;
-```
+These commands are useful for checking the database structure and verifying that the setup is working correctly. 🛠️
 
 ---
 
 # 📁 Project Structure
 
 ```text
-📦 College-Database-Management-System
+📦 MySQL-SQL-Project
 │
 ├── 📄 main.sql
-└── 📄 README.md
+└── 📘 README.md
 ```
 
 ### 📄 `main.sql`
 
-Contains the complete SQL implementation:
+Contains the actual SQL implementation of the project, including the database structure, data operations, and query practice.
 
-```text
-🗄️ Database creation
-🏗️ Table creation
-🔑 Keys and constraints
-📝 Sample records
-✏️ CRUD operations
-🔍 Query practice
-📊 Aggregate functions
-🔗 JOIN operations
-🧠 Subqueries
-🗓️ Date functions
-🔤 String functions
-🪟 Window functions
-🏷️ CASE expressions
-📌 Query outputs/comments
-```
+### 📘 `README.md`
+
+Contains the project documentation, SQL explanations, execution instructions, and learning flow.
+
+---
+
+# 📊 Project Statistics
+
+| 📌 Property | 💻 Details |
+|---|---|
+| 🗄️ Database | `smart_eventDB` |
+| 🐬 Technology | MySQL |
+| 📄 Main File | `main.sql` |
+| 📊 Tables Defined | 6 |
+| 🔢 SQL Statements | 73 |
+| 📈 SQL Lines | 1007 |
+
+### 🧩 Feature Status
+
+| 🛠️ Feature | 📌 Status |
+|---|---|
+| 📝 Data Operations | ✅ Included |
+| 🔗 JOIN Practice | ✅ Included |
+| 🧠 Subqueries | ✅ Included |
+| 📊 Aggregate Functions | ✅ Included |
+| 🏷️ CASE | ✅ Included |
+| 🪟 Window Functions | ✅ Included |
 
 ---
 
 # 🎯 Learning Outcomes
 
-After completing this project, you will have practical experience with:
+After practicing this project, you can strengthen your understanding of:
 
-- 🗄️ Creating a relational MySQL database
-- 🏗️ Designing connected tables
-- 🔑 Understanding primary and foreign keys
-- 📝 Inserting structured records
-- 🔍 Filtering records with `WHERE`
-- ✏️ Performing CRUD operations
-- 📊 Using aggregate functions
-- 🧮 Grouping and filtering data
-- 🔗 Combining tables with JOINs
-- 🧠 Writing subqueries
-- 🗓️ Working with SQL dates
-- 🔤 Manipulating strings
-- 🪟 Using Window Functions
-- 🏷️ Creating conditional results with `CASE`
+- 🗄️ Relational database structure
+- 🏗️ Database and table creation
+- 🔑 Table relationships
+- 📝 Data insertion and manipulation
+- 🔍 Data retrieval with `SELECT`
+- 🎯 Filtering with `WHERE`
+- ↕️ Sorting with `ORDER BY`
+- 📊 Aggregate functions
+- 🧮 `GROUP BY` and `HAVING`
+- 🔗 JOIN operations
+- 🧠 Subqueries
+- 🗓️ Date functions
+- 🔤 String functions
+- 🏷️ Conditional logic with `CASE`
+- 🪟 Window functions
+- 📈 Analytical SQL thinking
+- 💻 Practical query writing
 
 ---
 
@@ -665,20 +626,17 @@ After completing this project, you will have practical experience with:
 
 | 📌 Property | 💻 Details |
 |---|---|
-| 🗄️ Database | `college_db` |
+| 🗄️ Database | `smart_eventDB` |
 | 🐬 Technology | MySQL |
 | 📄 Main File | `main.sql` |
-| 📊 Tables | 5 |
-| 📝 Sample Data | Included |
-| ✏️ CRUD | Included |
-| 🔗 JOINs | Included |
-| 🧠 Subqueries | Included |
-| 📈 Aggregate Functions | Included |
-| 🗓️ Date Functions | Included |
-| 🔤 String Functions | Included |
-| 🪟 Window Functions | Included |
-| 🏷️ CASE | Included |
-| 🔢 Main Queries | 16 |
+| 📊 Tables | 6 |
+| 🔢 SQL Statements | 73 |
+| ✏️ Data Operations | ✅ Included |
+| 🔗 JOINs | ✅ Included |
+| 🧠 Subqueries | ✅ Included |
+| 📈 Aggregate Functions | ✅ Included |
+| 🏷️ CASE | ✅ Included |
+| 🪟 Window Functions | ✅ Included |
 
 ---
 
@@ -686,13 +644,25 @@ After completing this project, you will have practical experience with:
 
 <div align="center">
 
-### 🌟 Ayush Donga
+### 🌟 Ayush Donga 🌟
 
-**B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
+**🎓 B.Sc IT Student | 💻 SQL & Database Learner | 🤖 Aspiring AI/ML Engineer**
 
-`🐬 MySQL` · `🐍 Python` · `📊 Data Science` · `🤖 AI/ML`
+<br>
+
+`🐬 MySQL` · `💻 SQL` · `📊 Data Analysis` · `🤖 AI/ML`
+
+<br>
 
 **📄 Project:** `main.sql`
+
+<br>
+
+> 💡 *Learn the concept → Write the query → Run it → Understand the result.*
+
+<br>
+
+### 🚀 Keep Learning • Keep Coding • Keep Improving 🚀
 
 </div>
 
@@ -700,8 +670,8 @@ After completing this project, you will have practical experience with:
 
 <div align="center">
 
-### ⭐ Built with MySQL, SQL practice & learning by doing.
+### ⭐ Built with MySQL, SQL Practice & Learning by Doing
 
-**🐬💻📚 Happy Learning & Happy Querying! 🚀**
+**🐬 💻 📊 🔗 🧠 🪟 🚀**
 
 </div>
