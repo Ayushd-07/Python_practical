@@ -652,13 +652,8 @@ After practicing this project, you can strengthen your understanding of:
 
 `🐬 MySQL` · `💻 SQL` · `📊 Data Analysis` · `🤖 AI/ML`
 
-<br>
-
 **📄 Project:** `main.sql`
 
-<br>
-
-> 💡 *Learn the concept → Write the query → Run it → Understand the result.*
 
 <br>
 
