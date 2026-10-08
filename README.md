@@ -1,25 +1,25 @@
 <div align="center">
 
-# 🗄️ MySQL SQL Practice Project
+# 📊 Sales Analytics & Performance Dashboard
 
-### 💻 Practical Database Design • SQL Queries • Data Analysis
+### 📈 Excel-Based Sales Analysis • Customer Insights • Scenario Planning • Regression
 
 <p>
-<img src="https://img.shields.io/badge/MySQL-Database-00758F?style=for-the-badge&logo=mysql&logoColor=white">
-<img src="https://img.shields.io/badge/SQL-Queries-4479A1?style=for-the-badge">
-<img src="https://img.shields.io/badge/CRUD-Operations-6C63FF?style=for-the-badge">
-<img src="https://img.shields.io/badge/JOINs-Relationships-FF6B35?style=for-the-badge">
+<img src="https://img.shields.io/badge/Microsoft_Excel-Analytics-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">
+<img src="https://img.shields.io/badge/Sales_Data-250_Transactions-4472C4?style=for-the-badge">
+<img src="https://img.shields.io/badge/Pivot_Tables-Business_Analysis-6C63FF?style=for-the-badge">
+<img src="https://img.shields.io/badge/Dashboard-KPI_Reporting-FF6B35?style=for-the-badge">
 </p>
 
 <p>
-<img src="https://img.shields.io/badge/Subqueries-Advanced_SQL-8E44AD?style=for-the-badge">
-<img src="https://img.shields.io/badge/Window_Functions-Analytics-16A085?style=for-the-badge">
-<img src="https://img.shields.io/badge/CASE-Conditional_Logic-E67E22?style=for-the-badge">
+<img src="https://img.shields.io/badge/XLOOKUP-Customer_Analysis-16A085?style=for-the-badge">
+<img src="https://img.shields.io/badge/Scenario_Manager-What--If_Analysis-8E44AD?style=for-the-badge">
+<img src="https://img.shields.io/badge/Linear_Regression-Predictive_Analysis-E67E22?style=for-the-badge">
 </p>
 
 <br>
 
-**🏗️ Create → 📝 Insert → 🔍 Query → 🔗 Join → 📊 Analyze → 🧠 Practice**
+**📥 Sales Data → 🧮 Analysis → 🔄 Pivot Tables → 🎯 Scenarios → 📈 Regression → 📊 Dashboard**
 
 </div>
 
@@ -27,598 +27,613 @@
 
 ## ✨ Project Overview
 
-This project is a practical **MySQL SQL practice project** focused on database creation, relational data, query writing, and analytical SQL.
+**Sales Analytics & Performance Dashboard** is a practical Microsoft Excel project created to analyze sales transactions, customer behavior, product performance, payment methods, regions, and customer segments.
 
-The complete implementation is contained in **`main.sql`**. The file is intended for hands-on practice, where queries can be executed, tested, modified, and studied to understand how SQL works with structured data.
+The workbook combines **formula-based analysis, customer ranking, product analysis, What-If Scenario Manager, Goal Seek, Linear Regression, PivotTables, and an interactive-style dashboard** into one complete Excel project.
 
-### 🎯 Main Purpose
+| 🧩 Module | 📌 Purpose |
+|---|---|
+| 📋 **Data** | Stores transaction, customer, product, payment, region, and sales information |
+| 🧮 **Analysis** | Calculates KPIs, customer revenue, purchase frequency, top customers, and products |
+| 🎯 **Scenario Summary** | Compares different growth assumptions and projected revenue |
+| 📈 **Linear Regression** | Analyzes the relationship between a selected variable and revenue |
+| 🔄 **Pivot Table** | Summarizes sales by product, region, customer segment, payment method, and category |
+| 📊 **Dashboard** | Presents key sales KPIs and top-product information |
 
-- 🎓 Practice SQL for college practicals and examinations
-- 🧑‍💻 Improve real-world database query skills
-- 🧠 Understand SQL query logic step by step
-- 🔗 Learn how related tables work together
-- 📊 Practice data analysis using SQL
-- 🚀 Build a strong foundation for Data Science and AI/ML
+> 💡 **Main Excel File:** `Final_Project.xlsx`
 
-> 💡 **Main SQL File:** `main.sql`
-
----
-
-## 🗂️ Database Structure
-
-### 🗄️ Database
-
-```sql
-CREATE DATABASE smart_eventDB;
-USE smart_eventDB;
-```
-
-### 📊 Tables
-
-| # | 🧩 Table | 📌 Purpose |
-|---:|---|---|
-| 1️⃣ | `venues` | Defined and used by the SQL project |
-| 2️⃣ | `organizers` | Defined and used by the SQL project |
-| 3️⃣ | `attendees` | Defined and used by the SQL project |
-| 4️⃣ | `events` | Defined and used by the SQL project |
-| 5️⃣ | `tickets` | Defined and used by the SQL project |
-| 6️⃣ | `payments` | Defined and used by the SQL project |
-
-The database structure provides the foundation for the queries contained in the project. Tables can be connected through keys and relationships, allowing information to be retrieved together using SQL JOINs. 🔗
+The project is useful for **Excel data-analysis practice, business reporting, practical assignments, dashboard creation, What-If Analysis, PivotTables, and beginner-level predictive analysis**. 🚀
 
 ---
 
-# 🛠️ SQL Concepts Covered
-
-The project contains practical examples of the following concepts:
-
-- 🔹 **Database & Table Creation**
-- 🔹 **INSERT & Data Population**
-- 🔹 **UPDATE Operations**
-- 🔹 **DELETE Operations**
-- 🔹 **SELECT Queries**
-- 🔹 **Filtering with WHERE**
-- 🔹 **DISTINCT**
-- 🔹 **ORDER BY**
-- 🔹 **GROUP BY & HAVING**
-- 🔹 **JOIN Operations**
-- 🔹 **Aggregate Functions**
-- 🔹 **CASE Expressions**
-- 🔹 **Date Functions**
-- 🔹 **Window Functions**
-- 🔹 **Window Frame / Running Calculations**
-- 🔹 **Subqueries**
-
-### 🟢 SQL Learning Path
+# 🗂️ Workbook Structure
 
 ```text
-🗄️ Database & Tables
-        ↓
-📝 Insert / Modify Data
-        ↓
-👀 SELECT Data
-        ↓
-🎯 WHERE Conditions
-        ↓
-↕️ ORDER BY
-        ↓
-📊 GROUP BY & Aggregation
-        ↓
-🔗 JOIN Tables
-        ↓
-🧠 Subqueries
-        ↓
-🏷️ CASE Expressions
-        ↓
-🪟 Window Functions
+📦 Final_Project.xlsx
+│
+├── 📋 Data
+│   └── Sales Transaction Dataset
+│
+├── 🧮 Analysis
+│   └── Customer, Product & KPI Analysis
+│
+├── 🎯 Scenario Summary
+│   └── Growth Scenario Comparison
+│
+├── 📈 Linear Regression
+│   └── Regression Statistics & ANOVA
+│
+├── 🔄 Pivot Table
+│   └── Multi-Dimensional Sales Analysis
+│
+└── 📊 Dashboard
+    └── Sales Performance Overview
 ```
 
 ---
 
-# ✏️ CRUD Operations
+# 📋 Data Sheet
 
-CRUD represents the four basic operations used when working with database data.
+The `Data` sheet contains the main transaction dataset used throughout the project.
+
+The workbook contains **250 sales transactions**.
+
+### 📌 Main Columns
+
+| Column | Purpose |
+|---|---|
+| `Transaction_ID` | Unique transaction identifier |
+| `Date` | Transaction date |
+| `Customer_ID` | Customer identifier |
+| `Customer_Name` | Customer name |
+| `Product_ID` | Product identifier |
+| `Product_Name` | Product sold |
+| `Category` | Product category |
+| `Quantity` | Units purchased |
+| `Unit_Price` | Price per unit |
+| `Payment_Method` | Payment method used |
+| `Region` | Customer/sales region |
+| `Customer_Segment` | Basic, Premium, or Standard |
+| `Customer_Since` | Customer relationship start date |
+| `Total_Amount` | Calculated transaction value |
+| `Customer relationship` | Customer relationship duration |
+| `Timestamp` | Current timestamp |
+| `Abbreviation_Customer_Name` | Customer initials |
+| `Eomonth of sales` | Month-end sales date |
+| `Sales Month` | Month extracted from transaction date |
+
+### 🧮 Important Data Formulas
+
+**Total Amount**
+
+```excel
+=data[[#This Row],[Quantity]]*data[[#This Row],[Unit_Price]]
+```
+
+Calculates transaction revenue from quantity multiplied by unit price.
+
+**Customer Relationship**
+
+```excel
+=DATEDIF(M2,TODAY(),"Y")
+```
+
+Calculates the customer's relationship duration in years.
+
+**Timestamp**
+
+```excel
+=NOW()
+```
+
+Returns the current date and time.
+
+**End of Sales Month**
+
+```excel
+=EOMONTH(data[[#This Row],[Date]],0)
+```
+
+Returns the last day of the transaction month.
+
+**Sales Month**
+
+```excel
+=MONTH(data[[#This Row],[Date]])
+```
+
+Extracts the month number from the sales date.
+
+---
+
+# 🧮 Analysis Sheet
+
+The `Analysis` sheet converts the raw transaction data into useful business information.
+
+### 📊 Main KPIs
+
+| KPI | Result |
+|---|---:|
+| 💰 Total Revenue | **$229,192.47** |
+| 🧾 Total Transactions | **250** |
+| 📦 Total Quantity | **753** |
+| 💵 Average Transaction Value | **$916.77** |
+| ⬆️ Highest Transaction | **$4,499.95** |
+| ⬇️ Lowest Transaction | **$59.99** |
+
+### 🧮 KPI Formulas
+
+**Total Revenue**
+
+```excel
+=SUM(Data!N:N)
+```
+
+**Total Transactions**
+
+```excel
+=COUNTA(data[Transaction_ID])
+```
+
+**Total Quantity**
+
+```excel
+=SUM(data[Quantity])
+```
+
+**Average Transaction Value**
+
+```excel
+=AVERAGE(data[Total_Amount])
+```
+
+**Highest Transaction**
+
+```excel
+=MAX(data[Total_Amount])
+```
+
+**Lowest Transaction**
+
+```excel
+=MIN(data[Total_Amount])
+```
+
+---
+
+# 👥 Customer Analysis
+
+The workbook calculates revenue and purchase frequency for individual customers.
+
+### 💰 Customer Revenue
+
+```excel
+=SUMIF(data[Customer_Name],Analysis!D2,data[Total_Amount])
+```
+
+Calculates the total revenue generated by a customer.
+
+### 🔢 Purchase Frequency
+
+```excel
+=COUNTIF(data[Customer_Name],Analysis!D2)
+```
+
+Counts how many transactions were made by each customer.
+
+### 🔤 Customer Abbreviation
+
+The workbook also creates customer initials, for example:
 
 ```text
-🟢 CREATE → INSERT
-🔵 READ   → SELECT
-🟡 UPDATE → UPDATE
-🔴 DELETE → DELETE
+Paul Baker       → PB
+Joseph Jackson   → JJ
+Kevin Scott      → KS
+Kathleen Bennett → KB
+Michael Brown    → MB
 ```
 
-### ➕ INSERT
+### 🏆 Top 10 Customers
 
-Adds new records to a table.
+The analysis sheet ranks the highest-revenue customers using ranking and lookup formulas.
 
-```sql
-INSERT INTO table_name
-(column1, column2)
-VALUES
-(value1, value2);
+| Rank | Customer | Revenue |
+|---:|---|---:|
+| 1 | Mark Carter | $15,659.65 |
+| 2 | Edward Mitchell | $11,919.77 |
+| 3 | Barbara Young | $10,649.80 |
+| 4 | Patricia Moore | $9,799.73 |
+| 5 | Dorothy Nelson | $8,269.79 |
+
+The complete workbook contains a **Top 10 Customers** section.
+
+### 🔎 Ranking & Lookup
+
+The workbook uses functions such as:
+
+```excel
+=LARGE(E2:E51,I3)
 ```
 
-### 👀 SELECT
+and
 
-Retrieves records from a table.
-
-```sql
-SELECT *
-FROM table_name;
+```excel
+=_xlfn.XLOOKUP(K3,$E$2:$E$51,$D$2:$D$51)
 ```
 
-### ✏️ UPDATE
-
-Changes existing records.
-
-```sql
-UPDATE table_name
-SET column1 = value1
-WHERE condition;
-```
-
-### 🗑️ DELETE
-
-Removes records that match a condition.
-
-```sql
-DELETE FROM table_name
-WHERE condition;
-```
-
-> ⚠️ **Important:** Always verify the `WHERE` condition before executing `UPDATE` or `DELETE`.
+to identify customers associated with the highest revenue values.
 
 ---
 
-# 🔍 Query Practice
+# 🛍️ Product Analysis
 
-The main SQL file is designed for practical query writing and execution.
+The Analysis sheet also calculates the quantity sold for each product.
 
-A simple learning process is:
+### 📦 Quantity Sold
+
+```excel
+=SUMIF(data[Product_Name],Analysis!N2,data[Quantity])
+```
+
+This calculates the total quantity sold for each product.
+
+### 🏆 Top 3 Products
+
+The workbook identifies the three products with the highest quantity sold:
+
+| Rank | Product | Quantity Sold |
+|---:|---|---:|
+| 1 | Bookshelf | **102** |
+| 2 | Laptop | **96** |
+| 3 | Desk | **89** |
+
+Other products analyzed include:
 
 ```text
-📖 Read the Query
-       ↓
-🧠 Understand the Logic
-       ↓
-▶️ Execute the Query
-       ↓
-📊 Check the Output
-       ↓
-✏️ Change the Query
-       ↓
-🔁 Execute Again
-```
-
-Try changing conditions, columns, sorting, grouping, or join logic. This makes it easier to understand the effect of each SQL clause instead of only memorizing syntax. 💡
-
----
-
-# 📊 Aggregate Functions
-
-Aggregate functions perform calculations over multiple rows.
-
-### 🔢 COUNT()
-
-Counts rows.
-
-```sql
-SELECT COUNT(*)
-FROM table_name;
-```
-
-### 📈 AVG()
-
-Calculates an average.
-
-```sql
-SELECT AVG(column_name)
-FROM table_name;
-```
-
-### 🏆 MAX()
-
-Returns the highest value.
-
-```sql
-SELECT MAX(column_name)
-FROM table_name;
-```
-
-### 📉 MIN()
-
-Returns the lowest value.
-
-```sql
-SELECT MIN(column_name)
-FROM table_name;
-```
-
-### ➕ SUM()
-
-Calculates a total.
-
-```sql
-SELECT SUM(column_name)
-FROM table_name;
-```
-
-### 🧩 GROUP BY
-
-Groups records so aggregate calculations can be performed for each category.
-
-```sql
-SELECT category, COUNT(*)
-FROM table_name
-GROUP BY category;
-```
-
-### 🎯 HAVING
-
-Filters grouped results.
-
-```sql
-SELECT category, COUNT(*)
-FROM table_name
-GROUP BY category
-HAVING COUNT(*) > 1;
+🖥️ Monitor
+🧊 Blender
+🎧 Headphones
+⌨️ Keyboard
+🪑 Office Chair
+📱 Smartphone
+☕ Coffee Maker
 ```
 
 ---
 
-# 🔗 JOIN Operations
+# 🎯 What-If Analysis & Goal Seek
 
-JOINs are used to combine related information stored in different tables.
+The workbook includes practical **Scenario Manager** and **Goal Seek** analysis.
 
-### 🔵 INNER JOIN
-
-Returns records with matching values in both tables.
-
-```sql
-SELECT
-    a.column_name,
-    b.column_name
-FROM table_a a
-INNER JOIN table_b b
-    ON a.id = b.id;
-```
-
-### 🟣 LEFT JOIN
-
-Returns all rows from the left table and matching rows from the right table.
-
-```sql
-SELECT
-    a.column_name,
-    b.column_name
-FROM table_a a
-LEFT JOIN table_b b
-    ON a.id = b.id;
-```
-
-### 💡 Quick Difference
+### 📌 Current Revenue
 
 ```text
-INNER JOIN
-→ Matching records only
-
-LEFT JOIN
-→ All records from the left table
-→ Matching records from the right table
+Current Total Sales → $229,192.47
 ```
 
-JOINs are an essential part of relational database querying because related information is often stored in separate tables. 🔗📊
+### 🎯 Goal Seek
 
----
-
-# 🧠 Subqueries
-
-A **subquery** is a query written inside another SQL query.
-
-Example structure:
-
-```sql
-SELECT column_name
-FROM table_name
-WHERE column_name IN (
-    SELECT column_name
-    FROM another_table
-    WHERE condition
-);
-```
-
-The inner query is executed as part of the logic of the outer query.
+The Analysis sheet contains a Goal Seek target of:
 
 ```text
-🔍 Outer Query
-      │
-      ▼
-🧠 Inner Query
-      │
-      ▼
-📊 Result
+🎯 Target Revenue → ₹3,50,000
 ```
 
-Subqueries are useful when one query needs information produced by another query.
-
----
-
-# 🏷️ CASE Expression
-
-`CASE` is used to apply conditional logic inside a SQL query.
-
-```sql
-SELECT
-    column_name,
-    CASE
-        WHEN condition THEN 'Result 1'
-        ELSE 'Result 2'
-    END AS category
-FROM table_name;
-```
-
-Conceptually:
+The required growth shown by the workbook is approximately:
 
 ```text
-Condition TRUE
-      ↓
-🏷️ Result 1
-
-Condition FALSE
-      ↓
-🏷️ Result 2
+📈 Growth → 52.71%
 ```
 
-It is useful for classification, labels, categories, and conditional results. 🎯
-
----
-
-# 🗓️ Date & String Functions
-
-SQL functions can transform and extract information from dates and text.
-
-### 📅 Date Functions
-
-```sql
-SELECT YEAR(date_column)
-FROM table_name;
-```
-
-```sql
-SELECT CURDATE();
-```
-
-```sql
-SELECT DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
-```
-
-### 🔤 String Functions
-
-`CONCAT()` can combine multiple text values.
-
-```sql
-SELECT
-    CONCAT(first_name, ' ', last_name) AS full_name
-FROM table_name;
-```
-
-These functions are useful when database information needs to be transformed into a more meaningful format. ✨
-
----
-
-# 🪟 Window Functions
-
-Window functions perform calculations across rows while keeping individual rows visible.
-
-Example:
-
-```sql
-SELECT
-    *,
-    COUNT(*) OVER (
-        ORDER BY id
-        ROWS BETWEEN UNBOUNDED PRECEDING
-        AND CURRENT ROW
-    ) AS running_total
-FROM table_name;
-```
-
-### 💡 GROUP BY vs Window Function
+with projected sales of:
 
 ```text
-GROUP BY
-→ Combines rows into groups
-→ Returns grouped results
-
-WINDOW FUNCTION
-→ Calculates across rows
-→ Keeps individual rows visible
+💰 Projected Sales → 350,000
 ```
 
-Window functions are particularly useful for running totals, rankings, comparisons, and analytical SQL. 📈🧠
+> 💡 Goal Seek is used to determine the input growth required to reach a specified revenue target.
+
+---
+
+# 🎯 Scenario Summary
+
+The `Scenario Summary` sheet compares four growth scenarios.
+
+| Scenario | Growth | Projected Revenue |
+|---|---:|---:|
+| 🔵 Low Growth | 5% | 240,652.09 |
+| 🟢 Medium Growth | 10% | 252,111.72 |
+| 🟠 High Growth | 15% | 263,571.34 |
+| 🔴 Very High Growth | 20% | 275,030.96 |
+
+### 📊 Scenario Logic
+
+```text
+5% Growth
+    ↓
+240,652.09
+
+10% Growth
+    ↓
+252,111.72
+
+15% Growth
+    ↓
+263,571.34
+
+20% Growth
+    ↓
+275,030.96
+```
+
+This provides a simple way to compare how different growth assumptions affect projected revenue.
+
+---
+
+# 📈 Linear Regression
+
+The `Linear Regression` sheet contains an Excel regression output with **249 observations**.
+
+### 📊 Regression Statistics
+
+| Metric | Value |
+|---|---:|
+| Multiple R | 0.4581 |
+| R Square | 0.2099 |
+| Adjusted R Square | 0.2067 |
+| Standard Error | 921.41 |
+| Observations | 249 |
+
+### 🧪 ANOVA
+
+| Metric | Value |
+|---|---:|
+| F Statistic | 65.60 |
+| Significance F | 2.539 × 10⁻¹⁴ |
+
+### 📌 Regression Coefficients
+
+| Variable | Coefficient |
+|---|---:|
+| Intercept | -148.19 |
+| Predictor | 353.79 |
+
+The workbook's regression output shows a positive coefficient for the predictor variable.
+
+The **R Square of approximately 0.210** means the model explains about **21.0% of the variation in the dependent variable** represented in the regression.
+
+> ⚠️ Regression indicates a statistical relationship within the analyzed dataset. It should not automatically be interpreted as proof of causation.
+
+---
+
+# 🔄 Pivot Table Analysis
+
+The `Pivot Table` sheet provides multiple views of the sales data.
+
+### 🛍️ Sales by Product
+
+| Product | Total Amount |
+|---|---:|
+| Coffee Maker | $3,119.61 |
+| Blender | $5,219.13 |
+| Headphones | $7,049.53 |
+| Keyboard | $8,009.11 |
+| Office Chair | $10,399.48 |
+| Bookshelf | $15,298.98 |
+| Monitor | $21,999.12 |
+| Desk | $23,399.22 |
+| Smartphone | $67,199.04 |
+| Laptop | $67,499.25 |
+| **Grand Total** | **$229,192.47** |
+
+🏆 **Laptop** has the highest total amount, closely followed by **Smartphone**.
+
+### 🌍 Sales by Region
+
+| Region | Total Amount |
+|---|---:|
+| Central | $41,288.34 |
+| East | $59,288.39 |
+| North | $50,808.31 |
+| South | $36,398.75 |
+| West | $41,408.68 |
+| **Grand Total** | **$229,192.47** |
+
+🏆 **East** is the highest-revenue region in the PivotTable.
+
+### 👥 Sales by Customer Segment
+
+| Segment | Total Amount |
+|---|---:|
+| Basic | $62,177.81 |
+| Premium | $84,657.12 |
+| Standard | $82,357.54 |
+| **Grand Total** | **$229,192.47** |
+
+🏆 **Premium** is the highest-revenue customer segment.
+
+### 💳 Sales by Payment Method
+
+| Payment Method | Total Amount |
+|---|---:|
+| Cash | $57,427.79 |
+| Credit Card | $61,447.96 |
+| Debit Card | $52,118.31 |
+| PayPal | $58,198.41 |
+| **Grand Total** | **$229,192.47** |
+
+🏆 **Credit Card** generates the highest transaction value among the payment methods.
+
+---
+
+# 📊 Category & Quantity Analysis
+
+The PivotTable also analyzes quantity across product categories and regions.
+
+### 📦 Total Units Sold
+
+```text
+Appliances   → 126
+Electronics  → 395
+Furniture    → 232
+--------------------------------
+Grand Total  → 753
+```
+
+🏆 **Electronics** has the highest quantity sold with **395 units**.
+
+### 🌍 Regional Category Quantity
+
+The workbook provides a region-by-category quantity matrix, allowing comparison of product-category volume across:
+
+```text
+📍 Central
+📍 East
+📍 North
+📍 South
+📍 West
+```
+
+This helps identify where different categories are selling the most units.
+
+---
+
+# 📊 Dashboard
+
+The `Dashboard` sheet provides a visual **Sales Performance Dashboard**.
+
+The dashboard covers the transaction period:
+
+```text
+📅 April 2024 → April 2025
+```
+
+### 🎯 Main Dashboard KPIs
+
+```text
+💰 TOTAL REVENUE
+$229,192.47
+
+🧾 TRANSACTIONS
+250
+
+📦 UNITS SOLD
+753
+
+💵 AVG ORDER VALUE
+$916.77
+
+🏆 TOP PRODUCT
+Bookshelf
+```
+
+The dashboard is connected to the Analysis/PivotTable calculations so that the main figures can be presented in a compact business-reporting format.
+
+---
+
+# 🧠 Excel Concepts Covered
+
+This project provides practical experience with:
+
+```text
+📊 SUM
+🧮 SUMIF
+🔢 COUNTIF
+📋 COUNTA
+📈 AVERAGE
+⬆️ MAX
+⬇️ MIN
+🔎 XLOOKUP
+🏆 LARGE
+🔤 Text / Name Abbreviation
+📅 DATEDIF
+📅 EOMONTH
+📅 MONTH
+⏰ NOW
+🔒 Structured References
+🔄 Pivot Tables
+🎯 Scenario Manager
+🎯 Goal Seek
+📈 Linear Regression
+🧪 ANOVA
+📊 Dashboard KPIs
+```
 
 ---
 
 # 🧪 Recommended Practice Flow
 
-For effective SQL practice, follow this sequence:
-
 ```text
-🗄️ Understand Database
+📥 Understand Transaction Data
         ↓
-🏗️ Understand Tables
+🧮 Calculate Revenue & KPIs
         ↓
-📝 Work With Data
+👥 Analyze Customers
         ↓
-👀 SELECT Records
+🛍️ Analyze Products
         ↓
-🎯 WHERE Conditions
+🏆 Rank Top Customers & Products
         ↓
-↕️ ORDER BY
+🔄 Build PivotTable Views
         ↓
-📊 GROUP BY + Aggregate Functions
+🌍 Compare Regions
         ↓
-🔗 JOIN Tables
+💳 Compare Payment Methods
         ↓
-🧠 Subqueries
+🎯 Test Growth Scenarios
         ↓
-🗓️ Date & String Functions
+🎯 Apply Goal Seek
         ↓
-🏷️ CASE Expressions
+📈 Review Regression
         ↓
-🪟 Window Functions
-        ↓
-🚀 Write Your Own Queries
+📊 Read Dashboard Insights
 ```
 
-> 💡 **Best method:** Run → Check Output → Change One Part → Run Again → Understand.
+> 💡 **Best way to practice:** Change the underlying sales data, recalculate the analysis, refresh the PivotTables, and observe how the KPIs and dashboard results change.
 
 ---
 
-# ▶️ How to Run
+# ▶️ How to Use
 
 ## 💻 Requirements
 
-- 🐬 **MySQL Server**
-- 🖥️ **MySQL Workbench** or another MySQL editor
-- 📄 **`main.sql`**
+- 🟢 **Microsoft Excel**
+- 📄 **`Final_Project.xlsx`**
+- 📊 Basic understanding of Excel formulas and PivotTables
 
-## 🚀 MySQL Workbench
+## 🚀 Steps
 
-### 1️⃣ Connect
+**1️⃣ Open the workbook**
 
-Open MySQL Workbench and connect to your MySQL Server.
-
-### 2️⃣ Open the SQL File
+Open:
 
 ```text
-main.sql
+Final_Project.xlsx
 ```
 
-### 3️⃣ Run the Setup
+**2️⃣ Start with `Data`**
 
-Execute the database and table setup statements required by the project.
+Review transactions, customers, products, quantities, prices, regions, segments, and payment methods.
 
-### 4️⃣ Select the Database
+**3️⃣ Explore `Analysis`**
 
-```sql
-USE smart_eventDB;
-```
+Review total revenue, transaction count, quantity, average transaction value, customer revenue, purchase frequency, and product rankings.
 
-### 5️⃣ Check Tables
+**4️⃣ Review `Scenario Summary`**
 
-```sql
-SHOW TABLES;
-```
+Compare Low, Medium, High, and Very High Growth scenarios.
 
-### 6️⃣ Check Structure
+**5️⃣ Explore `Linear Regression`**
 
-```sql
-DESCRIBE table_name;
-```
+Review the regression statistics, ANOVA table, coefficients, and model results.
 
-### 7️⃣ Run Queries
+**6️⃣ Explore `Pivot Table`**
 
-Execute the queries individually and inspect the output in the result grid.
+Compare product, region, customer segment, payment method, and category performance.
 
-> ⚠️ **Tip:** Run setup statements before executing queries that depend on the created database or tables.
+**7️⃣ Open `Dashboard`**
 
----
-
-# 🔎 Useful MySQL Commands
-
-### 📦 Show Databases
-
-```sql
-SHOW DATABASES;
-```
-
-### 📋 Show Tables
-
-```sql
-SHOW TABLES;
-```
-
-### 🔍 Describe a Table
-
-```sql
-DESCRIBE table_name;
-```
-
-### 👀 View Records
-
-```sql
-SELECT *
-FROM table_name;
-```
-
-These commands are useful for checking the database structure and verifying that the setup is working correctly. 🛠️
-
----
-
-# 📁 Project Structure
-
-```text
-📦 MySQL-SQL-Project
-│
-├── 📄 main.sql
-└── 📘 README.md
-```
-
-### 📄 `main.sql`
-
-Contains the actual SQL implementation of the project, including the database structure, data operations, and query practice.
-
-### 📘 `README.md`
-
-Contains the project documentation, SQL explanations, execution instructions, and learning flow.
-
----
-
-# 📊 Project Statistics
-
-| 📌 Property | 💻 Details |
-|---|---|
-| 🗄️ Database | `smart_eventDB` |
-| 🐬 Technology | MySQL |
-| 📄 Main File | `main.sql` |
-| 📊 Tables Defined | 6 |
-| 🔢 SQL Statements | 73 |
-| 📈 SQL Lines | 1007 |
-
-### 🧩 Feature Status
-
-| 🛠️ Feature | 📌 Status |
-|---|---|
-| 📝 Data Operations | ✅ Included |
-| 🔗 JOIN Practice | ✅ Included |
-| 🧠 Subqueries | ✅ Included |
-| 📊 Aggregate Functions | ✅ Included |
-| 🏷️ CASE | ✅ Included |
-| 🪟 Window Functions | ✅ Included |
-
----
-
-# 🎯 Learning Outcomes
-
-After practicing this project, you can strengthen your understanding of:
-
-- 🗄️ Relational database structure
-- 🏗️ Database and table creation
-- 🔑 Table relationships
-- 📝 Data insertion and manipulation
-- 🔍 Data retrieval with `SELECT`
-- 🎯 Filtering with `WHERE`
-- ↕️ Sorting with `ORDER BY`
-- 📊 Aggregate functions
-- 🧮 `GROUP BY` and `HAVING`
-- 🔗 JOIN operations
-- 🧠 Subqueries
-- 🗓️ Date functions
-- 🔤 String functions
-- 🏷️ Conditional logic with `CASE`
-- 🪟 Window functions
-- 📈 Analytical SQL thinking
-- 💻 Practical query writing
+Use the dashboard for a quick view of the main sales KPIs and top product.
 
 ---
 
@@ -626,17 +641,43 @@ After practicing this project, you can strengthen your understanding of:
 
 | 📌 Property | 💻 Details |
 |---|---|
-| 🗄️ Database | `smart_eventDB` |
-| 🐬 Technology | MySQL |
-| 📄 Main File | `main.sql` |
-| 📊 Tables | 6 |
-| 🔢 SQL Statements | 73 |
-| ✏️ Data Operations | ✅ Included |
-| 🔗 JOINs | ✅ Included |
-| 🧠 Subqueries | ✅ Included |
-| 📈 Aggregate Functions | ✅ Included |
-| 🏷️ CASE | ✅ Included |
-| 🪟 Window Functions | ✅ Included |
+| 📄 Workbook | `Final_Project.xlsx` |
+| 📊 Sheets | 6 |
+| 🧾 Transactions | 250 |
+| 💰 Total Revenue | $229,192.47 |
+| 📦 Total Quantity | 753 |
+| 💵 Average Transaction | $916.77 |
+| 👥 Customer Analysis | Included |
+| 🛍️ Product Analysis | Included |
+| 🔄 PivotTables | Included |
+| 🎯 Goal Seek | Included |
+| 🎯 Scenario Manager | Included |
+| 📈 Linear Regression | Included |
+| 📊 Dashboard | Included |
+| 🔎 XLOOKUP | Included |
+| 🏆 Top Customer Analysis | Included |
+| 🥇 Top Product Analysis | Included |
+
+---
+
+# 🎯 Learning Outcomes
+
+After completing this project, you will have practical experience with:
+
+- 📋 Working with structured sales transaction data
+- 🧮 Building KPI calculations with Excel formulas
+- 👥 Measuring customer revenue and purchase frequency
+- 🏆 Ranking high-value customers
+- 🛍️ Identifying top-selling products
+- 🔄 Creating and interpreting PivotTables
+- 🌍 Comparing regional performance
+- 💳 Analyzing payment methods
+- 👥 Comparing customer segments
+- 🎯 Performing What-If Scenario Analysis
+- 🎯 Using Goal Seek for revenue targets
+- 📈 Understanding basic regression output
+- 📊 Building a business-focused dashboard
+- 💡 Turning spreadsheet calculations into useful business insights
 
 ---
 
@@ -646,18 +687,11 @@ After practicing this project, you can strengthen your understanding of:
 
 ### 🌟 Ayush Donga 🌟
 
-**🎓 B.Sc IT Student | 💻 SQL & Database Learner | 🤖 Aspiring AI/ML Engineer**
+**B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
 
-<br>
+`📊 Excel` · `📈 Data Analysis` · `🐍 Python` · `🤖 AI/ML`
 
-`🐬 MySQL` · `💻 SQL` · `📊 Data Analysis` · `🤖 AI/ML`
-
-**📄 Project:** `main.sql`
-
-
-<br>
-
-### 🚀 Keep Learning • Keep Coding • Keep Improving 🚀
+**📄 Project:** `Final_Project.xlsx`
 
 </div>
 
@@ -665,8 +699,8 @@ After practicing this project, you can strengthen your understanding of:
 
 <div align="center">
 
-### ⭐ Built with MySQL, SQL Practice & Learning by Doing
+### ⭐ Learn the data. Analyze the numbers. Make better decisions. 🚀
 
-**🐬 💻 📊 🔗 🧠 🪟 🚀**
+**📊 Excel • 🔄 PivotTables • 🎯 What-If Analysis • 📈 Regression • 📊 Dashboards**
 
 </div>
