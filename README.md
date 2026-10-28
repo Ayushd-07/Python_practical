@@ -37,13 +37,13 @@ The report combines KPI cards, horizontal bar charts, slicers, and a detailed or
 
 ### 📊 1. Sales Dashboard
 
-![Superstore Sales Dashboard](Output%20images/Sales_Dashboard.png)
+<p align="center"><img src="Output%20images/Sales_Dashboard.png" alt="Superstore Sales Dashboard" width="100%"></p>
 
 *The main page presents headline KPIs, sales by product category, profit by region, and the Top 5 sub-categories by sales.*
 
 ### 📋 2. Order Details
 
-![Order Details](Output%20images/Order_Details.png)
+<p align="center"><img src="Output%20images/Order_Details.png" alt="Order Details page" width="100%"></p>
 
 *The Order Details page displays Year, Month, Category, Product Name, Sales, Profit, Quantity, and Region. The table is sorted by sales in descending order to make high-value records easier to review.*
 
@@ -191,12 +191,11 @@ A built-in professional theme can be applied from **View → Themes**. After app
 
 ---
 
-## 🎥 Dashboard Walkthrough Video
+## 🎥 Project Overview Video
 
-Watch the project walkthrough using the Google Drive link below.
+Watch this video for a walkthrough of the **Superstore Sales Dashboard**, including the dashboard layout, key performance indicators, sales by category, profit by region, and the Order Details page.
 
-**▶️ [Open Sales Dashboard Walkthrough Video](https://drive.google.com/drive/folders/1Ft32rP0E23pXjXehZTHOQyGM7CYn3wol)**
-
+**▶️ [Watch the Superstore Sales Dashboard Project Overview](https://drive.google.com/drive/folders/1Ft32rP0E23pXjXehZTHOQyGM7CYn3wol)**
 ---
 
 ## 📁 Project Structure
