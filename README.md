@@ -37,7 +37,8 @@ The report combines KPI cards, horizontal bar charts, slicers, and a detailed or
 
 ### 📊 1. Sales Dashboard
 
-<p align="center"><img src="Output%20images/Sales_Dashboard.png" alt="Superstore Sales Dashboard" width="100%"></p>
+<p align="center"><img src="<img width="756" height="439" alt="Screenshot 2026-10-27 151719" src="https://github.com/user-attachments/assets/95ea8378-d8ff-4230-85c8-9e2ed8d68f3a" />
+" alt="Superstore Sales Dashboard" width="100%"></p>
 
 *The main page presents headline KPIs, sales by product category, profit by region, and the Top 5 sub-categories by sales.*
 
