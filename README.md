@@ -1,25 +1,23 @@
 <div align="center">
 
-# 📊 Sales Analytics & Performance Dashboard
+# 📊 Superstore Sales Dashboard
 
-### 📈 Excel-Based Sales Analysis • Customer Insights • Scenario Planning • Regression
+### 💰 Sales Performance • Profitability • Product Insights • Regional Analysis
 
 <p>
-<img src="https://img.shields.io/badge/Microsoft_Excel-Analytics-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white">
-<img src="https://img.shields.io/badge/Sales_Data-250_Transactions-4472C4?style=for-the-badge">
-<img src="https://img.shields.io/badge/Pivot_Tables-Business_Analysis-6C63FF?style=for-the-badge">
-<img src="https://img.shields.io/badge/Dashboard-KPI_Reporting-FF6B35?style=for-the-badge">
+<img src="https://img.shields.io/badge/Power_BI-Interactive_Report-F2C811?style=for-the-badge&logo=powerbi&logoColor=black">
+<img src="https://img.shields.io/badge/Sales_Analytics-Business_Insights-4472C4?style=for-the-badge">
+<img src="https://img.shields.io/badge/KPI_Reporting-Executive_Summary-6C63FF?style=for-the-badge">
+<img src="https://img.shields.io/badge/Interactive-Report_Filters-16A085?style=for-the-badge">
 </p>
 
 <p>
-<img src="https://img.shields.io/badge/XLOOKUP-Customer_Analysis-16A085?style=for-the-badge">
-<img src="https://img.shields.io/badge/Scenario_Manager-What--If_Analysis-8E44AD?style=for-the-badge">
-<img src="https://img.shields.io/badge/Linear_Regression-Predictive_Analysis-E67E22?style=for-the-badge">
+<img src="https://img.shields.io/badge/Total_Sales-1.50M-CC0000?style=for-the-badge">
+<img src="https://img.shields.io/badge/Total_Profit-178.57K-555555?style=for-the-badge">
+<img src="https://img.shields.io/badge/Average_Discount-15.70%25-E67E22?style=for-the-badge">
 </p>
 
-<br>
-
-**📥 Sales Data → 🧮 Analysis → 🔄 Pivot Tables → 🎯 Scenarios → 📈 Regression → 📊 Dashboard**
+**📥 Sales Data → 📊 Power BI Visuals → 🎛️ Interactive Filters → 📋 Order Details → 💡 Business Insights**
 
 </div>
 
@@ -27,657 +25,205 @@
 
 ## ✨ Project Overview
 
-**Sales Analytics & Performance Dashboard** is a practical Microsoft Excel project created to analyze sales transactions, customer behavior, product performance, payment methods, regions, and customer segments.
+The **Superstore Sales Dashboard** is an interactive Power BI project designed to analyze sales, profit, quantity, discounts, product categories, regional performance, and order-level details.
 
-The workbook combines **formula-based analysis, customer ranking, product analysis, What-If Scenario Manager, Goal Seek, Linear Regression, PivotTables, and an interactive-style dashboard** into one complete Excel project.
+The report combines KPI cards, horizontal bar charts, slicers, and a detailed order table. The Dashboard page gives a quick overview of business performance, while the Order Details page makes it easier to inspect individual product records and compare sales, profit, quantity, and region.
 
-| 🧩 Module | 📌 Purpose |
-|---|---|
-| 📋 **Data** | Stores transaction, customer, product, payment, region, and sales information |
-| 🧮 **Analysis** | Calculates KPIs, customer revenue, purchase frequency, top customers, and products |
-| 🎯 **Scenario Summary** | Compares different growth assumptions and projected revenue |
-| 📈 **Linear Regression** | Analyzes the relationship between a selected variable and revenue |
-| 🔄 **Pivot Table** | Summarizes sales by product, region, customer segment, payment method, and category |
-| 📊 **Dashboard** | Presents key sales KPIs and top-product information |
-
-> 💡 **Main Excel File:** `Final_Project.xlsx`
-
-The project is useful for **Excel data-analysis practice, business reporting, practical assignments, dashboard creation, What-If Analysis, PivotTables, and beginner-level predictive analysis**. 🚀
+> 💡 **Main Power BI File:** `Sales_dashboard.pbix`
 
 ---
 
-# 🗂️ Workbook Structure
+## 🖼️ Dashboard Preview
 
-```text
-📦 Final_Project.xlsx
-│
-├── 📋 Data
-│   └── Sales Transaction Dataset
-│
-├── 🧮 Analysis
-│   └── Customer, Product & KPI Analysis
-│
-├── 🎯 Scenario Summary
-│   └── Growth Scenario Comparison
-│
-├── 📈 Linear Regression
-│   └── Regression Statistics & ANOVA
-│
-├── 🔄 Pivot Table
-│   └── Multi-Dimensional Sales Analysis
-│
-└── 📊 Dashboard
-    └── Sales Performance Overview
-```
+### 📊 1. Sales Dashboard
+
+![Superstore Sales Dashboard](Output%20images/Sales_Dashboard.png)
+
+*The main page presents headline KPIs, sales by product category, profit by region, and the Top 5 sub-categories by sales.*
+
+### 📋 2. Order Details
+
+![Order Details](Output%20images/Order_Details.png)
+
+*The Order Details page displays Year, Month, Category, Product Name, Sales, Profit, Quantity, and Region. The table is sorted by sales in descending order to make high-value records easier to review.*
 
 ---
 
-# 📋 Data Sheet
+## 📌 Dashboard KPIs
 
-The `Data` sheet contains the main transaction dataset used throughout the project.
+| KPI | Displayed Value | Description |
+|---|---:|---|
+| 💰 **Total Sales** | **1.50M** | Overall sales value displayed in the report |
+| 📈 **Total Profit** | **178.57K** | Overall profit displayed in the report |
+| 📦 **Total Quantity** | **25K** | Total quantity shown in the dashboard |
+| 🎟️ **Average Discount** | **15.70%** | Average discount in the current report context |
 
-The workbook contains **250 sales transactions**.
-
-### 📌 Main Columns
-
-| Column | Purpose |
-|---|---|
-| `Transaction_ID` | Unique transaction identifier |
-| `Date` | Transaction date |
-| `Customer_ID` | Customer identifier |
-| `Customer_Name` | Customer name |
-| `Product_ID` | Product identifier |
-| `Product_Name` | Product sold |
-| `Category` | Product category |
-| `Quantity` | Units purchased |
-| `Unit_Price` | Price per unit |
-| `Payment_Method` | Payment method used |
-| `Region` | Customer/sales region |
-| `Customer_Segment` | Basic, Premium, or Standard |
-| `Customer_Since` | Customer relationship start date |
-| `Total_Amount` | Calculated transaction value |
-| `Customer relationship` | Customer relationship duration |
-| `Timestamp` | Current timestamp |
-| `Abbreviation_Customer_Name` | Customer initials |
-| `Eomonth of sales` | Month-end sales date |
-| `Sales Month` | Month extracted from transaction date |
-
-### 🧮 Important Data Formulas
-
-**Total Amount**
-
-```excel
-=data[[#This Row],[Quantity]]*data[[#This Row],[Unit_Price]]
-```
-
-Calculates transaction revenue from quantity multiplied by unit price.
-
-**Customer Relationship**
-
-```excel
-=DATEDIF(M2,TODAY(),"Y")
-```
-
-Calculates the customer's relationship duration in years.
-
-**Timestamp**
-
-```excel
-=NOW()
-```
-
-Returns the current date and time.
-
-**End of Sales Month**
-
-```excel
-=EOMONTH(data[[#This Row],[Date]],0)
-```
-
-Returns the last day of the transaction month.
-
-**Sales Month**
-
-```excel
-=MONTH(data[[#This Row],[Date]])
-```
-
-Extracts the month number from the sales date.
+KPI values may change when the Region or Category slicers are used.
 
 ---
 
-# 🧮 Analysis Sheet
+## 📊 Visual Analysis
 
-The `Analysis` sheet converts the raw transaction data into useful business information.
+### 🛍️ Total Sales by Product Category
 
-### 📊 Main KPIs
-
-| KPI | Result |
+| Product Category | Sales |
 |---|---:|
-| 💰 Total Revenue | **$229,192.47** |
-| 🧾 Total Transactions | **250** |
-| 📦 Total Quantity | **753** |
-| 💵 Average Transaction Value | **$916.77** |
-| ⬆️ Highest Transaction | **$4,499.95** |
-| ⬇️ Lowest Transaction | **$59.99** |
+| 💻 Technology | 503K |
+| 🪑 Furniture | 502K |
+| 📎 Office Supplies | 492K |
 
-### 🧮 KPI Formulas
+**Technology** leads the displayed category comparison, with Furniture close behind.
 
-**Total Revenue**
+### 🌍 Total Profit by Region
 
-```excel
-=SUM(Data!N:N)
-```
+| Region | Profit |
+|---|---:|
+| 🌅 West | 66K |
+| 🌄 East | 50K |
+| ☀️ South | 38K |
+| 🧭 Central | 25K |
 
-**Total Transactions**
+**West** has the highest displayed regional profit, while Central has the lowest.
 
-```excel
-=COUNTA(data[Transaction_ID])
-```
+### 🏆 Top 5 Sub-Categories by Sales
 
-**Total Quantity**
-
-```excel
-=SUM(data[Quantity])
-```
-
-**Average Transaction Value**
-
-```excel
-=AVERAGE(data[Total_Amount])
-```
-
-**Highest Transaction**
-
-```excel
-=MAX(data[Total_Amount])
-```
-
-**Lowest Transaction**
-
-```excel
-=MIN(data[Total_Amount])
-```
-
----
-
-# 👥 Customer Analysis
-
-The workbook calculates revenue and purchase frequency for individual customers.
-
-### 💰 Customer Revenue
-
-```excel
-=SUMIF(data[Customer_Name],Analysis!D2,data[Total_Amount])
-```
-
-Calculates the total revenue generated by a customer.
-
-### 🔢 Purchase Frequency
-
-```excel
-=COUNTIF(data[Customer_Name],Analysis!D2)
-```
-
-Counts how many transactions were made by each customer.
-
-### 🔤 Customer Abbreviation
-
-The workbook also creates customer initials, for example:
-
-```text
-Paul Baker       → PB
-Joseph Jackson   → JJ
-Kevin Scott      → KS
-Kathleen Bennett → KB
-Michael Brown    → MB
-```
-
-### 🏆 Top 10 Customers
-
-The analysis sheet ranks the highest-revenue customers using ranking and lookup formulas.
-
-| Rank | Customer | Revenue |
+| Rank | Sub-Category | Sales |
 |---:|---|---:|
-| 1 | Mark Carter | $15,659.65 |
-| 2 | Edward Mitchell | $11,919.77 |
-| 3 | Barbara Young | $10,649.80 |
-| 4 | Patricia Moore | $9,799.73 |
-| 5 | Dorothy Nelson | $8,269.79 |
+| 1 | 🪑 Chairs | 216K |
+| 2 | 📱 Phones | 209K |
+| 3 | 📦 Storage | 152K |
+| 4 | 🪵 Tables | 144K |
+| 5 | 📁 Binders | 139K |
 
-The complete workbook contains a **Top 10 Customers** section.
-
-### 🔎 Ranking & Lookup
-
-The workbook uses functions such as:
-
-```excel
-=LARGE(E2:E51,I3)
-```
-
-and
-
-```excel
-=_xlfn.XLOOKUP(K3,$E$2:$E$51,$D$2:$D$51)
-```
-
-to identify customers associated with the highest revenue values.
+The Top 5 visual uses a **Top N filter** and shows the filter context **Ship Mode: Standard & Second Class**. Interpret this ranking within that context.
 
 ---
 
-# 🛍️ Product Analysis
+## 📋 Order Details Page
 
-The Analysis sheet also calculates the quantity sold for each product.
+The second report page provides a detailed view of individual records.
 
-### 📦 Quantity Sold
+### 🧾 Fields Included
 
-```excel
-=SUMIF(data[Product_Name],Analysis!N2,data[Quantity])
-```
+- 📅 **Year** and **Month**
+- 🏷️ **Category**
+- 📦 **Product Name**
+- 💰 **Sum of Sales**
+- 📈 **Sum of Profit**
+- 🔢 **Sum of Quantity**
+- 🌍 **Region**
 
-This calculates the total quantity sold for each product.
-
-### 🏆 Top 3 Products
-
-The workbook identifies the three products with the highest quantity sold:
-
-| Rank | Product | Quantity Sold |
-|---:|---|---:|
-| 1 | Bookshelf | **102** |
-| 2 | Laptop | **96** |
-| 3 | Desk | **89** |
-
-Other products analyzed include:
-
-```text
-🖥️ Monitor
-🧊 Blender
-🎧 Headphones
-⌨️ Keyboard
-🪑 Office Chair
-📱 Smartphone
-☕ Coffee Maker
-```
+The table uses alternating row shading and includes a total row. Sorting by sales in descending order helps users inspect higher-value records first.
 
 ---
 
-# 🎯 What-If Analysis & Goal Seek
+## 🎛️ Filters & Interactions
 
-The workbook includes practical **Scenario Manager** and **Goal Seek** analysis.
+The report includes two slicers:
 
-### 📌 Current Revenue
+- 🌍 **Region:** Explore performance by region.
+- 🏷️ **Category:** Focus on a selected product category.
 
-```text
-Current Total Sales → $229,192.47
-```
+### 🔄 Cross-Filtering
 
-### 🎯 Goal Seek
+To configure visual interactions in Power BI:
 
-The Analysis sheet contains a Goal Seek target of:
+1. Select the **Sales by Product Category** chart.
+2. Open **Format → Edit interactions**.
+3. Configure the **Profit by Region** chart to cross-filter.
+4. Choose the intended interaction for KPI cards, such as highlight or none.
+5. Select a category bar and check whether the other visuals respond as expected.
+6. Repeat the interaction check for at least two additional visual pairs.
 
-```text
-🎯 Target Revenue → ₹3,50,000
-```
-
-The required growth shown by the workbook is approximately:
-
-```text
-📈 Growth → 52.71%
-```
-
-with projected sales of:
-
-```text
-💰 Projected Sales → 350,000
-```
-
-> 💡 Goal Seek is used to determine the input growth required to reach a specified revenue target.
+> 💡 Test slicers and chart selections before publishing to make sure the report behaves as intended.
 
 ---
 
-# 🎯 Scenario Summary
+## 🎨 Design & Layout
 
-The `Scenario Summary` sheet compares four growth scenarios.
+The dashboard uses a clean, card-based layout with:
 
-| Scenario | Growth | Projected Revenue |
-|---|---:|---:|
-| 🔵 Low Growth | 5% | 240,652.09 |
-| 🟢 Medium Growth | 10% | 252,111.72 |
-| 🟠 High Growth | 15% | 263,571.34 |
-| 🔴 Very High Growth | 20% | 275,030.96 |
+- 🔴 Red headings and category bars for strong visual emphasis
+- ⬜ White cards against a light grey background
+- 🔢 Large KPI values for quick scanning
+- 📊 Horizontal bar charts for category and regional comparisons
+- 🎛️ Slicers placed at the top for easy access
+- 📋 A separate Order Details page for transaction-level review
+- 🧩 Consistent spacing, rounded cards, and readable labels
 
-### 📊 Scenario Logic
-
-```text
-5% Growth
-    ↓
-240,652.09
-
-10% Growth
-    ↓
-252,111.72
-
-15% Growth
-    ↓
-263,571.34
-
-20% Growth
-    ↓
-275,030.96
-```
-
-This provides a simple way to compare how different growth assumptions affect projected revenue.
+A built-in professional theme can be applied from **View → Themes**. After applying a theme, check that colours and fonts remain consistent across all visuals.
 
 ---
 
-# 📈 Linear Regression
+## 💡 Key Insights
 
-The `Linear Regression` sheet contains an Excel regression output with **249 observations**.
+- 💰 Total sales are displayed as **1.50M**.
+- 📈 Total profit is displayed as **178.57K**.
+- 📦 The dashboard shows approximately **25K** in total quantity.
+- 🎟️ Average discount is **15.70%**.
+- 🛍️ **Technology** has the highest displayed category sales at approximately **503K**.
+- 🌍 **West** leads the displayed regional profit comparison at approximately **66K**.
+- 🏆 **Chairs** lead the displayed Top 5 sub-category sales chart at approximately **216K**.
+- 🔎 The Order Details page supports product-level inspection of sales and profit.
 
-### 📊 Regression Statistics
-
-| Metric | Value |
-|---|---:|
-| Multiple R | 0.4581 |
-| R Square | 0.2099 |
-| Adjusted R Square | 0.2067 |
-| Standard Error | 921.41 |
-| Observations | 249 |
-
-### 🧪 ANOVA
-
-| Metric | Value |
-|---|---:|
-| F Statistic | 65.60 |
-| Significance F | 2.539 × 10⁻¹⁴ |
-
-### 📌 Regression Coefficients
-
-| Variable | Coefficient |
-|---|---:|
-| Intercept | -148.19 |
-| Predictor | 353.79 |
-
-The workbook's regression output shows a positive coefficient for the predictor variable.
-
-The **R Square of approximately 0.210** means the model explains about **21.0% of the variation in the dependent variable** represented in the regression.
-
-> ⚠️ Regression indicates a statistical relationship within the analyzed dataset. It should not automatically be interpreted as proof of causation.
+*These observations reflect the values shown in the supplied screenshots. Active filters can change the displayed results.*
 
 ---
 
-# 🔄 Pivot Table Analysis
+## ▶️ How to Use
 
-The `Pivot Table` sheet provides multiple views of the sales data.
+### 💻 Requirements
 
-### 🛍️ Sales by Product
+- 🟡 **Microsoft Power BI Desktop**
+- 📄 `Sales_dashboard.pbix`
+- 📁 The `Output images` folder for the README screenshots
 
-| Product | Total Amount |
-|---|---:|
-| Coffee Maker | $3,119.61 |
-| Blender | $5,219.13 |
-| Headphones | $7,049.53 |
-| Keyboard | $8,009.11 |
-| Office Chair | $10,399.48 |
-| Bookshelf | $15,298.98 |
-| Monitor | $21,999.12 |
-| Desk | $23,399.22 |
-| Smartphone | $67,199.04 |
-| Laptop | $67,499.25 |
-| **Grand Total** | **$229,192.47** |
+### 🚀 Steps
 
-🏆 **Laptop** has the highest total amount, closely followed by **Smartphone**.
-
-### 🌍 Sales by Region
-
-| Region | Total Amount |
-|---|---:|
-| Central | $41,288.34 |
-| East | $59,288.39 |
-| North | $50,808.31 |
-| South | $36,398.75 |
-| West | $41,408.68 |
-| **Grand Total** | **$229,192.47** |
-
-🏆 **East** is the highest-revenue region in the PivotTable.
-
-### 👥 Sales by Customer Segment
-
-| Segment | Total Amount |
-|---|---:|
-| Basic | $62,177.81 |
-| Premium | $84,657.12 |
-| Standard | $82,357.54 |
-| **Grand Total** | **$229,192.47** |
-
-🏆 **Premium** is the highest-revenue customer segment.
-
-### 💳 Sales by Payment Method
-
-| Payment Method | Total Amount |
-|---|---:|
-| Cash | $57,427.79 |
-| Credit Card | $61,447.96 |
-| Debit Card | $52,118.31 |
-| PayPal | $58,198.41 |
-| **Grand Total** | **$229,192.47** |
-
-🏆 **Credit Card** generates the highest transaction value among the payment methods.
+1. Open `Sales_dashboard.pbix` in Power BI Desktop.
+2. Review the KPI cards on the Dashboard page.
+3. Use the **Region** and **Category** slicers to filter the report.
+4. Compare category sales and regional profit.
+5. Review the Top 5 sub-categories and note the ship-mode filter context.
+6. Open **Order Details** to inspect individual product records.
+7. Test chart interactions and confirm that visuals respond as intended.
+8. Save the report after making changes.
 
 ---
 
-# 📊 Category & Quantity Analysis
+## 🎥 Dashboard Walkthrough Video
 
-The PivotTable also analyzes quantity across product categories and regions.
+Watch the project walkthrough using the Google Drive link below.
 
-### 📦 Total Units Sold
-
-```text
-Appliances   → 126
-Electronics  → 395
-Furniture    → 232
---------------------------------
-Grand Total  → 753
-```
-
-🏆 **Electronics** has the highest quantity sold with **395 units**.
-
-### 🌍 Regional Category Quantity
-
-The workbook provides a region-by-category quantity matrix, allowing comparison of product-category volume across:
-
-```text
-📍 Central
-📍 East
-📍 North
-📍 South
-📍 West
-```
-
-This helps identify where different categories are selling the most units.
+**▶️ [Open Sales Dashboard Walkthrough Video](https://drive.google.com/drive/folders/1Ft32rP0E23pXjXehZTHOQyGM7CYn3wol)**
 
 ---
 
-# 📊 Dashboard
-
-The `Dashboard` sheet provides a visual **Sales Performance Dashboard**.
-
-The dashboard covers the transaction period:
+## 📁 Project Structure
 
 ```text
-📅 April 2024 → April 2025
-```
-
-### 🎯 Main Dashboard KPIs
-
-```text
-💰 TOTAL REVENUE
-$229,192.47
-
-🧾 TRANSACTIONS
-250
-
-📦 UNITS SOLD
-753
-
-💵 AVG ORDER VALUE
-$916.77
-
-🏆 TOP PRODUCT
-Bookshelf
-```
-
-The dashboard is connected to the Analysis/PivotTable calculations so that the main figures can be presented in a compact business-reporting format.
-
----
-
-# 🧠 Excel Concepts Covered
-
-This project provides practical experience with:
-
-```text
-📊 SUM
-🧮 SUMIF
-🔢 COUNTIF
-📋 COUNTA
-📈 AVERAGE
-⬆️ MAX
-⬇️ MIN
-🔎 XLOOKUP
-🏆 LARGE
-🔤 Text / Name Abbreviation
-📅 DATEDIF
-📅 EOMONTH
-📅 MONTH
-⏰ NOW
-🔒 Structured References
-🔄 Pivot Tables
-🎯 Scenario Manager
-🎯 Goal Seek
-📈 Linear Regression
-🧪 ANOVA
-📊 Dashboard KPIs
+📦 Sales_dashboard
+│
+├── 📊 Sales_dashboard.pbix
+├── 📄 README.md
+└── 📁 Output images
+    ├── Sales_Dashboard.png
+    └── Order_Details.png
 ```
 
 ---
 
-# 🧪 Recommended Practice Flow
+## 🧠 Skills Demonstrated
 
-```text
-📥 Understand Transaction Data
-        ↓
-🧮 Calculate Revenue & KPIs
-        ↓
-👥 Analyze Customers
-        ↓
-🛍️ Analyze Products
-        ↓
-🏆 Rank Top Customers & Products
-        ↓
-🔄 Build PivotTable Views
-        ↓
-🌍 Compare Regions
-        ↓
-💳 Compare Payment Methods
-        ↓
-🎯 Test Growth Scenarios
-        ↓
-🎯 Apply Goal Seek
-        ↓
-📈 Review Regression
-        ↓
-📊 Read Dashboard Insights
-```
-
-> 💡 **Best way to practice:** Change the underlying sales data, recalculate the analysis, refresh the PivotTables, and observe how the KPIs and dashboard results change.
-
----
-
-# ▶️ How to Use
-
-## 💻 Requirements
-
-- 🟢 **Microsoft Excel**
-- 📄 **`Final_Project.xlsx`**
-- 📊 Basic understanding of Excel formulas and PivotTables
-
-## 🚀 Steps
-
-**1️⃣ Open the workbook**
-
-Open:
-
-```text
-Final_Project.xlsx
-```
-
-**2️⃣ Start with `Data`**
-
-Review transactions, customers, products, quantities, prices, regions, segments, and payment methods.
-
-**3️⃣ Explore `Analysis`**
-
-Review total revenue, transaction count, quantity, average transaction value, customer revenue, purchase frequency, and product rankings.
-
-**4️⃣ Review `Scenario Summary`**
-
-Compare Low, Medium, High, and Very High Growth scenarios.
-
-**5️⃣ Explore `Linear Regression`**
-
-Review the regression statistics, ANOVA table, coefficients, and model results.
-
-**6️⃣ Explore `Pivot Table`**
-
-Compare product, region, customer segment, payment method, and category performance.
-
-**7️⃣ Open `Dashboard`**
-
-Use the dashboard for a quick view of the main sales KPIs and top product.
-
----
-
-# 📌 Quick Project Summary
-
-| 📌 Property | 💻 Details |
-|---|---|
-| 📄 Workbook | `Final_Project.xlsx` |
-| 📊 Sheets | 6 |
-| 🧾 Transactions | 250 |
-| 💰 Total Revenue | $229,192.47 |
-| 📦 Total Quantity | 753 |
-| 💵 Average Transaction | $916.77 |
-| 👥 Customer Analysis | Included |
-| 🛍️ Product Analysis | Included |
-| 🔄 PivotTables | Included |
-| 🎯 Goal Seek | Included |
-| 🎯 Scenario Manager | Included |
-| 📈 Linear Regression | Included |
-| 📊 Dashboard | Included |
-| 🔎 XLOOKUP | Included |
-| 🏆 Top Customer Analysis | Included |
-| 🥇 Top Product Analysis | Included |
-
----
-
-# 🎯 Learning Outcomes
-
-After completing this project, you will have practical experience with:
-
-- 📋 Working with structured sales transaction data
-- 🧮 Building KPI calculations with Excel formulas
-- 👥 Measuring customer revenue and purchase frequency
-- 🏆 Ranking high-value customers
-- 🛍️ Identifying top-selling products
-- 🔄 Creating and interpreting PivotTables
-- 🌍 Comparing regional performance
-- 💳 Analyzing payment methods
-- 👥 Comparing customer segments
-- 🎯 Performing What-If Scenario Analysis
-- 🎯 Using Goal Seek for revenue targets
-- 📈 Understanding basic regression output
-- 📊 Building a business-focused dashboard
-- 💡 Turning spreadsheet calculations into useful business insights
+- 📊 Power BI report and dashboard design
+- 💰 KPI cards and sales performance reporting
+- 🛍️ Product category and sub-category analysis
+- 🌍 Regional profit comparison
+- 📋 Order-level data presentation
+- 🎛️ Slicers and interactive filtering
+- 🔄 Cross-filtering and visual interactions
+- 🎨 Theme consistency and dashboard layout
+- 💡 Communicating business insights with visuals
 
 ---
 
@@ -687,11 +233,11 @@ After completing this project, you will have practical experience with:
 
 ### 🌟 Ayush Donga 🌟
 
-**B.Sc IT Student | Aspiring AI/ML Engineer 🤖**
+**B.Sc IT Student | Aspiring Data Analyst & AI/ML Engineer 🤖**
 
-`📊 Excel` · `📈 Data Analysis` · `🐍 Python` · `🤖 AI/ML`
+`📊 Power BI` · `📈 Data Analysis` · `📗 Excel` · `🐍 Python`
 
-**📄 Project:** `Final_Project.xlsx`
+**📄 Project:** `Sales_dashboard.pbix`
 
 </div>
 
@@ -699,8 +245,8 @@ After completing this project, you will have practical experience with:
 
 <div align="center">
 
-### ⭐ Learn the data. Analyze the numbers. Make better decisions. 🚀
+### ⭐ Explore the numbers. Find the patterns. Make better decisions. 🚀
 
-**📊 Excel • 🔄 PivotTables • 🎯 What-If Analysis • 📈 Regression • 📊 Dashboards**
+**📊 Power BI • 💰 Sales Analytics • 📋 Order Details • 🎛️ Interactive Dashboard**
 
 </div>
